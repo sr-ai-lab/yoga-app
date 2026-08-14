@@ -5,7 +5,7 @@
     {
       "id": "SAMPLE00001",
       "title": "[サンプル]朝ヨガで心地よく目覚める",
-      "channel": "b-life",
+      "channel": "b-flow",
       "duration_min": 12,
       "intensity": 1,
       "type": "main",
@@ -41,7 +41,7 @@
     {
       "id": "SAMPLE00005",
       "title": "[サンプル]腰・股関節をほぐすストレッチ",
-      "channel": "b-life",
+      "channel": "b-flow",
       "duration_min": 15,
       "intensity": 2,
       "type": "main",
@@ -68,7 +68,7 @@
     {
       "id": "SAMPLE00008",
       "title": "[サンプル]むくみ解消・脚すっきりヨガ",
-      "channel": "b-life",
+      "channel": "b-flow",
       "duration_min": 18,
       "intensity": 2,
       "type": "main",
@@ -91,6 +91,51 @@
       "intensity": 2,
       "type": "main",
       "tags": ["夜", "リフレッシュ", "全身", "中級"]
+    },
+    {
+      "id": "pIjgh6PxFd8",
+      "title": "【5分】ぽっこりお腹をやさしく解消｜下腹＆ウエスト引き締め #769",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["体幹", "初心者", "リフレッシュ"]
+    },
+    {
+      "id": "7Gm6KkTrHN0",
+      "title": "【毎日12分】首・肩・背中のこりがみるみる軽くなるヨガ #768",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "背中", "疲労回復"]
+    },
+    {
+      "id": "5BjJNy-NY_U",
+      "title": "【6分】寝たままでできるやさしい夜ヨガ｜疲れを癒してぐっすり安眠 #778",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["夜", "寝る前", "リラックス", "疲労回復"]
+    },
+    {
+      "id": "rIdOXfeiCD0",
+      "title": "【15分全身ピラティス】しなやかに整う｜柔軟性アップ×コア強化｜Yuka",
+      "channel": "b-flow-studio",
+      "duration_min": 15,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹", "柔軟性", "全身"]
+    },
+    {
+      "id": "_OifqN0tBzM",
+      "title": "【20分陰ヨガ】自律神経を整える｜緊張を解き放ち心身をリセット｜Chiori",
+      "channel": "b-flow-studio",
+      "duration_min": 25,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経", "リラックス", "柔軟性"]
     }
   ]
 }

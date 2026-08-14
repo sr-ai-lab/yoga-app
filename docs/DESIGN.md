@@ -1,11 +1,16 @@
 # B-flow ヨガ動画推薦Webアプリ 設計ドキュメント
 
-**バージョン**: 1.1(実装前設計・レビュー反映済み)
+**バージョン**: 1.2(実装中・実データ投入準備済み)
 **目的**: このドキュメントをClaude Codeに渡し、実装を依頼できる状態にする。
 **前提**: コードはまだ書かれていない。本ドキュメントが唯一の正式仕様である。初期要求書は [docs/REQUIREMENTS.md](./REQUIREMENTS.md) を参照(参考資料。矛盾がある場合は本ドキュメントを優先)。
 
 ## 変更履歴
 
+- **v1.2(2026-08-14)**: 実データ投入準備(Step 7)に伴う整理
+  1. 旧B-lifeチャンネルは、YouTube Data API(`channels.list`, `forHandle`)による公式確認の結果、現在の B-Flow(`@bflowyoga`)と同一チャンネルであることが確定したため、動画データ上の分類を `b-flow` へ統一(旧: `b-flow` / `b-life` / `b-flow-studio` の3分類 → `b-flow` / `b-flow-studio` の2分類)
+  2. 動画取得元を実チャンネル数に合わせて **B-Flow / B-Flow Studio の2チャンネル**に整理(§9.2)
+  3. 公式APIで確認した実際のchannel IDを反映: B-Flow = `UCd0pUnH7i5CM-Y8xRe7cZVg`、B-Flow Studio = `UCaf8CNoK0GuCvjPDeint_1g`(channel IDは公開識別子のため、APIキーとは異なり本ドキュメント・リポジトリに直接記載してよいものとして扱う)
+  4. 上記に伴い、旧§14「旧B-lifeチャンネルの動画とB-flowの重複」の項目は解消したため未決定事項から削除
 - **v1.1(2026-08-14)**: 設計レビューの指摘を反映
   1. リポジトリ名を `bflow-yoga`(仮)から実際の `yoga-app` に統一
   2. コース生成の再抽選に最大20回の上限を追加し、上限到達時はフォールバックへ進む仕様を明記(§6.3)
@@ -20,7 +25,7 @@
 
 > スマートフォンから **2タップ** で「今日やるヨガ」が決まり、そのままYouTubeで再生できるWebアプリ。
 
-- 対象動画: B-flow / 旧B-life / B-flow Studio の **一般公開・無料視聴可能な動画のみ**
+- 対象動画: B-flow / B-flow Studio の **一般公開・無料視聴可能な動画のみ**(旧B-life時代の動画も、公式APIで確認済みの同一チャンネルであるB-flowの一部として扱う)
 - 利用者: **主に本人**が利用するが、PublicなWebアプリとして**第三者も利用可能**。ログイン・個人情報なし(誰が使っても端末のlocalStorage以外に何も残らない)
 - ホスティング: GitHub Pages(Publicリポジトリ、静的サイト、サーバーレス)
 - 保守: Claude Codeによる半自動更新を前提としたデータ・ドキュメント構成
@@ -185,7 +190,7 @@ yoga-app/                        ← リポジトリ名
     {
       "id": "AbCdEfGhIjK",
       "title": "朝ヨガで心地よく1日を始める☀ 初心者にもおすすめ",
-      "channel": "b-life",
+      "channel": "b-flow",
       "duration_min": 12,
       "intensity": 1,
       "type": "main",
@@ -199,7 +204,7 @@ yoga-app/                        ← リポジトリ名
 |---|---|---|---|
 | `id` | string | ✔ | YouTube動画ID(11文字)。URL・サムネイルはここから生成 |
 | `title` | string | ✔ | 動画タイトル(そのまま転記) |
-| `channel` | string | ✔ | `b-flow` / `b-life` / `b-flow-studio` のいずれか |
+| `channel` | string | ✔ | `b-flow` / `b-flow-studio` のいずれか(旧B-life時代の動画も`b-flow`に含む) |
 | `duration_min` | number | ✔ | 分単位・整数(四捨五入) |
 | `intensity` | number | ✔ | 1=ゆるい / 2=ふつう / 3=しっかり |
 | `type` | string | ✔ | `warmup` / `main` / `cooldown` / `meditation` |
@@ -448,13 +453,14 @@ https://www.youtube.com/watch_videos?video_ids={id1},{id2},{id3}
 ```json
 {
   "channels": [
-    { "name": "b-flow",        "channel_id": "(実装時に取得して記入)" },
-    { "name": "b-life",        "channel_id": "(実装時に取得して記入)" },
-    { "name": "b-flow-studio", "channel_id": "(実装時に取得して記入)" }
+    { "name": "b-flow",        "channel_id": "UCd0pUnH7i5CM-Y8xRe7cZVg" },
+    { "name": "b-flow-studio", "channel_id": "UCaf8CNoK0GuCvjPDeint_1g" }
   ],
   "rss_url_template": "https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
 }
 ```
+
+channel IDはYouTube Data API(`channels.list`, `forHandle=bflowyoga` / `forHandle=bflowstudio`)により公式確認済み(2026-08-14)。channel IDは公開識別子でありAPIキーのような秘密情報ではないため、本ドキュメント・リポジトリに直接記載してよいものとして扱う。
 
 ### 9.3 fetch-new.mjs の仕様
 
@@ -607,7 +613,7 @@ git add data/ && git commit -m "add videos" && git push
 3. **YouTubeデータの扱い**: リポジトリに保存するのは「動画ID・タイトル・長さ」という事実データと**自作の分類**のみ。APIレスポンスの丸ごと保存・再配布はしない。この整理をREADMEに明記する
 4. **著作権**: 動画の埋め込み・ダウンロードはせず、YouTube公式ページ/アプリへのリンクのみ。サムネイルもYouTube提供の公式URLを参照するだけ
 5. **無料視聴可否の担保**: 「videos.jsonに載せる前に人間が視聴可否を確認する」を運用ルールとし、UPDATE.mdの手順に組み込み済み(§10.1 手順2)
-6. **第三者利用に関する表示**: 第三者も利用可能なPublicアプリとするため、READMEおよびアプリのフッターに「本アプリは非公式の個人プロジェクトであり、B-flow / B-life 各チャンネルとは無関係であること」「動画の権利は各チャンネルに帰属し、本アプリはYouTubeへのリンク集であること」を明記する。チャンネル名をアプリ名に含める場合は誤認を招かない表現にする(§14の名称決定時に考慮)
+6. **第三者利用に関する表示**: 第三者も利用可能なPublicアプリとするため、READMEおよびアプリのフッターに「本アプリは非公式の個人プロジェクトであり、B-flow / B-flow Studio 各チャンネルとは無関係であること」「動画の権利は各チャンネルに帰属し、本アプリはYouTubeへのリンク集であること」を明記する。チャンネル名をアプリ名に含める場合は誤認を招かない表現にする(§14の名称決定時に考慮)
 7. **Public化前のGit履歴チェック**: 現在はPrivateリポジトリで開発し、完成後にPublicへ切り替える運用とする。切り替える前に、リポジトリの全コミット履歴を対象に秘密情報(APIキー・トークン等)が含まれていないかを必ず確認する。
    - `git log -p -- .env` 等、APIキーを含みうるファイルの履歴を直接確認する
    - 可能であれば gitleaks 等のシークレットスキャンツールをリポジトリ全体に対して実行する
@@ -666,9 +672,7 @@ git add data/ && git commit -m "add videos" && git push
 
 | # | 項目 | 対応方針 |
 |---|---|---|
-| 1 | 3チャンネルのchannel_id | 実装時に各チャンネルページから取得し config.json に記入 |
-| 2 | oEmbedでのメンバー限定動画の判定可否 | 実装時に実データで検証。不可なら目視確認運用 |
-| 3 | アプリ名・アイコン | 仮称「今日のヨガ」。カエルアイコン等、公開前に決定 |
-| 4 | 旧B-lifeチャンネルの動画とB-flowの重複 | 初回データ構築時に、同一タイトル・同一内容の動画がないか確認し、ある場合は新しいチャンネル側を採用 |
-| 5 | 60分コースの4本構成の使用感 | MVP検証期間に実際に使って、3本構成に固定するか判断 |
-| 6 | YouTubeアプリなし環境でのwatch_videos挙動 | 実装時にブラウザ版YouTubeでの一時リスト再生を実機検証(§13 Step 3)。挙動が異なる場合も個別リンクで代替可能なため、結果のみREADMEに記録 |
+| 1 | oEmbedでのメンバー限定動画の判定可否 | 実装時に実データで検証。不可なら目視確認運用 |
+| 2 | アプリ名・アイコン | 仮称「今日のヨガ」。カエルアイコン等、公開前に決定 |
+| 3 | 60分コースの4本構成の使用感 | MVP検証期間に実際に使って、3本構成に固定するか判断 |
+| 4 | YouTubeアプリなし環境でのwatch_videos挙動 | 実装時にブラウザ版YouTubeでの一時リスト再生を実機検証(§13 Step 3)。挙動が異なる場合も個別リンクで代替可能なため、結果のみREADMEに記録 |
