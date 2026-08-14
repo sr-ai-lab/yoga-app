@@ -1,0 +1,335 @@
+:root {
+  --color-bg: #faf7f2;
+  --color-text: #2b2b2b;
+  --color-primary: #4a7c59;
+  --color-primary-dark: #345c40;
+  --color-surface: #ffffff;
+  --color-border: #ddd6c9;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  padding-bottom: 96px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 8px 0 24px;
+}
+
+h2 {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+.screen {
+  display: block;
+}
+
+.screen[hidden] {
+  display: none;
+}
+
+/* 時間チップ */
+.time-select {
+  margin-bottom: 28px;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  flex: 1 1 auto;
+  min-width: 56px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.chip.selected {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* モードボタン */
+.mode-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mode-button {
+  position: relative;
+  min-height: 64px;
+  padding: 12px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.mode-button:active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.mode-button--last-used {
+  border-color: var(--color-primary);
+  border-width: 2px;
+}
+
+.last-used-badge {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  min-width: auto;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* 結果画面 */
+.back-button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  color: var(--color-primary-dark);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.result-condition {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 16px;
+}
+
+.video-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.video-thumb-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #e5e0d4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext x='12' y='16' font-size='12' text-anchor='middle'%3E%F0%9F%A7%98%3C/text%3E%3C/svg%3E") center/48px no-repeat;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-thumb.broken {
+  visibility: hidden;
+}
+
+.video-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+
+.video-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 14px;
+}
+
+.play-button {
+  display: block;
+  min-height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 10px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.result-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.retry-button,
+.toggle-course-button {
+  flex: 1 1 0;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.no-candidates {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* コース表示 */
+.course-fallback-note {
+  background: #fff4e5;
+  border: 1px solid #e8c98a;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #7a5a20;
+  font-size: 0.85rem;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.course-card {
+  margin-bottom: 16px;
+}
+
+.course-list {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.course-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.course-item-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.course-thumb {
+  width: 96px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #e5e0d4;
+  flex-shrink: 0;
+}
+
+.course-thumb.broken {
+  visibility: hidden;
+}
+
+.course-item-info {
+  min-width: 0;
+}
+
+.course-item-role {
+  font-size: 0.75rem;
+  color: var(--color-primary-dark);
+  font-weight: bold;
+  margin: 0 0 4px;
+}
+
+.course-item-title {
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.course-total {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* まとめて再生(画面下部固定) */
+.play-all-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+  background: linear-gradient(to top, var(--color-bg) 65%, transparent);
+}
+
+.play-all-bar[hidden] {
+  display: none;
+}
+
+.play-all-button {
+  display: block;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 52px;
+  line-height: 52px;
+  text-align: center;
+  border-radius: 12px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今日のヨガ(仮) - ヨガ動画推薦</title>
+<meta name="theme-color" content="#4a7c59">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="今日のヨガ">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <section id="top-screen" class="screen">
+    <h1>🐸 今日のヨガ</h1>
+
+    <section class="time-select">
+      <h2>時間</h2>
+      <div class="chip-group" id="time-chips" role="group" aria-label="時間を選択"></div>
+    </section>
+
+    <section class="mode-select">
+      <h2>今日はどうする?</h2>
+      <div class="mode-grid" id="mode-grid" role="group" aria-label="モードを選択"></div>
+    </section>
+  </section>
+
+  <section id="result-screen" class="screen" hidden>
+    <button id="back-button" class="back-button" type="button">← もどる</button>
+    <p id="result-condition" class="result-condition"></p>
+
+    <!-- 単発表示(20分以下、または「1本にする」選択時) -->
+    <div id="video-card" class="video-card" hidden>
+      <div class="video-thumb-wrap">
+        <img id="video-thumb" class="video-thumb" alt="">
+      </div>
+      <p id="video-title" class="video-title"></p>
+      <p id="video-meta" class="video-meta"></p>
+      <a id="video-play" class="play-button" target="_blank" rel="noopener">▶ 再生</a>
+    </div>
+
+    <!-- コース表示(30分以上のデフォルト) -->
+    <p id="course-fallback-note" class="course-fallback-note" hidden>
+      条件に合うコースを組めなかったため、1本の動画を代わりに提案しています。
+    </p>
+    <div id="course-card" class="course-card" hidden>
+      <ol id="course-list" class="course-list"></ol>
+      <p id="course-total" class="course-total"></p>
+    </div>
+
+    <p id="no-candidates" class="no-candidates" hidden>
+      条件に合う動画が見つかりませんでした。時間かモードを変えてお試しください。
+    </p>
+
+    <div class="result-actions">
+      <button id="retry-button" class="retry-button" type="button" hidden>🔀 別の提案</button>
+      <button id="toggle-course-button" class="toggle-course-button" type="button" hidden>1本にする</button>
+    </div>
+  </section>
+
+  <div id="play-all-bar" class="play-all-bar" hidden>
+    <a id="play-all-button" class="play-all-button" target="_blank" rel="noopener">▶ まとめて再生</a>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

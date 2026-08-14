@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-14",
+  "videos": [
+    {
+      "id": "SAMPLE00001",
+      "title": "[サンプル]朝ヨガで心地よく目覚める",
+      "channel": "b-life",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝", "全身", "初心者", "リフレッシュ"]
+    },
+    {
+      "id": "SAMPLE00002",
+      "title": "[サンプル]肩こり解消フロー",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["肩", "首", "背中", "中級"]
+    },
+    {
+      "id": "SAMPLE00003",
+      "title": "[サンプル]寝る前のリラックスヨガ",
+      "channel": "b-flow-studio",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["寝る前", "リラックス", "自律神経"]
+    },
+    {
+      "id": "SAMPLE00004",
+      "title": "[サンプル]しっかり動く体幹トレーニング",
+      "channel": "b-flow",
+      "duration_min": 25,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力", "全身", "中級"]
+    },
+    {
+      "id": "SAMPLE00005",
+      "title": "[サンプル]腰・股関節をほぐすストレッチ",
+      "channel": "b-life",
+      "duration_min": 15,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["腰", "股関節", "骨盤", "柔軟性"]
+    },
+    {
+      "id": "SAMPLE00006",
+      "title": "[サンプル]5分間の朝の目覚めウォームアップ",
+      "channel": "b-flow",
+      "duration_min": 5,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝", "全身", "初心者"]
+    },
+    {
+      "id": "SAMPLE00007",
+      "title": "[サンプル]呼吸を整える瞑想タイム",
+      "channel": "b-flow-studio",
+      "duration_min": 8,
+      "intensity": 1,
+      "type": "meditation",
+      "tags": ["自律神経", "リラックス", "寝る前"]
+    },
+    {
+      "id": "SAMPLE00008",
+      "title": "[サンプル]むくみ解消・脚すっきりヨガ",
+      "channel": "b-life",
+      "duration_min": 18,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚", "むくみ", "デトックス", "柔軟性"]
+    },
+    {
+      "id": "SAMPLE00009",
+      "title": "[サンプル]全身をしっかり伸ばすクールダウン",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["全身", "柔軟性", "疲労回復"]
+    },
+    {
+      "id": "SAMPLE00010",
+      "title": "[サンプル]夜のリフレッシュフロー",
+      "channel": "b-flow-studio",
+      "duration_min": 30,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["夜", "リフレッシュ", "全身", "中級"]
+    }
+  ]
+}

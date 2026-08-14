@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "modes": [
+    {
+      "id": "stretch",
+      "label": "ゆるくほぐす",
+      "intensity": { "1": 10, "2": 4, "3": 0 },
+      "tag_weights": { "全身": 5, "柔軟性": 5, "疲労回復": 4, "リフレッシュ": 3 },
+      "main_types": ["main", "cooldown"]
+    },
+    {
+      "id": "active",
+      "label": "しっかり動く",
+      "intensity": { "1": 0, "2": 5, "3": 10 },
+      "tag_weights": { "筋力": 5, "体幹": 5, "全身": 4, "デトックス": 3 },
+      "main_types": ["main"]
+    },
+    {
+      "id": "shoulder_neck",
+      "label": "肩・首",
+      "intensity": { "1": 6, "2": 6, "3": 2 },
+      "tag_weights": { "肩": 10, "首": 10, "背中": 5 },
+      "main_types": ["main", "cooldown"]
+    },
+    {
+      "id": "hip_lower",
+      "label": "腰・股関節",
+      "intensity": { "1": 6, "2": 6, "3": 2 },
+      "tag_weights": { "腰": 10, "股関節": 10, "骨盤": 8, "脚": 4 },
+      "main_types": ["main", "cooldown"]
+    },
+    {
+      "id": "relax",
+      "label": "リラックス",
+      "intensity": { "1": 10, "2": 3, "3": 0 },
+      "tag_weights": { "リラックス": 10, "自律神経": 8, "寝る前": 6, "疲労回復": 4 },
+      "main_types": ["main", "cooldown", "meditation"]
+    },
+    {
+      "id": "random",
+      "label": "おまかせ",
+      "intensity": { "1": 5, "2": 5, "3": 5 },
+      "tag_weights": {},
+      "main_types": ["main"]
+    }
+  ],
+  "time_of_day_bonus": {
+    "morning": { "hours": [4, 10], "tags": { "朝": 4 } },
+    "night": { "hours": [20, 27], "tags": { "夜": 3, "寝る前": 4 } }
+  }
+}
