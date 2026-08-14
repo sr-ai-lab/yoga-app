@@ -27,6 +27,19 @@ body {
   padding-bottom: 96px;
 }
 
+.app-footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: #999;
+}
+
 h1 {
   font-size: 1.4rem;
   text-align: center;

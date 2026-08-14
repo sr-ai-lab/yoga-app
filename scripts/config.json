@@ -1,0 +1,8 @@
+{
+  "channels": [
+    { "name": "b-flow", "channel_id": "(実装時に取得して記入)" },
+    { "name": "b-life", "channel_id": "(実装時に取得して記入)" },
+    { "name": "b-flow-studio", "channel_id": "(実装時に取得して記入)" }
+  ],
+  "rss_url_template": "https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+}
