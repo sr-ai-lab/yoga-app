@@ -1,0 +1,1088 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-15",
+  "channels": {
+    "b-flow": {
+      "channel_id": "UCd0pUnH7i5CM-Y8xRe7cZVg",
+      "uploads_playlist_id": "UUd0pUnH7i5CM-Y8xRe7cZVg",
+      "video_count": 945,
+      "next_page_token": "EAAaH1BUOkNNZ0JJaEE1TnpnMU56UTNSVEkzTUVNMlEwSXc",
+      "fully_scanned": false
+    },
+    "b-flow-studio": {
+      "channel_id": "UCaf8CNoK0GuCvjPDeint_1g",
+      "uploads_playlist_id": "UUaf8CNoK0GuCvjPDeint_1g",
+      "video_count": 295,
+      "next_page_token": null,
+      "fully_scanned": true
+    }
+  },
+  "processed": {
+    "st2NcTI8sYY": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "PKZVVsshAuA": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "XAIyM9_YvsU": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "sTF_0B2_IFo": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "jkJ_YWAOu9Y": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "3TtGXFdqihU": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "QQZYAKyrB8g": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "GrHIGqeLcf4": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "VkbGKJl8RQY": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "5Karb8vHHwY": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "UvWXo-1bJvw": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "liPaxILZ2Js": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "4L9c972FRYc": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "ERvwb9K7nnM": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "3Onj5J0gBBY": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch1"
+    },
+    "N-1JHRQC6cE": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "Na61jHmFLJ0": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "Cx0T3B5dpY4": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "f5Qt5TI5ebA": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "kVpvhgWbRdo": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "pQPNDooRPnI": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "p4C0M-jArHQ": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "1kdoIm9gIGs": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "BlJpibXWjzs": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch1"
+    },
+    "0_kxWgQfozg": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "XGzvp5R2kZ8": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "Ai3iTYE1jGo": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch1"
+    },
+    "iF6kEb32ajI": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "1ZwoDuQsyqM": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "E8Yy_YeNvqg": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "ghRcigrapwo": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "2YvenpNR3dQ": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "zPOxBf989Ew": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "dC-8IjZjTDE": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "g8bZJc0FE64": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "D9L4__SdLFg": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "oigVVLQiUlA": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "CpOO2JVy8Oo": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "_QXcexhD27I": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "80nON7tlnlw": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "yKnt1Vf-6fc": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "Q6Gkf5kKeus": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "3LjDMpkLh3M": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "v1Jyw9aHRIE": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "s6poDXmdQhQ": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "xbGpMsMyzRM": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "wAFtYVj0Frs": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "e5XqOAfuyVI": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "CddjNFlEn4Y": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "lmV9LewqZ5c": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "ugM40HjKjxo": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "AoFsBdN4iw8": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "vcswYh1murI": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "aBZeBASyCYs": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "BmeVLAQ-SAw": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "1VINYPCLqrs": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "UMCpYzllKRo": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "Io4bw2T3fR4": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "Pwn3PZZ9754": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "kO-3aNbttmQ": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "UfRZ8WbG2nM": {
+      "status": "candidate",
+      "channel": "b-flow",
+      "deferred_reason": "meditation_out_of_scope"
+    },
+    "rgvF1ODDxCg": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "M1TQTuFa-Lo": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "44xIw7UzcnY": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "moyFAcThOng": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch1"
+    },
+    "OeisNBZhVrs": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "tgUuVWpL9gY": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "AwifDGij6b8": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch1"
+    },
+    "HRQGhDGfH2w": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "_BRIDFAA8U4": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "KmWGt7VK2DM": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "hI9XRg4uaLY": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "TDe5YypXUis": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "mRLtCdR9z4Q": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "kIvKQhgEtEU": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "5jLAeAJLRWE": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "JOELTIsle_0": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "-s4H0l_onpU": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "D0LS8rVto0o": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "-n4pse-F2gw": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "xSOL_ztm4aI": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "dVdxe9LQ318": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "_DhoZgiNTA4": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "YHso7FXStl8": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "_GBSPMuWa_g": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "l7ALnzigwIo": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "O37UoYdp6_I": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "iF03HbT7Ggw": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "BYzCRp4iIWI": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "EZIruVnU08c": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "Zyl0PhhNiNo": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "TL4Jb7d4zFU": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "uuOWcRwLRtE": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "jSNIl4rWBZQ": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "ldQdodnis1k": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "sd9d1ItsD3k": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "uYG0uXMzlEA": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "ySoQsXQjR2U": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "A1V7C6j05qE": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "cw4oxYa8vgQ": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "wtX9c4vlkMs": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "5UxaqHF2NTg": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "63BFLly5NiA": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "yAAlgeUtbjI": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "ePJOasZp3CQ": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "pds0p81Rhhw": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "12AHkdvUMLc": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch1"
+    },
+    "DDUXeUrVkXM": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "DwsGt767Oe4": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "vZZONYVF1rI": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "5vBox42Te_Y": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "hP_wkNWIIcw": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "A5Cskg0RQzU": {
+      "status": "candidate",
+      "channel": "b-flow",
+      "deferred_reason": "intensity_unclear"
+    },
+    "j60sH_oUzsQ": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch1"
+    },
+    "g18COTMQRR0": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "4l5mTWAvX4I": {
+      "status": "candidate",
+      "channel": "b-flow",
+      "deferred_reason": "intensity_unclear"
+    },
+    "BxiQIFon4v8": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "3d5X6-G40yg": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "pH17nf9Ey3I": {
+      "status": "candidate",
+      "channel": "b-flow",
+      "deferred_reason": "intensity_unclear"
+    },
+    "FDivwThGCyg": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "z4h3OH_VcVU": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "M_2aTeTrRzg": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "Hg6AKETdYEc": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "gzDFchGqA34": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "ZCIoX1QLQHg": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "Z_Ssk7kR8yw": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "shhGflhYFfk": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "ZTzyKyATBlQ": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "v2YwcuW8rQs": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "zbyGh6bv9Oc": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "xvrIxDH6REM": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch1"
+    },
+    "b7J6Df1XK8k": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "yZK7WReA15I": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "lPnsVF1_ZZE": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "FQixMwPy7D0": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "1R0L2LQ4rso": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "VgSIKD6Ou78": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "AxLzmtnsdCk": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "grD9NGRtGiQ": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "bEYWRAQmIUc": {
+      "status": "rejected",
+      "reason": "shorts_or_too_short",
+      "channel": "b-flow"
+    },
+    "o9FPXY1-n5E": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch4"
+    },
+    "WZpCNEo9zQU": {
+      "status": "rejected",
+      "reason": "live_or_unknown_duration",
+      "channel": "b-flow"
+    },
+    "m5j9hIK2rT0": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "Md4PbJ3bjmU": {
+      "status": "rejected",
+      "reason": "live_or_unknown_duration",
+      "channel": "b-flow"
+    },
+    "Xo6UVLJBrHM": {
+      "status": "rejected",
+      "reason": "shorts_or_too_short",
+      "channel": "b-flow"
+    },
+    "gya60twQ9NE": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "1MppTkrS8vo": {
+      "status": "rejected",
+      "reason": "live_or_unknown_duration",
+      "channel": "b-flow"
+    },
+    "qCXWBJIzzN0": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "SfjcBDYWjp8": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "26aFrEzofnk": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "D8-1GqmNVog": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "MHf1NzCoSl0": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "z8H0phQIts0": {
+      "status": "rejected",
+      "reason": "live_or_unknown_duration",
+      "channel": "b-flow"
+    },
+    "YG9uVQrCxLo": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "6p1wgbNwcco": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "szQ2ujCZW1Y": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "UNvYcv5Vt-Y": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "y9HUGCm5A9Q": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "lHfkxI999P0": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "POZUCZEJwdk": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "xgI-P4pEPKI": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "OZsX74wClOg": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow"
+    },
+    "tt4ebHvAppg": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch3"
+    },
+    "mKDFHEaubUE": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "jaVX7qwKQXI": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch1"
+    },
+    "cMspgXtU1Mw": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "DNVoqNbxAbg": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "BrNGGu2J-6Q": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "cYvLdBbLh-s": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "uRcdRKqHYOA": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "qpYQnsuqe3o": {
+      "status": "candidate",
+      "channel": "b-flow",
+      "deferred_reason": "intensity_unclear"
+    },
+    "cM-kaD7RLIs": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "O7ZzxN3biKA": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "To1yijqZCCE": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "3Gec0zeu9fY": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "JL_FLZLyz2o": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "ITqRzhPvLgE": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "HfhyZCN-KPg": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "XXZ7gWeFwik": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "FdoSHCnJjMo": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "yEae_CNIcxU": {
+      "status": "rejected",
+      "reason": "too_long_over_60min",
+      "channel": "b-flow"
+    },
+    "84PPlvnh6a0": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "KdrsbM_nZ64": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "7xK0WSveK9Q": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "8FX9ZwDvf_0": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "y2xMLAF0XFg": {
+      "status": "accepted",
+      "channel": "b-flow",
+      "batch": "batch2"
+    },
+    "nRvSBd_h0Eg": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "URL0Lhk5hO4": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "K7cjZIz1HZ0": {
+      "status": "candidate",
+      "channel": "b-flow"
+    },
+    "ZmZEZKTK9HU": {
+      "status": "rejected",
+      "reason": "interview",
+      "channel": "b-flow-studio"
+    },
+    "K0oKrL-2B5w": {
+      "status": "rejected",
+      "reason": "interview",
+      "channel": "b-flow-studio"
+    },
+    "CL5psaqBQFs": {
+      "status": "rejected",
+      "reason": "interview",
+      "channel": "b-flow-studio"
+    },
+    "PzsvmBKL5sk": {
+      "status": "rejected",
+      "reason": "talk_or_announcement_no_exercise",
+      "channel": "b-flow-studio"
+    },
+    "fqhwlH0WF_0": {
+      "status": "rejected",
+      "reason": "interview",
+      "channel": "b-flow-studio"
+    },
+    "WAwriSqVpHU": {
+      "status": "rejected",
+      "reason": "live_or_unknown_duration",
+      "channel": "b-flow-studio"
+    },
+    "4vAOB1Od81Y": {
+      "status": "rejected",
+      "reason": "interview",
+      "channel": "b-flow-studio"
+    },
+    "GCznZwzD26s": {
+      "status": "rejected",
+      "reason": "interview",
+      "channel": "b-flow-studio"
+    },
+    "r60Xez1bZjU": {
+      "status": "rejected",
+      "reason": "interview",
+      "channel": "b-flow-studio"
+    },
+    "7VzgcqFRl2o": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "cynNU0tWWBU": {
+      "status": "rejected",
+      "reason": "interview",
+      "channel": "b-flow-studio"
+    },
+    "hQw_BrlrMU4": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "l1CJSLUveQ4": {
+      "status": "rejected",
+      "reason": "interview",
+      "channel": "b-flow-studio"
+    },
+    "LHM0cyAg2AY": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch2"
+    },
+    "Xh8x5W8tBHI": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch2"
+    },
+    "Q3mtaFdf7tk": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "urRQZYwc07E": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch2"
+    },
+    "obARE8HkK4s": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "2VGKxo6BZKk": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "ywwzeCYO54E": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "rafisYa39VQ": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "l8ohVSLdgcA": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "__gBISl5xmU": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "BQGx9aVMUxM": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "JZXDJzP4umw": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "jiNc1qYgEW0": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "1tMVOFjjERg": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "M8RSrOeBO3c": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "gkZtsIMuEc8": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "AfXrBzobNd0": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "Eio8RCD9b94": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch2"
+    },
+    "cYL3_1H_UX4": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch2"
+    },
+    "ktH-z3lzBdo": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "G0TWbYR0VuE": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "FCzhYvct5gY": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch2"
+    },
+    "ZXzs-qQEIbE": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch3"
+    },
+    "luM4bxfC0Ak": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "e4fjSfyUb1w": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "yR-BTaiUeKM": {
+      "status": "candidate",
+      "channel": "b-flow-studio"
+    },
+    "mVUQoqEI23E": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch2"
+    },
+    "AMI_KtB6c0M": {
+      "status": "accepted",
+      "channel": "b-flow-studio",
+      "batch": "batch1"
+    },
+    "yJL1f2R34-I": {
+      "status": "rejected",
+      "reason": "channel_intro",
+      "channel": "b-flow-studio"
+    }
+  }
+}
