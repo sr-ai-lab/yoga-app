@@ -20,6 +20,7 @@
       "label": "肩・首",
       "intensity": { "1": 6, "2": 6, "3": 2 },
       "tag_weights": { "肩": 10, "首": 10, "背中": 5 },
+      "primary_tags": ["肩", "首", "背中"],
       "main_types": ["main", "cooldown"]
     },
     {
@@ -27,6 +28,7 @@
       "label": "腰・股関節",
       "intensity": { "1": 6, "2": 6, "3": 2 },
       "tag_weights": { "腰": 10, "股関節": 10, "骨盤": 8, "脚": 4 },
+      "primary_tags": ["腰", "股関節", "骨盤", "脚"],
       "main_types": ["main", "cooldown"]
     },
     {

@@ -66,11 +66,17 @@ const state = {
   modes: [],
   timeOfDayBonus: {},
   videos: [],
+  allPrimaryTags: new Set(), // 全モードのprimary_tagsの和集合(Tier分類用)
   currentMode: null,
   courseModePreferred: true, // 「コースにする/1本にする」トグルの現在値
   currentPool: [], // 単発推薦: [{ video, score }] 上位5件
   shownIds: new Set(), // 単発推薦: 現在のプール内で提案済みのID
 };
+
+// Tier分類の対象外(従来どおりスコア+重み付きランダムのみ)
+const TIERLESS_MODE_IDS = ["random"];
+// Tier1が1件でもあればTier1のみを使う強いゲーティング対象
+const STRICT_TIER_MODE_IDS = ["shoulder_neck", "hip_lower"];
 
 const topScreen = document.getElementById("top-screen");
 const resultScreen = document.getElementById("result-screen");
@@ -159,9 +165,13 @@ function durationFit(video, minutes) {
   return Math.max(3 - diff, 0);
 }
 
+function getTagScore(video, mode) {
+  return video.tags.reduce((sum, tag) => sum + (mode.tag_weights[tag] || 0), 0);
+}
+
 function scoreVideo(video, mode, minutes, now) {
   const intensityScore = mode.intensity[String(video.intensity)] ?? 0;
-  const tagScore = video.tags.reduce((sum, tag) => sum + (mode.tag_weights[tag] || 0), 0);
+  const tagScore = getTagScore(video, mode);
   const bonus = timeOfDayBonus(video.tags, now);
   const fit = durationFit(video, minutes);
   const jitter = Math.random() * 2;
@@ -189,6 +199,63 @@ function weightedPickExcluding(scoredList, excludeIds) {
   return weightedPick(pool);
 }
 
+// --- Tier分類(design.md §5.3): 部位が明確なモードで無関係な部位の動画を優先度低下させる ---
+
+// tagScore>0: Tier1(一致)。tagScore=0でも他モードのprimary_tagsに触れていなければTier2(中立な補完)。
+// それ以外(別モードの部位に一致)はTier3(別部位の衝突)。
+function classifyTier(video, mode) {
+  if (getTagScore(video, mode) > 0) return 1;
+  const hasConflict = video.tags.some((tag) => state.allPrimaryTags.has(tag));
+  return hasConflict ? 3 : 2;
+}
+
+function splitByTier(scoredList, mode) {
+  const tiers = { 1: [], 2: [], 3: [] };
+  for (const item of scoredList) {
+    tiers[classifyTier(item.video, mode)].push(item);
+  }
+  for (const key of [1, 2, 3]) {
+    tiers[key].sort((a, b) => b.score - a.score);
+  }
+  return tiers;
+}
+
+// 単発推薦・コースmain枠向け: モード種別に応じてTier1/2/3から候補を選ぶ。
+// poolSizeを指定すると件数を上限まで切り詰める(単発推薦の上位5件用)。コース生成ではnullを渡し全件を対象にする。
+function selectTierCandidates(scoredList, mode, poolSize) {
+  if (TIERLESS_MODE_IDS.includes(mode.id)) {
+    const sorted = [...scoredList].sort((a, b) => b.score - a.score);
+    return poolSize ? sorted.slice(0, poolSize) : sorted;
+  }
+
+  const tiers = splitByTier(scoredList, mode);
+
+  if (STRICT_TIER_MODE_IDS.includes(mode.id)) {
+    // Tier1が1件でもあればTier1のみ。0件の場合のみTier2、それも0件ならTier3。
+    const chosen = tiers[1].length > 0 ? tiers[1] : tiers[2].length > 0 ? tiers[2] : tiers[3];
+    return poolSize ? chosen.slice(0, poolSize) : chosen;
+  }
+
+  // ブレンド方式: Tier1を優先し、不足分をTier2、それでも不足すればTier3で補う
+  if (poolSize == null) {
+    return tiers[1].length + tiers[2].length > 0 ? [...tiers[1], ...tiers[2]] : tiers[3];
+  }
+  const blended = [...tiers[1]];
+  if (blended.length < poolSize) blended.push(...tiers[2].slice(0, poolSize - blended.length));
+  if (blended.length < poolSize) blended.push(...tiers[3].slice(0, poolSize - blended.length));
+  return blended;
+}
+
+// コースのwarmup/cooldown枠向け: モード種別によらず中立な補完(Tier1∪Tier2)を優先し、
+// 別部位の動画(Tier3)は両方0件のときの最終手段とする(design.md §6.3)
+function selectSupportSlotCandidates(scoredList, mode) {
+  if (TIERLESS_MODE_IDS.includes(mode.id)) {
+    return scoredList;
+  }
+  const tiers = splitByTier(scoredList, mode);
+  return tiers[1].length + tiers[2].length > 0 ? [...tiers[1], ...tiers[2]] : tiers[3];
+}
+
 // --- 単発推薦(design.md §5) ---
 
 function filterCandidates(minutes, mode, tolerance) {
@@ -211,10 +278,8 @@ function buildCandidatePool(minutes, mode) {
     return [];
   }
 
-  return candidates
-    .map((video) => ({ video, score: scoreVideo(video, mode, minutes, now) }))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, POOL_SIZE);
+  const scored = candidates.map((video) => ({ video, score: scoreVideo(video, mode, minutes, now) }));
+  return selectTierCandidates(scored, mode, POOL_SIZE);
 }
 
 function pickFromPool() {
@@ -285,7 +350,9 @@ function attemptCombination(templateSlots, mode) {
   for (const slot of templateSlots) {
     if (slot.type !== "main") continue;
     const candidates = getMainCandidates(slot.target, mode, now);
-    const picked = weightedPickExcluding(candidates, usedIds);
+    // main枠はモード種別に応じてTier1(一致)を優先・またはTier1のみに絞る(design.md §5.3・§6.3)
+    const tierCandidates = selectTierCandidates(candidates, mode, null);
+    const picked = weightedPickExcluding(tierCandidates, usedIds);
     if (!picked) return null;
     usedIds.add(picked.id);
     mainVideos.push(picked);
@@ -296,7 +363,9 @@ function attemptCombination(templateSlots, mode) {
   if (warmupSlot) {
     const refIntensity = mainVideos.length ? mainVideos[0].intensity : 3;
     const candidates = getWarmupCandidates(warmupSlot.target, mode, refIntensity, now);
-    warmupVideo = weightedPickExcluding(candidates, usedIds);
+    // warmup枠は中立な補完(全身・リラックス等)を許可し、別部位の動画は最終手段とする
+    const tierCandidates = selectSupportSlotCandidates(candidates, mode);
+    warmupVideo = weightedPickExcluding(tierCandidates, usedIds);
     if (!warmupVideo) return null;
     usedIds.add(warmupVideo.id);
   }
@@ -305,7 +374,9 @@ function attemptCombination(templateSlots, mode) {
   const cooldownSlot = templateSlots.find((s) => s.type === "cooldown");
   if (cooldownSlot) {
     const candidates = getCooldownCandidates(cooldownSlot.target, mode, now);
-    cooldownVideo = weightedPickExcluding(candidates, usedIds);
+    // cooldown枠も同様に中立な補完を許可する
+    const tierCandidates = selectSupportSlotCandidates(candidates, mode);
+    cooldownVideo = weightedPickExcluding(tierCandidates, usedIds);
     if (!cooldownVideo) return null;
     usedIds.add(cooldownVideo.id);
   }
@@ -513,6 +584,7 @@ function showNoCandidates() {
 function showTopScreen() {
   resultScreen.hidden = true;
   topScreen.hidden = false;
+  playAllBar.hidden = true;
 }
 
 backButton.addEventListener("click", showTopScreen);
@@ -542,6 +614,7 @@ async function init() {
   state.modes = modesData.modes;
   state.timeOfDayBonus = modesData.time_of_day_bonus;
   state.videos = videosData.videos;
+  state.allPrimaryTags = new Set(state.modes.flatMap((m) => m.primary_tags || []));
 
   renderModeGrid();
 }

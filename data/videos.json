@@ -3,96 +3,6 @@
   "updated": "2026-08-14",
   "videos": [
     {
-      "id": "SAMPLE00001",
-      "title": "[サンプル]朝ヨガで心地よく目覚める",
-      "channel": "b-flow",
-      "duration_min": 12,
-      "intensity": 1,
-      "type": "main",
-      "tags": ["朝", "全身", "初心者", "リフレッシュ"]
-    },
-    {
-      "id": "SAMPLE00002",
-      "title": "[サンプル]肩こり解消フロー",
-      "channel": "b-flow",
-      "duration_min": 20,
-      "intensity": 2,
-      "type": "main",
-      "tags": ["肩", "首", "背中", "中級"]
-    },
-    {
-      "id": "SAMPLE00003",
-      "title": "[サンプル]寝る前のリラックスヨガ",
-      "channel": "b-flow-studio",
-      "duration_min": 10,
-      "intensity": 1,
-      "type": "cooldown",
-      "tags": ["寝る前", "リラックス", "自律神経"]
-    },
-    {
-      "id": "SAMPLE00004",
-      "title": "[サンプル]しっかり動く体幹トレーニング",
-      "channel": "b-flow",
-      "duration_min": 25,
-      "intensity": 3,
-      "type": "main",
-      "tags": ["体幹", "筋力", "全身", "中級"]
-    },
-    {
-      "id": "SAMPLE00005",
-      "title": "[サンプル]腰・股関節をほぐすストレッチ",
-      "channel": "b-flow",
-      "duration_min": 15,
-      "intensity": 2,
-      "type": "main",
-      "tags": ["腰", "股関節", "骨盤", "柔軟性"]
-    },
-    {
-      "id": "SAMPLE00006",
-      "title": "[サンプル]5分間の朝の目覚めウォームアップ",
-      "channel": "b-flow",
-      "duration_min": 5,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": ["朝", "全身", "初心者"]
-    },
-    {
-      "id": "SAMPLE00007",
-      "title": "[サンプル]呼吸を整える瞑想タイム",
-      "channel": "b-flow-studio",
-      "duration_min": 8,
-      "intensity": 1,
-      "type": "meditation",
-      "tags": ["自律神経", "リラックス", "寝る前"]
-    },
-    {
-      "id": "SAMPLE00008",
-      "title": "[サンプル]むくみ解消・脚すっきりヨガ",
-      "channel": "b-flow",
-      "duration_min": 18,
-      "intensity": 2,
-      "type": "main",
-      "tags": ["脚", "むくみ", "デトックス", "柔軟性"]
-    },
-    {
-      "id": "SAMPLE00009",
-      "title": "[サンプル]全身をしっかり伸ばすクールダウン",
-      "channel": "b-flow",
-      "duration_min": 7,
-      "intensity": 1,
-      "type": "cooldown",
-      "tags": ["全身", "柔軟性", "疲労回復"]
-    },
-    {
-      "id": "SAMPLE00010",
-      "title": "[サンプル]夜のリフレッシュフロー",
-      "channel": "b-flow-studio",
-      "duration_min": 30,
-      "intensity": 2,
-      "type": "main",
-      "tags": ["夜", "リフレッシュ", "全身", "中級"]
-    },
-    {
       "id": "pIjgh6PxFd8",
       "title": "【5分】ぽっこりお腹をやさしく解消｜下腹＆ウエスト引き締め #769",
       "channel": "b-flow",
@@ -136,6 +46,123 @@
       "intensity": 1,
       "type": "main",
       "tags": ["自律神経", "リラックス", "柔軟性"]
+    },
+    {
+      "id": "WprSgm-jjeg",
+      "title": "【12分で整う】首こり肩こりをスッキリゆるめるやさしいヨガ #777",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "疲労回復"]
+    },
+    {
+      "id": "SqkgRXvLt_M",
+      "title": "【30分】重だるい体をスッキリ整える｜自律神経リセットヨガ #775",
+      "channel": "b-flow",
+      "duration_min": 33,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["自律神経", "リフレッシュ", "全身"]
+    },
+    {
+      "id": "jLZHZnlHjFc",
+      "title": "【毎日8分】首こり肩こりがスーッと軽くなる癒しヨガ #773",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["肩", "首", "リラックス"]
+    },
+    {
+      "id": "MPmOiN1eYRk",
+      "title": "【朝10分】動いてほぐす全身ストレッチ｜体がスッと軽くなる #770",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["朝", "全身", "リフレッシュ"]
+    },
+    {
+      "id": "M_bMYHTJPC8",
+      "title": "【毎日10分】全身整う！ 骨盤 × 肩こり × 自律神経リセット #766",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["骨盤", "肩", "自律神経"]
+    },
+    {
+      "id": "iDExNhTqads",
+      "title": "【6分】姿勢改善！骨盤底筋ピラティス｜ぽっこりお腹・尿もれ予防 #767",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["骨盤", "体幹", "初心者"]
+    },
+    {
+      "id": "ZbrX6U4YOCQ",
+      "title": "【10分】自律神経を整えるやさしいストレッチ｜深い呼吸と心地よい眠りへ #765",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["自律神経", "リラックス", "寝る前"]
+    },
+    {
+      "id": "lQshaVTKPLE",
+      "title": "【10分】体と心を静かに目覚めさせる｜やさしい朝ヨガ #764",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝", "リラックス", "初心者"]
+    },
+    {
+      "id": "yCCy33oLtvI",
+      "title": "【10分ヨガ】肩まわりスッキリ｜気の巡りを整える手の経絡ヨガ｜Midori",
+      "channel": "b-flow-studio",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "自律神経", "リフレッシュ"]
+    },
+    {
+      "id": "5cBdxSUYMH0",
+      "title": "【朝ヨガ】体がみるみる目覚める☆ 12分で全身スッキリ！｜Chizuru",
+      "channel": "b-flow-studio",
+      "duration_min": 14,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["朝", "全身", "リフレッシュ"]
+    },
+    {
+      "id": "Z8vnLIEk-ZU",
+      "title": "【15分寝たまま】股関節と腰をゆるめるヨガ｜腰痛ケア＆深い眠りへ｜Kayo",
+      "channel": "b-flow-studio",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "腰", "リラックス", "寝る前"]
+    },
+    {
+      "id": "1p37GC_bxHo",
+      "title": "【15分やさしい股関節ヨガ】柔軟性アップで足腰スッキリ｜Mizuki",
+      "channel": "b-flow-studio",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "脚", "柔軟性"]
+    },
+    {
+      "id": "nZrp98_QfYU",
+      "title": "【10分朝ヨガ】寝起きの体をスッキリ整える！全身ほぐしストレッチ｜Kotoe",
+      "channel": "b-flow-studio",
+      "duration_min": 14,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["朝", "全身", "リフレッシュ"]
     }
   ]
 }
