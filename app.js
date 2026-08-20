@@ -452,7 +452,7 @@ function buildRoleLabels(template) {
 // 「今まさに選ばれた結果である」ことが体感的に分かるようにする。
 
 const REVEAL_FADE_OUT_MS = 180; // 前回の結果を消す時間
-const REVEAL_STAGGER_MS = 260; // カード表示の間隔(最大4枚構成でも合計が1.5秒程度に収まる)
+const REVEAL_STAGGER_MS = 330; // カード表示の間隔(最大4枚構成でも合計が1.5秒程度に収まる)
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 let revealGeneration = 0;
