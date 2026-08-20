@@ -153,6 +153,55 @@ h2 {
   margin: 0 0 16px;
 }
 
+/* 検索結果の段階表示演出(表示のみ。推薦・選定ロジックには無関係) */
+.reveal-heading {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--color-primary-dark);
+  margin: -8px 0 12px;
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.reveal-heading.reveal-visible {
+  opacity: 1;
+}
+
+.video-card,
+.course-card {
+  transition: opacity 180ms ease;
+}
+
+.video-card.reveal-fading,
+.course-card.reveal-fading {
+  opacity: 0;
+}
+
+.reveal-item {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 420ms cubic-bezier(0.22, 1, 0.36, 1), transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-item.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-card,
+  .course-card,
+  .reveal-heading,
+  .reveal-item {
+    transition: none;
+  }
+
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .video-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);

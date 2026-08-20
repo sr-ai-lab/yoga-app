@@ -84,6 +84,7 @@ const timeChips = document.getElementById("time-chips");
 const modeGrid = document.getElementById("mode-grid");
 const backButton = document.getElementById("back-button");
 const resultCondition = document.getElementById("result-condition");
+const resultHeading = document.getElementById("result-heading");
 
 const videoCard = document.getElementById("video-card");
 const videoThumb = document.getElementById("video-thumb");
@@ -446,6 +447,93 @@ function buildRoleLabels(template) {
   });
 }
 
+// --- 結果表示の演出(表示専用。上記の推薦・選定ロジックには一切影響しない) ---
+// 選定処理自体は一瞬で終わるため、結果を1枚ずつ順番に表示することで
+// 「今まさに選ばれた結果である」ことが体感的に分かるようにする。
+
+const REVEAL_FADE_OUT_MS = 180; // 前回の結果を消す時間
+const REVEAL_STAGGER_MS = 260; // カード表示の間隔(最大4枚構成でも合計が1.5秒程度に収まる)
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+let revealGeneration = 0;
+let revealTimers = [];
+
+// 連打等で古い演出が新しい演出を上書きしないよう、世代カウンタで無効化する
+function cancelReveal() {
+  revealGeneration++;
+  for (const timer of revealTimers) clearTimeout(timer);
+  revealTimers = [];
+}
+
+// requestAnimationFrameはタブが非表示(バックグラウンド)だと発火しないことがあるため、
+// 短いsetTimeoutを保険として競わせ、演出がハングしないようにする
+function nextFrame(callback) {
+  let done = false;
+  const fire = () => {
+    if (done) return;
+    done = true;
+    callback();
+  };
+  requestAnimationFrame(fire);
+  setTimeout(fire, 50);
+}
+
+// container(video-card/course-card)が表示中なら一度フェードアウトしてからbuildContentで
+// 中身を差し替え、getItemsが返す要素を上から順にフェードインさせる。
+function revealResult({ container, headingText, buildContent, getItems }) {
+  const generation = ++revealGeneration;
+  for (const timer of revealTimers) clearTimeout(timer);
+  revealTimers = [];
+
+  const wasVisible = !container.hidden;
+
+  const start = () => {
+    if (generation !== revealGeneration) return;
+
+    container.classList.remove("reveal-fading");
+    buildContent();
+    container.hidden = false;
+
+    resultHeading.textContent = headingText;
+    resultHeading.hidden = false;
+    resultHeading.classList.remove("reveal-visible");
+
+    const items = getItems();
+    items.forEach((el) => {
+      el.classList.add("reveal-item");
+      el.classList.remove("reveal-visible");
+    });
+
+    if (prefersReducedMotion) {
+      resultHeading.classList.add("reveal-visible");
+      items.forEach((el) => el.classList.add("reveal-visible"));
+      return;
+    }
+
+    // 1フレーム待ってから開始し、opacity:0の初期状態を確実に描画させてからフェードインさせる
+    nextFrame(() => {
+      if (generation !== revealGeneration) return;
+      resultHeading.classList.add("reveal-visible");
+      items.forEach((el, index) => {
+        const timer = setTimeout(() => {
+          if (generation !== revealGeneration) return;
+          el.classList.add("reveal-visible");
+        }, index * REVEAL_STAGGER_MS);
+        revealTimers.push(timer);
+      });
+    });
+  };
+
+  if (wasVisible && !prefersReducedMotion) {
+    container.classList.add("reveal-fading");
+    const timer = setTimeout(start, REVEAL_FADE_OUT_MS);
+    revealTimers.push(timer);
+  } else {
+    container.classList.remove("reveal-fading");
+    start();
+  }
+}
+
 // --- 画面表示 ---
 
 function recommend(mode) {
@@ -507,81 +595,99 @@ function renderCourse() {
 
 function showVideo(video) {
   noCandidates.hidden = true;
-  videoCard.hidden = false;
   retryButton.hidden = false;
 
-  videoThumb.classList.remove("broken");
-  videoThumb.onerror = () => videoThumb.classList.add("broken");
-  videoThumb.src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
-  videoThumb.alt = video.title;
+  revealResult({
+    container: videoCard,
+    headingText: "今日の1本",
+    buildContent: () => {
+      videoThumb.classList.remove("broken");
+      videoThumb.onerror = () => videoThumb.classList.add("broken");
+      videoThumb.src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
+      videoThumb.alt = video.title;
 
-  videoTitle.textContent = video.title;
-  videoMeta.textContent = `${video.channel} ・ ${video.duration_min}分 ・ 強度${video.intensity}`;
-  videoPlay.href = `https://www.youtube.com/watch?v=${video.id}`;
+      videoTitle.textContent = video.title;
+      videoMeta.textContent = `${video.channel} ・ ${video.duration_min}分 ・ 強度${video.intensity}`;
+      videoPlay.href = `https://www.youtube.com/watch?v=${video.id}`;
+    },
+    getItems: () => [videoCard],
+  });
 }
 
 function showCourse({ videos, template }) {
   noCandidates.hidden = true;
-  courseCard.hidden = false;
   retryButton.hidden = false;
-  playAllBar.hidden = false;
 
-  const roleLabels = buildRoleLabels(template);
-  courseList.innerHTML = "";
+  revealResult({
+    container: courseCard,
+    headingText: `今日の${videos.length}本`,
+    buildContent: () => {
+      const roleLabels = buildRoleLabels(template);
+      courseList.innerHTML = "";
 
-  videos.forEach((video, index) => {
-    const li = document.createElement("li");
-    li.className = "course-item";
+      videos.forEach((video, index) => {
+        const li = document.createElement("li");
+        li.className = "course-item";
 
-    const link = document.createElement("a");
-    link.className = "course-item-link";
-    link.href = `https://www.youtube.com/watch?v=${video.id}`;
-    link.target = "_blank";
-    link.rel = "noopener";
+        const link = document.createElement("a");
+        link.className = "course-item-link";
+        link.href = `https://www.youtube.com/watch?v=${video.id}`;
+        link.target = "_blank";
+        link.rel = "noopener";
 
-    const thumb = document.createElement("img");
-    thumb.className = "course-thumb";
-    thumb.alt = video.title;
-    thumb.onerror = () => thumb.classList.add("broken");
-    thumb.src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
+        const thumb = document.createElement("img");
+        thumb.className = "course-thumb";
+        thumb.alt = video.title;
+        thumb.onerror = () => thumb.classList.add("broken");
+        thumb.src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
 
-    const info = document.createElement("div");
-    info.className = "course-item-info";
+        const info = document.createElement("div");
+        info.className = "course-item-info";
 
-    const role = document.createElement("p");
-    role.className = "course-item-role";
-    role.textContent = `${index + 1}. ${roleLabels[index]}`;
+        const role = document.createElement("p");
+        role.className = "course-item-role";
+        role.textContent = `${index + 1}. ${roleLabels[index]}`;
 
-    const title = document.createElement("p");
-    title.className = "course-item-title";
-    title.textContent = `${video.title}(${video.duration_min}分)`;
+        const title = document.createElement("p");
+        title.className = "course-item-title";
+        title.textContent = `${video.title}(${video.duration_min}分)`;
 
-    info.appendChild(role);
-    info.appendChild(title);
-    link.appendChild(thumb);
-    link.appendChild(info);
-    li.appendChild(link);
-    courseList.appendChild(li);
+        info.appendChild(role);
+        info.appendChild(title);
+        link.appendChild(thumb);
+        link.appendChild(info);
+        li.appendChild(link);
+        courseList.appendChild(li);
+      });
+
+      const total = videos.reduce((sum, v) => sum + v.duration_min, 0);
+      courseTotal.textContent = `合計 ${total}分`;
+
+      // まとめて再生: 非公式の watch_videos エンドポイントを使用(design.md §6.4)。
+      // 将来無効化される可能性があるが、上記の個別動画リンクが常にフォールバックとして機能する。
+      const ids = videos.map((v) => v.id).join(",");
+      playAllButton.href = `https://www.youtube.com/watch_videos?video_ids=${ids}`;
+      playAllBar.hidden = false;
+    },
+    getItems: () => Array.from(courseList.children),
   });
-
-  const total = videos.reduce((sum, v) => sum + v.duration_min, 0);
-  courseTotal.textContent = `合計 ${total}分`;
-
-  // まとめて再生: 非公式の watch_videos エンドポイントを使用(design.md §6.4)。
-  // 将来無効化される可能性があるが、上記の個別動画リンクが常にフォールバックとして機能する。
-  const ids = videos.map((v) => v.id).join(",");
-  playAllButton.href = `https://www.youtube.com/watch_videos?video_ids=${ids}`;
 }
 
 function showNoCandidates() {
+  cancelReveal();
+  resultHeading.hidden = true;
   videoCard.hidden = true;
+  videoCard.classList.remove("reveal-fading");
   courseCard.hidden = true;
+  courseCard.classList.remove("reveal-fading");
   playAllBar.hidden = true;
   retryButton.hidden = true;
   noCandidates.hidden = false;
 }
 
 function showTopScreen() {
+  cancelReveal();
+  resultHeading.hidden = true;
   resultScreen.hidden = true;
   topScreen.hidden = false;
   playAllBar.hidden = true;
