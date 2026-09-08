@@ -93,6 +93,13 @@ function validateVideos(videosRaw, videosData, validChannels, validTags) {
         }
       }
     }
+
+    // equipment(任意): 壁・椅子・ブロック等、動画の実施に必要な道具。未設定/空配列=道具なし
+    if (video.equipment !== undefined) {
+      if (!Array.isArray(video.equipment) || video.equipment.some((e) => typeof e !== "string" || e.trim() === "")) {
+        errors.push(`${prefix}: equipment は文字列の配列である必要があります`);
+      }
+    }
   }
 
   return errors;

@@ -136,6 +136,32 @@ h2 {
   line-height: 1.4;
 }
 
+/* 道具なし条件(目立たせすぎない簡易チェック) */
+.equipment-select {
+  margin-top: 16px;
+}
+
+.equipment-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.equipment-checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+}
+
+.equipment-note {
+  margin: 2px 0 0 26px;
+  font-size: 0.75rem;
+  color: #888;
+}
+
 /* 結果画面 */
 .back-button {
   min-height: 44px;

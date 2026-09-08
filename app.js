@@ -71,6 +71,7 @@ const state = {
   courseModePreferred: true, // 「コースにする/1本にする」トグルの現在値
   currentPool: [], // 単発推薦: [{ video, score }] 上位5件
   shownIds: new Set(), // 単発推薦: 現在のプール内で提案済みのID
+  noEquipment: false, // 「道具なし」条件(ONの間、equipment指定のある動画を候補から除外)
 };
 
 // Tier分類の対象外(従来どおりスコア+重み付きランダムのみ)
@@ -97,6 +98,7 @@ const courseCard = document.getElementById("course-card");
 const courseList = document.getElementById("course-list");
 const courseTotal = document.getElementById("course-total");
 
+const noEquipmentCheckbox = document.getElementById("no-equipment-checkbox");
 const noCandidates = document.getElementById("no-candidates");
 const retryButton = document.getElementById("retry-button");
 const toggleCourseButton = document.getElementById("toggle-course-button");
@@ -164,6 +166,16 @@ function timeOfDayBonus(tags, now) {
 function durationFit(video, minutes) {
   const diff = Math.abs(video.duration_min - minutes);
   return Math.max(3 - diff, 0);
+}
+
+// 「道具なし」条件: video.equipmentが未設定・空配列なら道具不要とみなす
+function isEquipmentFree(video) {
+  return !(video.equipment && video.equipment.length > 0);
+}
+
+// state.noEquipmentがOFFなら常にtrue(既存の絞り込み結果に一切影響しない)
+function passesEquipmentFilter(video) {
+  return !state.noEquipment || isEquipmentFree(video);
 }
 
 function getTagScore(video, mode) {
@@ -261,7 +273,10 @@ function selectSupportSlotCandidates(scoredList, mode) {
 
 function filterCandidates(minutes, mode, tolerance) {
   return state.videos.filter(
-    (v) => Math.abs(v.duration_min - minutes) <= tolerance && (mode.intensity[String(v.intensity)] ?? 0) > 0
+    (v) =>
+      Math.abs(v.duration_min - minutes) <= tolerance &&
+      (mode.intensity[String(v.intensity)] ?? 0) > 0 &&
+      passesEquipmentFilter(v)
   );
 }
 
@@ -302,14 +317,21 @@ function getMainCandidates(target, mode, now) {
       (v) =>
         mode.main_types.includes(v.type) &&
         Math.abs(v.duration_min - target) <= target * 0.3 &&
-        (mode.intensity[String(v.intensity)] ?? 0) > 0
+        (mode.intensity[String(v.intensity)] ?? 0) > 0 &&
+        passesEquipmentFilter(v)
     )
     .map((v) => ({ video: v, score: scoreVideo(v, mode, target, now) }));
 }
 
 function getWarmupCandidates(target, mode, maxIntensity, now) {
   return state.videos
-    .filter((v) => v.type === "warmup" && v.intensity <= maxIntensity && Math.abs(v.duration_min - target) <= 3)
+    .filter(
+      (v) =>
+        v.type === "warmup" &&
+        v.intensity <= maxIntensity &&
+        Math.abs(v.duration_min - target) <= 3 &&
+        passesEquipmentFilter(v)
+    )
     .map((v) => {
       const tagScore = v.tags.reduce((sum, tag) => sum + (mode.tag_weights[tag] || 0), 0);
       const bonus = timeOfDayBonus(v.tags, now);
@@ -321,7 +343,7 @@ function getWarmupCandidates(target, mode, maxIntensity, now) {
 
 function getCooldownCandidates(target, mode, now) {
   return state.videos
-    .filter((v) => v.type === "cooldown" || v.type === "meditation")
+    .filter((v) => (v.type === "cooldown" || v.type === "meditation") && passesEquipmentFilter(v))
     .map((v) => {
       const tagScore = v.tags.reduce((sum, tag) => sum + (mode.tag_weights[tag] || 0), 0);
       const bonus = timeOfDayBonus(v.tags, now);
@@ -708,6 +730,10 @@ retryButton.addEventListener("click", () => {
 toggleCourseButton.addEventListener("click", () => {
   state.courseModePreferred = !state.courseModePreferred;
   renderResult();
+});
+
+noEquipmentCheckbox.addEventListener("change", () => {
+  state.noEquipment = noEquipmentCheckbox.checked;
 });
 
 async function init() {

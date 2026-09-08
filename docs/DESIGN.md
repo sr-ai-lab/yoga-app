@@ -214,6 +214,7 @@ yoga-app/                        ← リポジトリ名
 | `intensity` | number | ✔ | 1=ゆるい / 2=ふつう / 3=しっかり |
 | `type` | string | ✔ | `warmup` / `main` / `cooldown` / `meditation` |
 | `tags` | string[] | ✔ | vocabulary.json記載の語のみ。1〜5個 |
+| `equipment` | string[] | 任意 | 実施に壁・椅子・ヨガブロック等の道具/設備が必要な場合のみ設定(例: `["wall"]`)。未設定・空配列は「道具なし」を意味する。vocabulary.jsonの統制語彙とは別枠の任意フィールドで、値は自由記述(現時点でこの語のリストを厳格に統制はしない) |
 
 **持たない項目とその理由**:
 - URL → `https://www.youtube.com/watch?v={id}` で生成(表記ゆれ・重複防止)
