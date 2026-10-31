@@ -139,10 +139,11 @@ async function syncChannel({ channel, mode, client, catalog, rules, vocabularyTa
   }
 
   // 定期更新: 登録済みの動画も最新のメタデータに更新する(削除・非公開の検出と、保存データの鮮度維持のため)
-  const stats = { refreshed: 0, pending_unavailable: 0, newly_unavailable: 0, recovered: 0, purged: 0 };
+  const stats = { checked: 0, refreshed: 0, pending_unavailable: 0, newly_unavailable: 0, recovered: 0, purged: 0 };
   const refreshIds = own.filter(([, e]) => !e.purged).map(([id]) => id);
   if (mode === "incremental" && refreshIds.length > 0) {
     const details = await client.getVideos(refreshIds);
+    stats.checked = refreshIds.length; // 再取得して確認した動画数(変更の有無とは別)
     // 取得結果から漏れた動画は、同じ実行内でもう一度だけ個別に確認する(一時的な取りこぼしの除外)
     const missing = refreshIds.filter((id) => !details.has(id));
     if (missing.length > 0) for (const [id, d] of await client.getVideos(missing)) details.set(id, d);

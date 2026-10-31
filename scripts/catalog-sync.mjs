@@ -146,14 +146,14 @@ async function writeStepSummary(lines) {
 
 function reportToMarkdown(report, build) {
   const lines = ["## 動画データ更新結果", "", `モード: \`${report.mode}\``, ""];
-  lines.push("| チャンネル | 結果 | 一覧取得 | 新規 | 登録 | 保留 | 除外 | メタデータ更新 | 利用不可を確認中 | 利用不可を確定 |", "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|");
+  lines.push("| チャンネル | 結果 | 新着の一覧取得 | 新規 | 登録 | 保留 | 除外 | 登録済みの再確認 | うち内容が変わった | 利用不可を確認中 | 利用不可を確定 |", "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|");
   for (const [name, c] of Object.entries(report.channels)) {
     if (!c.ok) {
-      lines.push(`| ${name} | ❌ 失敗 | - | - | - | - | - | - | - | - |`);
+      lines.push(`| ${name} | ❌ 失敗 | - | - | - | - | - | - | - | - | - |`);
       continue;
     }
     const n = c.new_result ?? {};
-    lines.push(`| ${name} | ✅ | ${c.fetched} | ${c.new} | ${n.registered ?? 0} | ${n.held ?? 0} | ${n.excluded ?? 0} | ${c.refreshed} | ${c.pending_unavailable ?? 0} | ${c.newly_unavailable ?? 0} |`);
+    lines.push(`| ${name} | ✅ | ${c.fetched} | ${c.new} | ${n.registered ?? 0} | ${n.held ?? 0} | ${n.excluded ?? 0} | ${c.checked ?? 0} | ${c.refreshed} | ${c.pending_unavailable ?? 0} | ${c.newly_unavailable ?? 0} |`);
   }
   for (const f of report.failures) lines.push("", `❌ **${f.channel}** の更新に失敗しました: ${f.error}`);
   for (const w of report.warnings) lines.push("", `⚠️ ${w}`);
@@ -238,7 +238,7 @@ async function main() {
     for (const [name, c] of Object.entries(report.channels)) {
       log(
         c.ok
-          ? `[${name}] 取得 ${c.fetched}件 / 新規 ${c.new}件 / メタデータ更新 ${c.refreshed}件 / 利用不可を確認中 ${c.pending_unavailable}件 / 利用不可を確定 ${c.newly_unavailable}件 / 復活 ${c.recovered}件 / 消去 ${c.purged}件`
+          ? `[${name}] 新着の一覧取得 ${c.fetched}件 / 新規 ${c.new}件 / 登録済みの再確認 ${c.checked}件(うち内容が変わったもの ${c.refreshed}件) / 利用不可を確認中 ${c.pending_unavailable}件 / 利用不可を確定 ${c.newly_unavailable}件 / 復活 ${c.recovered}件 / 消去 ${c.purged}件`
           : `[${name}] 失敗: ${c.error}`
       );
     }

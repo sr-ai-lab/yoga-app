@@ -96,6 +96,9 @@ test("定期更新のたびに、台帳の全動画のメタデータを再取�
   const r = await incremental(fakeClient({ channels: w }), base.catalog, { today: "2026-11-08", now });
   assert.equal(r.catalog.videos[id(1)].title, "【10分】肩こり解消ストレッチヨガ(改)");
   assert.equal(r.catalog.videos[id(1)].duration_sec, 720);
+  assert.equal(r.report.channels["chan-a"].checked, 6, "台帳の全動画を再確認する(変更があった数とは別)");
+  assert.equal(r.report.channels["chan-a"].refreshed, 1);
+  assert.equal(r.report.channels["chan-b"].checked, 2);
   assert.equal(r.catalog.channels.UC_A.last_verified, "2026-11-08");
   assert.equal(r.catalog.channels.UC_A.last_verified_at, "2026-11-08T00:00:00.000Z");
   assert.equal(r.catalog.channels.UC_A.video_count_stat, undefined, "統計値は保存しない");
