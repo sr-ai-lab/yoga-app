@@ -49,9 +49,9 @@ python3 -m http.server 4173
 
 0. **(Public化前)** 開発中はPrivateリポジトリのままでよい。Publicに切り替える前に、必ず以下の「Public化前のチェックリスト」を実施する
 1. リポジトリをPublicに切り替える
-2. リポジトリの Settings → Pages → Source を「Deploy from a branch」、Branch を `main` / `/ (root)` に設定
+2. リポジトリの Settings → Pages → Build and deployment → Source を **「GitHub Actions」** に設定(`.github/workflows/deploy-pages.yml` が公開します。データの自動更新後も同じ仕組みで公開されます。詳細は [docs/UPDATE.md](docs/UPDATE.md))
 3. `https://sr-ai-lab.github.io/yoga-app/` で公開される
-4. 以後、`git push` のたびに自動反映(反映まで数分)
+4. 以後、`main` への `git push` と、毎週のデータ自動更新のたびに自動反映(反映まで数分)
 5. スマートフォンでURLを開き、共有メニューから「ホーム画面に追加」
 
 ### Public化前のチェックリスト
@@ -64,8 +64,9 @@ Publicに切り替える前に、リポジトリの全コミット履歴を対�
 
 ## 動画リストの更新
 
-新しい動画の追加・分類の手順は [docs/UPDATE.md](docs/UPDATE.md) にまとめています。
-Claude Codeに「docs/UPDATE.md に従って新着動画を追加して」と依頼することもできます。
+動画データは GitHub Actions が **毎週月曜 9:00(日本時間)に自動更新**します(2つの公式チャンネルの新着を取得し、ライブ・Shorts・運動以外を除外、ルールで自動分類)。
+判断が不確かな動画は「保留」にして推薦せず、[docs/HELD.md](docs/HELD.md) に理由つきで一覧化します。
+初期設定(APIキーとGitHub Secrets)・保留の扱い・手動修正の方法は [docs/UPDATE.md](docs/UPDATE.md) にまとめています。
 
 ## 開発・保守
 

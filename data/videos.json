@@ -1,33 +1,60 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-15",
+  "updated": "2026-10-31",
   "videos": [
     {
-      "id": "pIjgh6PxFd8",
-      "title": "【5分】ぽっこりお腹をやさしく解消｜下腹＆ウエスト引き締め #769",
+      "id": "pKqL-925900",
+      "title": "【10分お尻ほぐし】股関節を柔らかくして骨盤を整える｜足腰スッキリ #784",
       "channel": "b-flow",
-      "duration_min": 6,
-      "intensity": 2,
-      "type": "warmup",
-      "tags": [
-        "体幹",
-        "初心者",
-        "リフレッシュ"
-      ]
-    },
-    {
-      "id": "7Gm6KkTrHN0",
-      "title": "【毎日12分】首・肩・背中のこりがみるみる軽くなるヨガ #768",
-      "channel": "b-flow",
-      "duration_min": 14,
+      "duration_min": 11,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "肩",
-        "首",
-        "背中",
-        "疲労回復"
-      ]
+      "tags": ["腰", "股関節", "骨盤", "脚", "柔軟性"]
+    },
+    {
+      "id": "7UqCcBrdd_E",
+      "title": "【美尻をつくる14分】ヒップアップ＆下半身引き締めヨガ｜Kotoe",
+      "channel": "b-flow-studio",
+      "duration_min": 16,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "jYqUwwgpqBA",
+      "title": "【10分】体をやさしく目覚めさせる朝ピラティス｜全身の代謝アップ・心も体もスッキリ #783",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["全身", "朝"]
+    },
+    {
+      "id": "-lJbtEPHSHQ",
+      "title": "【12分朝ヨガ】 太陽礼拝で全身スッキリ｜代謝アップ＆気分爽快｜Saori",
+      "channel": "b-flow-studio",
+      "duration_min": 15,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "朝", "リフレッシュ"]
+    },
+    {
+      "id": "_xrf6CkqNVQ",
+      "title": "【10分】骨盤の歪みを整えて姿勢改善！柔軟性もアップ #782",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "柔軟性"]
+    },
+    {
+      "id": "6X6LGF1LSnI",
+      "title": "【たった5分】股関節をほぐして骨盤リセット！ 腰・脚がスッキリ軽くなる #780",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "股関節", "骨盤", "脚"]
     },
     {
       "id": "5BjJNy-NY_U",
@@ -36,38 +63,7 @@
       "duration_min": 7,
       "intensity": 1,
       "type": "cooldown",
-      "tags": [
-        "夜",
-        "寝る前",
-        "リラックス",
-        "疲労回復"
-      ]
-    },
-    {
-      "id": "rIdOXfeiCD0",
-      "title": "【15分全身ピラティス】しなやかに整う｜柔軟性アップ×コア強化｜Yuka",
-      "channel": "b-flow-studio",
-      "duration_min": 15,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "体幹",
-        "柔軟性",
-        "全身"
-      ]
-    },
-    {
-      "id": "_OifqN0tBzM",
-      "title": "【20分陰ヨガ】自律神経を整える｜緊張を解き放ち心身をリセット｜Chiori",
-      "channel": "b-flow-studio",
-      "duration_min": 25,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "自律神経",
-        "リラックス",
-        "柔軟性"
-      ]
+      "tags": ["夜", "寝る前", "リラックス", "疲労回復"]
     },
     {
       "id": "WprSgm-jjeg",
@@ -76,11 +72,7 @@
       "duration_min": 19,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "肩",
-        "首",
-        "疲労回復"
-      ]
+      "tags": ["肩", "首", "疲労回復"]
     },
     {
       "id": "SqkgRXvLt_M",
@@ -89,89 +81,7 @@
       "duration_min": 33,
       "intensity": 2,
       "type": "main",
-      "tags": [
-        "自律神経",
-        "リフレッシュ",
-        "全身"
-      ]
-    },
-    {
-      "id": "jLZHZnlHjFc",
-      "title": "【毎日8分】首こり肩こりがスーッと軽くなる癒しヨガ #773",
-      "channel": "b-flow",
-      "duration_min": 9,
-      "intensity": 1,
-      "type": "cooldown",
-      "tags": [
-        "肩",
-        "首",
-        "リラックス"
-      ]
-    },
-    {
-      "id": "MPmOiN1eYRk",
-      "title": "【朝10分】動いてほぐす全身ストレッチ｜体がスッと軽くなる #770",
-      "channel": "b-flow",
-      "duration_min": 12,
-      "intensity": 2,
-      "type": "warmup",
-      "tags": [
-        "朝",
-        "全身",
-        "リフレッシュ"
-      ]
-    },
-    {
-      "id": "M_bMYHTJPC8",
-      "title": "【毎日10分】全身整う！ 骨盤 × 肩こり × 自律神経リセット #766",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "骨盤",
-        "肩",
-        "自律神経"
-      ]
-    },
-    {
-      "id": "iDExNhTqads",
-      "title": "【6分】姿勢改善！骨盤底筋ピラティス｜ぽっこりお腹・尿もれ予防 #767",
-      "channel": "b-flow",
-      "duration_min": 9,
-      "intensity": 2,
-      "type": "warmup",
-      "tags": [
-        "骨盤",
-        "体幹",
-        "初心者"
-      ]
-    },
-    {
-      "id": "ZbrX6U4YOCQ",
-      "title": "【10分】自律神経を整えるやさしいストレッチ｜深い呼吸と心地よい眠りへ #765",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "cooldown",
-      "tags": [
-        "自律神経",
-        "リラックス",
-        "寝る前"
-      ]
-    },
-    {
-      "id": "lQshaVTKPLE",
-      "title": "【10分】体と心を静かに目覚めさせる｜やさしい朝ヨガ #764",
-      "channel": "b-flow",
-      "duration_min": 12,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": [
-        "朝",
-        "リラックス",
-        "初心者"
-      ]
+      "tags": ["自律神経", "リフレッシュ", "全身"]
     },
     {
       "id": "yCCy33oLtvI",
@@ -180,11 +90,43 @@
       "duration_min": 14,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "肩",
-        "自律神経",
-        "リフレッシュ"
-      ]
+      "tags": ["肩", "自律神経", "リフレッシュ"]
+    },
+    {
+      "id": "jLZHZnlHjFc",
+      "title": "【毎日8分】首こり肩こりがスーッと軽くなる癒しヨガ #773",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["肩", "首", "リラックス"]
+    },
+    {
+      "id": "MPmOiN1eYRk",
+      "title": "【朝10分】動いてほぐす全身ストレッチ｜体がスッと軽くなる #770",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["朝", "全身", "リフレッシュ"]
+    },
+    {
+      "id": "pIjgh6PxFd8",
+      "title": "【5分】ぽっこりお腹をやさしく解消｜下腹＆ウエスト引き締め #769",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["体幹", "初心者", "リフレッシュ"]
+    },
+    {
+      "id": "M_bMYHTJPC8",
+      "title": "【毎日10分】全身整う！ 骨盤 × 肩こり × 自律神経リセット #766",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["骨盤", "肩", "自律神経"]
     },
     {
       "id": "5cBdxSUYMH0",
@@ -193,916 +135,52 @@
       "duration_min": 14,
       "intensity": 2,
       "type": "main",
-      "tags": [
-        "朝",
-        "全身",
-        "リフレッシュ"
-      ]
+      "tags": ["朝", "全身", "リフレッシュ"]
     },
     {
-      "id": "Z8vnLIEk-ZU",
-      "title": "【15分寝たまま】股関節と腰をゆるめるヨガ｜腰痛ケア＆深い眠りへ｜Kayo",
-      "channel": "b-flow-studio",
-      "duration_min": 17,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "股関節",
-        "腰",
-        "リラックス",
-        "寝る前"
-      ]
-    },
-    {
-      "id": "1p37GC_bxHo",
-      "title": "【15分やさしい股関節ヨガ】柔軟性アップで足腰スッキリ｜Mizuki",
-      "channel": "b-flow-studio",
-      "duration_min": 18,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "股関節",
-        "脚",
-        "柔軟性"
-      ]
-    },
-    {
-      "id": "nZrp98_QfYU",
-      "title": "【10分朝ヨガ】寝起きの体をスッキリ整える！全身ほぐしストレッチ｜Kotoe",
-      "channel": "b-flow-studio",
+      "id": "7Gm6KkTrHN0",
+      "title": "【毎日12分】首・肩・背中のこりがみるみる軽くなるヨガ #768",
+      "channel": "b-flow",
       "duration_min": 14,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "朝",
-        "全身",
-        "リフレッシュ"
-      ]
-    },
-    {
-      "id": "M8RSrOeBO3c",
-      "title": "【HOPE｜Day7】全身を鍛えるダイエットフロー｜体幹×持久力×集中力チャレンジ",
-      "channel": "b-flow-studio",
-      "duration_min": 55,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "体幹",
-        "筋力",
-        "全身"
-      ]
-    },
-    {
-      "id": "gkZtsIMuEc8",
-      "title": "【HOPE｜Day6】体幹を鍛えて軸を整える｜しなやかなCoreトレーニング",
-      "channel": "b-flow-studio",
-      "duration_min": 35,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "体幹",
-        "筋力"
-      ]
-    },
-    {
-      "id": "AfXrBzobNd0",
-      "title": "【HOPE｜Day5】脂肪燃焼×体幹強化｜燃焼サーキットトレーニングで全身引き締め",
-      "channel": "b-flow-studio",
-      "duration_min": 28,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "体幹",
-        "筋力",
-        "全身"
-      ]
-    },
-    {
-      "id": "ktH-z3lzBdo",
-      "title": "【HOPE｜Day2】お腹を本気で鍛える！腹筋集中・引き締めトレーニング",
-      "channel": "b-flow-studio",
-      "duration_min": 31,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "体幹",
-        "筋力"
-      ]
-    },
-    {
-      "id": "G0TWbYR0VuE",
-      "title": "【HOPE｜Day1】脚を本気で引き締める！太もも・ふくらはぎ集中トレーニング",
-      "channel": "b-flow-studio",
-      "duration_min": 38,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "脚",
-        "筋力"
-      ]
-    },
-    {
-      "id": "AMI_KtB6c0M",
-      "title": "【7 Days Diet｜Day1】お腹を本気で絞る！効かせる体幹トレーニング",
-      "channel": "b-flow-studio",
-      "duration_min": 15,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "体幹",
-        "筋力"
-      ]
-    },
-    {
-      "id": "Ai3iTYE1jGo",
-      "title": "【劇的に変わる】ガチガチ股関節をやさしくほぐす魔法のストレッチ #742",
-      "channel": "b-flow",
-      "duration_min": 15,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "股関節",
-        "柔軟性"
-      ]
+      "tags": ["肩", "首", "背中", "疲労回復"]
     },
     {
-      "id": "jaVX7qwKQXI",
-      "title": "股関節が超ほぐれる魔法のヨガストレッチ　#615",
+      "id": "iDExNhTqads",
+      "title": "【6分】姿勢改善！骨盤底筋ピラティス｜ぽっこりお腹・尿もれ予防 #767",
       "channel": "b-flow",
-      "duration_min": 25,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "股関節",
-        "柔軟性"
-      ]
-    },
-    {
-      "id": "AwifDGij6b8",
-      "title": "【柔軟性アップ】 股関節をほぐし、骨盤を整える30分のヨガ #701",
-      "channel": "b-flow",
-      "duration_min": 34,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "股関節",
-        "骨盤",
-        "柔軟性"
-      ]
-    },
-    {
-      "id": "obARE8HkK4s",
-      "title": "【毎日15分】骨盤をゆるめる陰ヨガ｜柔軟性UP＆腰スッキリ｜Tomoya",
-      "channel": "b-flow-studio",
-      "duration_min": 17,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "骨盤",
-        "腰",
-        "柔軟性"
-      ]
-    },
-    {
-      "id": "moyFAcThOng",
-      "title": "【10分骨盤リセット】歪み改善＆冷え・むくみスッキリ！初心者向け簡単ストレッチ #704",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "骨盤",
-        "むくみ",
-        "初心者"
-      ]
-    },
-    {
-      "id": "3Onj5J0gBBY",
-      "title": "【寝たまま20分 夜ヨガ】心身をゆるめてぐっすり眠れるリラックスヨガ #753",
-      "channel": "b-flow",
-      "duration_min": 23,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "夜",
-        "寝る前",
-        "リラックス"
-      ]
-    },
-    {
-      "id": "12AHkdvUMLc",
-      "title": "【熟睡ヨガ20分】心と体の疲れを癒す寝る前のリラックスヨガ #663",
-      "channel": "b-flow",
-      "duration_min": 22,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "寝る前",
-        "リラックス",
-        "疲労回復"
-      ]
-    },
-    {
-      "id": "BlJpibXWjzs",
-      "title": "【5分朝ヨガ】目覚めスッキリ！全身をやさしくリセット #744",
-      "channel": "b-flow",
-      "duration_min": 7,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": [
-        "朝",
-        "全身",
-        "初心者"
-      ]
-    },
-    {
-      "id": "xvrIxDH6REM",
-      "title": "【毎日5分】朝ヨガで柔軟性を高め、しなやかな体をつくる！ #640",
-      "channel": "b-flow",
-      "duration_min": 7,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": [
-        "朝",
-        "柔軟性"
-      ]
-    },
-    {
-      "id": "j60sH_oUzsQ",
-      "title": "【脂肪燃焼MAX】全身の体脂肪がみるみる燃える効果絶大トレーニング #654",
-      "channel": "b-flow",
-      "duration_min": 23,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "全身",
-        "筋力"
-      ]
-    },
-    {
-      "id": "7VzgcqFRl2o",
-      "title": "【15分朝ストレッチ】全身を気持ちよくほぐして1日を軽やかにスタート｜Hikari",
-      "channel": "b-flow-studio",
-      "duration_min": 15,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "朝",
-        "全身"
-      ]
-    },
-    {
-      "id": "hQw_BrlrMU4",
-      "title": "【20分】これ1本で全身整うフローヨガ｜代謝アップ＆気分爽快｜Saori",
-      "channel": "b-flow-studio",
-      "duration_min": 22,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "全身",
-        "リフレッシュ"
-      ]
-    },
-    {
-      "id": "ywwzeCYO54E",
-      "title": "【毎日10分】全身引き締めヨガワークアウト｜筋力アップ＆代謝アップ｜Yu",
-      "channel": "b-flow-studio",
-      "duration_min": 12,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "全身",
-        "筋力"
-      ]
-    },
-    {
-      "id": "l8ohVSLdgcA",
-      "title": "【毎日15分】全身ストレッチで自律神経を整える｜不調改善＆リフレッシュ｜Hikari",
-      "channel": "b-flow-studio",
-      "duration_min": 17,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "全身",
-        "自律神経",
-        "リフレッシュ"
-      ]
-    },
-    {
-      "id": "Z_Ssk7kR8yw",
-      "title": "【最速で腹を割る】腹筋に縦線を作る超短期間トレーニング #645",
-      "channel": "b-flow",
-      "duration_min": 4,
-      "intensity": 3,
-      "type": "warmup",
-      "tags": [
-        "体幹",
-        "筋力"
-      ]
-    },
-    {
-      "id": "zbyGh6bv9Oc",
-      "title": "【10分鬼やせ】これ１本で全身の脂肪をごっそり落とす完全燃焼トレーニング #641",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "全身",
-        "筋力"
-      ]
-    },
-    {
-      "id": "D0LS8rVto0o",
-      "title": "心身の癒しと疲労回復のためのリラックスヨガ #690",
-      "channel": "b-flow",
-      "duration_min": 15,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "リラックス",
-        "疲労回復"
-      ]
-    },
-    {
-      "id": "b7J6Df1XK8k",
-      "title": "【毎日10分】骨盤調整、腰痛改善、冷えやむくみを改善し美脚になるストレッチ #639",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "骨盤",
-        "腰",
-        "むくみ"
-      ]
-    },
-    {
-      "id": "lPnsVF1_ZZE",
-      "title": "【毎日10分】ぽっこりお腹、前張り太もも、腰痛、むくみが一気に解消されるストレッチ #637",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "腰",
-        "むくみ",
-        "脚"
-      ]
-    },
-    {
-      "id": "Zyl0PhhNiNo",
-      "title": "【充実の30分】骨盤調整ヨガ｜腰痛改善・股関節柔軟性向上・むくみ解消に効果的 #678",
-      "channel": "b-flow",
-      "duration_min": 31,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "骨盤",
-        "腰",
-        "股関節",
-        "むくみ"
-      ]
-    },
-    {
-      "id": "XXZ7gWeFwik",
-      "title": "【１回で骨盤が変わる！】 姿勢改善、腰痛予防、下半身の冷えやむくみ、肩こり解消に効果的 #602",
-      "channel": "b-flow",
-      "duration_min": 20,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "骨盤",
-        "むくみ",
-        "肩"
-      ]
-    },
-    {
-      "id": "LHM0cyAg2AY",
-      "title": "【15分ヨガ】足腰スッキリ＆むくみ改善｜気の巡りを整えるストレッチ｜Midori",
-      "channel": "b-flow-studio",
-      "duration_min": 15,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "脚",
-        "むくみ"
-      ]
-    },
-    {
-      "id": "Xh8x5W8tBHI",
-      "title": "【10分美脚ピラティス】骨盤整えて下半身スッキリ｜初心者OK｜Yuka",
-      "channel": "b-flow-studio",
-      "duration_min": 14,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "脚",
-        "骨盤",
-        "初心者"
-      ]
-    },
-    {
-      "id": "FQixMwPy7D0",
-      "title": "【毎日10分】体が硬い人のための肩甲骨がみるみる柔らかくなるストレッチ #636",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "背中",
-        "柔軟性"
-      ]
-    },
-    {
-      "id": "urRQZYwc07E",
-      "title": "【15分ヨガ】肩甲骨ストレッチで猫背＆肩こり改善｜Kayo",
-      "channel": "b-flow-studio",
-      "duration_min": 15,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "肩",
-        "背中"
-      ]
-    },
-    {
-      "id": "D8-1GqmNVog",
-      "title": "【6分でスッキリ！】 立ったままできる肩こり解消ヨガ #626",
-      "channel": "b-flow",
-      "duration_min": 8,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": [
-        "肩"
-      ]
-    },
-    {
-      "id": "GrHIGqeLcf4",
-      "title": "【6分】首・肩・背中がまとめて楽になる｜肩甲骨ケア #761",
-      "channel": "b-flow",
-      "duration_min": 8,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": [
-        "首",
-        "肩",
-        "背中"
-      ]
-    },
-    {
-      "id": "p4C0M-jArHQ",
-      "title": "【5分ヨガ】肩こり＆首こりスッキリ！座ったまま簡単ストレッチ #746",
-      "channel": "b-flow",
-      "duration_min": 6,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": [
-        "肩",
-        "首"
-      ]
-    },
-    {
-      "id": "AoFsBdN4iw8",
-      "title": "【10分】肩こり・首こり解消！簡単ヨガルーティン #717",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "肩",
-        "首"
-      ]
-    },
-    {
-      "id": "ZTzyKyATBlQ",
-      "title": "毎朝5分だけ！ 自律神経を整える朝のヨガ習慣 #643",
-      "channel": "b-flow",
-      "duration_min": 8,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": [
-        "朝",
-        "自律神経"
-      ]
-    },
-    {
-      "id": "KdrsbM_nZ64",
-      "title": "【人生を変える5分ヨガ】 代謝を上げ、自然に痩せやすいカラダをつくる！ #598",
-      "channel": "b-flow",
-      "duration_min": 7,
+      "duration_min": 9,
       "intensity": 2,
       "type": "warmup",
-      "tags": [
-        "リフレッシュ"
-      ]
+      "tags": ["骨盤", "体幹", "初心者"]
     },
     {
-      "id": "7xK0WSveK9Q",
-      "title": "【人生を変える5分ヨガ】 腸活デトックスで内臓機能が改善！ 便秘も治る #597",
-      "channel": "b-flow",
-      "duration_min": 7,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": [
-        "デトックス"
-      ]
-    },
-    {
-      "id": "y2xMLAF0XFg",
-      "title": "【人生を変える5分ヨガ】 寝たまま脚やせで足の疲れやむくみをリセット！ #595",
-      "channel": "b-flow",
-      "duration_min": 7,
-      "intensity": 1,
-      "type": "warmup",
-      "tags": [
-        "脚",
-        "むくみ"
-      ]
-    },
-    {
-      "id": "E8Yy_YeNvqg",
-      "title": "【一日の疲れに効く20分】骨盤調整で安眠・腰痛改善・姿勢リセット #739",
-      "channel": "b-flow",
-      "duration_min": 23,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "骨盤",
-        "腰",
-        "寝る前"
-      ]
-    },
-    {
-      "id": "v1Jyw9aHRIE",
-      "title": "【ぐっすり眠れる】自律神経を整える夜のヨガ #725",
-      "channel": "b-flow",
-      "duration_min": 19,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "夜",
-        "自律神経",
-        "寝る前"
-      ]
-    },
-    {
-      "id": "Eio8RCD9b94",
-      "title": "【HOPE｜Day4】脂肪燃焼×体幹強化｜しなやかな全身をつくるダイエットヨガ",
+      "id": "rIdOXfeiCD0",
+      "title": "【15分全身ピラティス】しなやかに整う｜柔軟性アップ×コア強化｜Yuka",
       "channel": "b-flow-studio",
-      "duration_min": 47,
-      "intensity": 3,
+      "duration_min": 15,
+      "intensity": 2,
       "type": "main",
-      "tags": [
-        "体幹",
-        "筋力",
-        "全身"
-      ]
+      "tags": ["体幹", "柔軟性", "全身"]
     },
     {
-      "id": "cYL3_1H_UX4",
-      "title": "【HOPE｜Day3】背中とお尻を引き締める！姿勢改善＆ヒップアップトレーニング",
-      "channel": "b-flow-studio",
-      "duration_min": 35,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "背中",
-        "筋力"
-      ]
-    },
-    {
-      "id": "FCzhYvct5gY",
-      "title": "【7 Days Diet｜Day7】全身を整えて鍛える！しなやかに動く引き締めプログラム",
-      "channel": "b-flow-studio",
-      "duration_min": 28,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "全身",
-        "筋力"
-      ]
-    },
-    {
-      "id": "mVUQoqEI23E",
-      "title": "【7 Days Diet｜Day2】太もも・ふくらはぎに効く！脚痩せトレーニング",
-      "channel": "b-flow-studio",
-      "duration_min": 26,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "脚",
-        "筋力"
-      ]
-    },
-    {
-      "id": "QQZYAKyrB8g",
-      "title": "【15分】座ったままで全身スッキリ｜疲れをリセットする夜ヨガストレッチ #760",
-      "channel": "b-flow",
-      "duration_min": 18,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "夜",
-        "全身",
-        "疲労回復"
-      ]
-    },
-    {
-      "id": "N-1JHRQC6cE",
-      "title": "【寝る前10分ストレッチ】1日の歪みを整えて深く眠る #752",
-      "channel": "b-flow",
-      "duration_min": 12,
-      "intensity": 1,
-      "type": "cooldown",
-      "tags": [
-        "寝る前"
-      ]
-    },
-    {
-      "id": "1kdoIm9gIGs",
-      "title": "【寝る前10分】骨盤リラックスヨガ｜自律神経を整えてぐっすり眠れる #745",
+      "id": "ZbrX6U4YOCQ",
+      "title": "【10分】自律神経を整えるやさしいストレッチ｜深い呼吸と心地よい眠りへ #765",
       "channel": "b-flow",
       "duration_min": 11,
       "intensity": 1,
       "type": "cooldown",
-      "tags": [
-        "骨盤",
-        "寝る前",
-        "自律神経"
-      ]
+      "tags": ["自律神経", "リラックス", "寝る前"]
     },
     {
-      "id": "iF6kEb32ajI",
-      "title": "【10分で変わる】首こり肩こりがラクになる姿勢改善ヨガ #741",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "肩",
-        "首"
-      ]
-    },
-    {
-      "id": "1ZwoDuQsyqM",
-      "title": "【究極のリラックス】心身の疲れを癒す安眠ヨガ｜寝ながら自律神経ケア #740",
-      "channel": "b-flow",
-      "duration_min": 25,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "リラックス",
-        "寝る前",
-        "自律神経"
-      ]
-    },
-    {
-      "id": "ghRcigrapwo",
-      "title": "【毎日10分】体の奥からキレイに｜自律神経も整う腸活ヨガ #738",
+      "id": "lQshaVTKPLE",
+      "title": "【10分】体と心を静かに目覚めさせる｜やさしい朝ヨガ #764",
       "channel": "b-flow",
       "duration_min": 12,
       "intensity": 1,
-      "type": "main",
-      "tags": [
-        "自律神経",
-        "デトックス"
-      ]
-    },
-    {
-      "id": "g8bZJc0FE64",
-      "title": "【疲労回復】1日の終わりに自律神経を整える30分ストレッチヨガ #734",
-      "channel": "b-flow",
-      "duration_min": 37,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "疲労回復",
-        "自律神経"
-      ]
-    },
-    {
-      "id": "CpOO2JVy8Oo",
-      "title": "【全身引き締め】代謝アップ ＆ 脂肪燃焼フローヨガ #731",
-      "channel": "b-flow",
-      "duration_min": 13,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "全身",
-        "リフレッシュ"
-      ]
-    },
-    {
-      "id": "80nON7tlnlw",
-      "title": "【毎朝10分】腸を整えてデトックス｜体の内側からキレイになる腸活ヨガ #729",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "朝",
-        "デトックス"
-      ]
-    },
-    {
-      "id": "s6poDXmdQhQ",
-      "title": "【短時間で効果絶大】10分脂肪燃焼エクササイズ #724",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "筋力"
-      ]
-    },
-    {
-      "id": "BmeVLAQ-SAw",
-      "title": "【免疫力アップ】腸をケアして自律神経を整えるやさしいヨガ #714",
-      "channel": "b-flow",
-      "duration_min": 36,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "自律神経",
-        "デトックス"
-      ]
-    },
-    {
-      "id": "1VINYPCLqrs",
-      "title": "【初心者向け】壁を使ったピラティスで柔軟性と姿勢を整える #713",
-      "channel": "b-flow",
-      "duration_min": 14,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "柔軟性",
-        "初心者"
-      ],
-      "equipment": ["wall"]
-    },
-    {
-      "id": "tgUuVWpL9gY",
-      "title": "【8分で肩こり＆自律神経ケア】寝たまま簡単リラックスストレッチ #702",
-      "channel": "b-flow",
-      "duration_min": 10,
-      "intensity": 1,
-      "type": "cooldown",
-      "tags": [
-        "肩",
-        "自律神経",
-        "リラックス"
-      ]
-    },
-    {
-      "id": "TDe5YypXUis",
-      "title": "【毎日10分】猫背・肩こり・骨盤調整に効果的な姿勢改善ストレッチ #696",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "肩",
-        "骨盤"
-      ]
-    },
-    {
-      "id": "kIvKQhgEtEU",
-      "title": "【毎日10分】脂肪燃焼＆柔軟性UP！痩せやすい体を作るストレッチ #694",
-      "channel": "b-flow",
-      "duration_min": 12,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "柔軟性"
-      ]
-    },
-    {
-      "id": "JOELTIsle_0",
-      "title": "【寝る前のヨガ】全身の疲労を回復し、自律神経を整える夜ヨガ #692",
-      "channel": "b-flow",
-      "duration_min": 18,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "夜",
-        "寝る前",
-        "疲労回復",
-        "自律神経"
-      ]
-    },
-    {
-      "id": "-s4H0l_onpU",
-      "title": "【究極の安眠ヨガ】 自律神経を整え、心と体の疲れを癒す #691",
-      "channel": "b-flow",
-      "duration_min": 34,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "自律神経",
-        "疲労回復",
-        "寝る前"
-      ]
-    },
-    {
-      "id": "dVdxe9LQ318",
-      "title": "背骨を整えるヨガで自律神経をリセット！ #687",
-      "channel": "b-flow",
-      "duration_min": 36,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "背中",
-        "自律神経"
-      ]
-    },
-    {
-      "id": "l7ALnzigwIo",
-      "title": "【毎日5分！】寝たままできる下腹やせピラティス #683",
-      "channel": "b-flow",
-      "duration_min": 7,
-      "intensity": 2,
       "type": "warmup",
-      "tags": [
-        "体幹"
-      ]
-    },
-    {
-      "id": "uYG0uXMzlEA",
-      "title": "【毎日10分】 これ1本で全身の疲れが取れる！ 極上の疲労回復ストレッチ #673",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "全身",
-        "疲労回復"
-      ]
-    },
-    {
-      "id": "63BFLly5NiA",
-      "title": "【毎日10分】夜のストレッチヨガ　全身の疲労回復、骨盤の歪み解消、自律神経を整えるのに効果的！ #667",
-      "channel": "b-flow",
-      "duration_min": 11,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "夜",
-        "全身",
-        "疲労回復",
-        "骨盤"
-      ]
-    },
-    {
-      "id": "ePJOasZp3CQ",
-      "title": "【寝る前30分】これ1本で足・腰・背中・肩の疲れが取れる！ #665",
-      "channel": "b-flow",
-      "duration_min": 38,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "寝る前",
-        "腰",
-        "背中",
-        "肩"
-      ]
-    },
-    {
-      "id": "pds0p81Rhhw",
-      "title": "【毎日10分】股関節もどんどん柔らかくなる骨盤調整ストレッチ #664",
-      "channel": "b-flow",
-      "duration_min": 12,
-      "intensity": 1,
-      "type": "main",
-      "tags": [
-        "股関節",
-        "骨盤",
-        "柔軟性"
-      ]
-    },
-    {
-      "id": "tt4ebHvAppg",
-      "title": "【毎日10分】 下腹ポッコリに効く！骨盤底筋を鍛えるピラティストレーニング #618",
-      "channel": "b-flow",
-      "duration_min": 14,
-      "intensity": 2,
-      "type": "main",
-      "tags": [
-        "骨盤",
-        "体幹"
-      ]
-    },
-    {
-      "id": "ZXzs-qQEIbE",
-      "title": "【7 Days Diet｜Day6】全身を鍛える！ヨガ×フィットネス×ピラティス融合プログラム",
-      "channel": "b-flow-studio",
-      "duration_min": 25,
-      "intensity": 3,
-      "type": "main",
-      "tags": [
-        "全身",
-        "筋力"
-      ]
+      "tags": ["朝", "リラックス", "初心者"]
     },
     {
       "id": "3TtGXFdqihU",
@@ -1111,10 +189,34 @@
       "duration_min": 17,
       "intensity": 2,
       "type": "main",
-      "tags": [
-        "全身",
-        "リフレッシュ"
-      ]
+      "tags": ["全身", "リフレッシュ"]
+    },
+    {
+      "id": "QQZYAKyrB8g",
+      "title": "【15分】座ったままで全身スッキリ｜疲れをリセットする夜ヨガストレッチ #760",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "全身", "疲労回復"]
+    },
+    {
+      "id": "Z8vnLIEk-ZU",
+      "title": "【15分寝たまま】股関節と腰をゆるめるヨガ｜腰痛ケア＆深い眠りへ｜Kayo",
+      "channel": "b-flow-studio",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "腰", "リラックス", "寝る前"]
+    },
+    {
+      "id": "GrHIGqeLcf4",
+      "title": "【6分】首・肩・背中がまとめて楽になる｜肩甲骨ケア #761",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["首", "肩", "背中"]
     },
     {
       "id": "UvWXo-1bJvw",
@@ -1123,11 +225,43 @@
       "duration_min": 12,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "骨盤",
-        "全身",
-        "リラックス"
-      ]
+      "tags": ["骨盤", "全身", "リラックス"]
+    },
+    {
+      "id": "liPaxILZ2Js",
+      "title": "【毎日10分】朝ヨガストレッチで軽やかに1日スタート #757",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝"]
+    },
+    {
+      "id": "1p37GC_bxHo",
+      "title": "【15分やさしい股関節ヨガ】柔軟性アップで足腰スッキリ｜Mizuki",
+      "channel": "b-flow-studio",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "脚", "柔軟性"]
+    },
+    {
+      "id": "4L9c972FRYc",
+      "title": "【たった10分】首こり肩こりをスッキリ改善！座ったままの簡単ストレッチ #755",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "nZrp98_QfYU",
+      "title": "【10分朝ヨガ】寝起きの体をスッキリ整える！全身ほぐしストレッチ｜Kotoe",
+      "channel": "b-flow-studio",
+      "duration_min": 14,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["朝", "全身", "リフレッシュ"]
     },
     {
       "id": "ERvwb9K7nnM",
@@ -1136,11 +270,52 @@
       "duration_min": 15,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "骨盤",
-        "背中",
-        "全身"
-      ]
+      "tags": ["骨盤", "背中", "全身"]
+    },
+    {
+      "id": "_OifqN0tBzM",
+      "title": "【20分陰ヨガ】自律神経を整える｜緊張を解き放ち心身をリセット｜Chiori",
+      "channel": "b-flow-studio",
+      "duration_min": 25,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経", "リラックス", "柔軟性"]
+    },
+    {
+      "id": "3Onj5J0gBBY",
+      "title": "【寝たまま20分 夜ヨガ】心身をゆるめてぐっすり眠れるリラックスヨガ #753",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "寝る前", "リラックス"]
+    },
+    {
+      "id": "N-1JHRQC6cE",
+      "title": "【寝る前10分ストレッチ】1日の歪みを整えて深く眠る #752",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["寝る前"]
+    },
+    {
+      "id": "7VzgcqFRl2o",
+      "title": "【15分朝ストレッチ】全身を気持ちよくほぐして1日を軽やかにスタート｜Hikari",
+      "channel": "b-flow-studio",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝", "全身"]
+    },
+    {
+      "id": "hQw_BrlrMU4",
+      "title": "【20分】これ1本で全身整うフローヨガ｜代謝アップ＆気分爽快｜Saori",
+      "channel": "b-flow-studio",
+      "duration_min": 22,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "リフレッシュ"]
     },
     {
       "id": "kVpvhgWbRdo",
@@ -1149,11 +324,34 @@
       "duration_min": 12,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "肩",
-        "背中",
-        "初心者"
-      ]
+      "tags": ["肩", "背中", "初心者"]
+    },
+    {
+      "id": "LHM0cyAg2AY",
+      "title": "【15分ヨガ】足腰スッキリ＆むくみ改善｜気の巡りを整えるストレッチ｜Midori",
+      "channel": "b-flow-studio",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚", "むくみ"]
+    },
+    {
+      "id": "Xh8x5W8tBHI",
+      "title": "【10分美脚ピラティス】骨盤整えて下半身スッキリ｜初心者OK｜Yuka",
+      "channel": "b-flow-studio",
+      "duration_min": 14,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚", "骨盤", "初心者"]
+    },
+    {
+      "id": "Q3mtaFdf7tk",
+      "title": "【15分朝ヨガ】初心者でも安心♪ 骨盤調整＆自律神経リセット｜Chizuru",
+      "channel": "b-flow-studio",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "朝", "自律神経", "初心者"]
     },
     {
       "id": "pQPNDooRPnI",
@@ -1162,10 +360,358 @@
       "duration_min": 34,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "寝る前",
-        "自律神経"
-      ]
+      "tags": ["寝る前", "自律神経"]
+    },
+    {
+      "id": "urRQZYwc07E",
+      "title": "【15分ヨガ】肩甲骨ストレッチで猫背＆肩こり改善｜Kayo",
+      "channel": "b-flow-studio",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中"]
+    },
+    {
+      "id": "obARE8HkK4s",
+      "title": "【毎日15分】骨盤をゆるめる陰ヨガ｜柔軟性UP＆腰スッキリ｜Tomoya",
+      "channel": "b-flow-studio",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "腰", "柔軟性"]
+    },
+    {
+      "id": "p4C0M-jArHQ",
+      "title": "【5分ヨガ】肩こり＆首こりスッキリ！座ったまま簡単ストレッチ #746",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "2VGKxo6BZKk",
+      "title": "【10分ヨガ】朝にも夜にもできるリラックス習慣｜不調をやさしく改善｜Mizuki",
+      "channel": "b-flow-studio",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝", "夜", "リラックス"]
+    },
+    {
+      "id": "ywwzeCYO54E",
+      "title": "【毎日10分】全身引き締めヨガワークアウト｜筋力アップ＆代謝アップ｜Yu",
+      "channel": "b-flow-studio",
+      "duration_min": 12,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["全身", "筋力"]
+    },
+    {
+      "id": "1kdoIm9gIGs",
+      "title": "【寝る前10分】骨盤リラックスヨガ｜自律神経を整えてぐっすり眠れる #745",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["骨盤", "寝る前", "自律神経"]
+    },
+    {
+      "id": "rafisYa39VQ",
+      "title": "【初心者向け10分】姿勢改善ヨガ｜猫背・肩こり・首こりをスッキリリセット｜Kotoe",
+      "channel": "b-flow-studio",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "背中", "初心者"]
+    },
+    {
+      "id": "l8ohVSLdgcA",
+      "title": "【毎日15分】全身ストレッチで自律神経を整える｜不調改善＆リフレッシュ｜Hikari",
+      "channel": "b-flow-studio",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "自律神経", "リフレッシュ"]
+    },
+    {
+      "id": "BlJpibXWjzs",
+      "title": "【5分朝ヨガ】目覚めスッキリ！全身をやさしくリセット #744",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝", "全身", "初心者"]
+    },
+    {
+      "id": "__gBISl5xmU",
+      "title": "【初心者向け20分】内臓を整える陰ヨガ｜便秘改善・消化促進・ストレス解消｜Chiori",
+      "channel": "b-flow-studio",
+      "duration_min": 25,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["デトックス", "初心者"]
+    },
+    {
+      "id": "jiNc1qYgEW0",
+      "title": "【HOPE｜リラックスヨガ】全身ストレッチ＆柔軟性アップ｜肩甲骨・股関節・ハムストリングをほぐす",
+      "channel": "b-flow-studio",
+      "duration_min": 47,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中", "股関節", "全身", "リラックス"]
+    },
+    {
+      "id": "Ai3iTYE1jGo",
+      "title": "【劇的に変わる】ガチガチ股関節をやさしくほぐす魔法のストレッチ #742",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "柔軟性"]
+    },
+    {
+      "id": "1tMVOFjjERg",
+      "title": "【HOPE｜陰ヨガ】心と体をゆるめる深いリラックスタイム",
+      "channel": "b-flow-studio",
+      "duration_min": 53,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["リラックス"]
+    },
+    {
+      "id": "iF6kEb32ajI",
+      "title": "【10分で変わる】首こり肩こりがラクになる姿勢改善ヨガ #741",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "M8RSrOeBO3c",
+      "title": "【HOPE｜Day7】全身を鍛えるダイエットフロー｜体幹×持久力×集中力チャレンジ",
+      "channel": "b-flow-studio",
+      "duration_min": 55,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力", "全身"]
+    },
+    {
+      "id": "gkZtsIMuEc8",
+      "title": "【HOPE｜Day6】体幹を鍛えて軸を整える｜しなやかなCoreトレーニング",
+      "channel": "b-flow-studio",
+      "duration_min": 35,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "AfXrBzobNd0",
+      "title": "【HOPE｜Day5】脂肪燃焼×体幹強化｜燃焼サーキットトレーニングで全身引き締め",
+      "channel": "b-flow-studio",
+      "duration_min": 28,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力", "全身"]
+    },
+    {
+      "id": "Eio8RCD9b94",
+      "title": "【HOPE｜Day4】脂肪燃焼×体幹強化｜しなやかな全身をつくるダイエットヨガ",
+      "channel": "b-flow-studio",
+      "duration_min": 47,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力", "全身"]
+    },
+    {
+      "id": "cYL3_1H_UX4",
+      "title": "【HOPE｜Day3】背中とお尻を引き締める！姿勢改善＆ヒップアップトレーニング",
+      "channel": "b-flow-studio",
+      "duration_min": 35,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["背中", "筋力"]
+    },
+    {
+      "id": "ktH-z3lzBdo",
+      "title": "【HOPE｜Day2】お腹を本気で鍛える！腹筋集中・引き締めトレーニング",
+      "channel": "b-flow-studio",
+      "duration_min": 31,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "G0TWbYR0VuE",
+      "title": "【HOPE｜Day1】脚を本気で引き締める！太もも・ふくらはぎ集中トレーニング",
+      "channel": "b-flow-studio",
+      "duration_min": 38,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "FCzhYvct5gY",
+      "title": "【7 Days Diet｜Day7】全身を整えて鍛える！しなやかに動く引き締めプログラム",
+      "channel": "b-flow-studio",
+      "duration_min": 28,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["全身", "筋力"]
+    },
+    {
+      "id": "1ZwoDuQsyqM",
+      "title": "【究極のリラックス】心身の疲れを癒す安眠ヨガ｜寝ながら自律神経ケア #740",
+      "channel": "b-flow",
+      "duration_min": 25,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["リラックス", "寝る前", "自律神経"]
+    },
+    {
+      "id": "ZXzs-qQEIbE",
+      "title": "【7 Days Diet｜Day6】全身を鍛える！ヨガ×フィットネス×ピラティス融合プログラム",
+      "channel": "b-flow-studio",
+      "duration_min": 25,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["全身", "筋力"]
+    },
+    {
+      "id": "luM4bxfC0Ak",
+      "title": "【7 Days Diet｜Day5】美しいくびれをつくる！ウエスト引き締め集中トレーニング",
+      "channel": "b-flow-studio",
+      "duration_min": 17,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "e4fjSfyUb1w",
+      "title": "【7 Days Diet｜Day4】お尻を引き上げる！ヒップライン整える美尻トレーニング",
+      "channel": "b-flow-studio",
+      "duration_min": 17,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "yR-BTaiUeKM",
+      "title": "【7 Days Diet｜Day3】二の腕＆背中を引き締める！たるみ撃退トレーニング",
+      "channel": "b-flow-studio",
+      "duration_min": 16,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["背中", "筋力"]
+    },
+    {
+      "id": "mVUQoqEI23E",
+      "title": "【7 Days Diet｜Day2】太もも・ふくらはぎに効く！脚痩せトレーニング",
+      "channel": "b-flow-studio",
+      "duration_min": 26,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "AMI_KtB6c0M",
+      "title": "【7 Days Diet｜Day1】お腹を本気で絞る！効かせる体幹トレーニング",
+      "channel": "b-flow-studio",
+      "duration_min": 15,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "E8Yy_YeNvqg",
+      "title": "【一日の疲れに効く20分】骨盤調整で安眠・腰痛改善・姿勢リセット #739",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "腰", "寝る前"]
+    },
+    {
+      "id": "ghRcigrapwo",
+      "title": "【毎日10分】体の奥からキレイに｜自律神経も整う腸活ヨガ #738",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経", "デトックス"]
+    },
+    {
+      "id": "dC-8IjZjTDE",
+      "title": "【朝の12分】ゆったり動く初心者向けのやさしいヨガ #735",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝", "初心者"]
+    },
+    {
+      "id": "g8bZJc0FE64",
+      "title": "【疲労回復】1日の終わりに自律神経を整える30分ストレッチヨガ #734",
+      "channel": "b-flow",
+      "duration_min": 37,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["疲労回復", "自律神経"]
+    },
+    {
+      "id": "D9L4__SdLFg",
+      "title": "【10分でととのう】呼吸を深めて自律神経を整えるやさしいヨガ #732",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経"]
+    },
+    {
+      "id": "CpOO2JVy8Oo",
+      "title": "【全身引き締め】代謝アップ ＆ 脂肪燃焼フローヨガ #731",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "リフレッシュ"]
+    },
+    {
+      "id": "_QXcexhD27I",
+      "title": "【心も体も整える】ストレス解消や骨盤調整に効く自律神経ストレッチ #730",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "自律神経"]
+    },
+    {
+      "id": "80nON7tlnlw",
+      "title": "【毎朝10分】腸を整えてデトックス｜体の内側からキレイになる腸活ヨガ #729",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝", "デトックス"]
+    },
+    {
+      "id": "v1Jyw9aHRIE",
+      "title": "【ぐっすり眠れる】自律神経を整える夜のヨガ #725",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "自律神経", "寝る前"]
+    },
+    {
+      "id": "s6poDXmdQhQ",
+      "title": "【短時間で効果絶大】10分脂肪燃焼エクササイズ #724",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["筋力"]
     },
     {
       "id": "xbGpMsMyzRM",
@@ -1174,11 +720,16 @@
       "duration_min": 13,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "骨盤",
-        "自律神経",
-        "全身"
-      ]
+      "tags": ["骨盤", "自律神経", "全身"]
+    },
+    {
+      "id": "wAFtYVj0Frs",
+      "title": "【毎朝10分】代謝アップで全身スッキリ！やさしい朝ヨガ​ #722",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["全身", "朝"]
     },
     {
       "id": "e5XqOAfuyVI",
@@ -1187,11 +738,71 @@
       "duration_min": 11,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "夜",
-        "疲労回復",
-        "全身"
-      ]
+      "tags": ["夜", "疲労回復", "全身"]
+    },
+    {
+      "id": "CddjNFlEn4Y",
+      "title": "【1日10分】朝のストレッチヨガで全身リフレッシュ！ #720",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["全身", "朝", "リフレッシュ"]
+    },
+    {
+      "id": "lmV9LewqZ5c",
+      "title": "【自律神経を整える】心と体を癒すリラックスヨガ｜深い呼吸でストレス解消 #719",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["リラックス", "自律神経"]
+    },
+    {
+      "id": "ugM40HjKjxo",
+      "title": "【姿勢改善＆疲労回復】全身を整えるリフレッシュヨガ｜骨盤調整にも効果的 #718",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "全身", "リフレッシュ", "疲労回復"]
+    },
+    {
+      "id": "AoFsBdN4iw8",
+      "title": "【10分】肩こり・首こり解消！簡単ヨガルーティン #717",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "aBZeBASyCYs",
+      "title": "【毎朝の習慣に】10分で全身を整える朝ストレッチ！ #715",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["全身", "朝"]
+    },
+    {
+      "id": "BmeVLAQ-SAw",
+      "title": "【免疫力アップ】腸をケアして自律神経を整えるやさしいヨガ #714",
+      "channel": "b-flow",
+      "duration_min": 36,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経", "デトックス"]
+    },
+    {
+      "id": "1VINYPCLqrs",
+      "title": "【初心者向け】壁を使ったピラティスで柔軟性と姿勢を整える #713",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["柔軟性", "初心者"],
+      "equipment": ["wall"]
     },
     {
       "id": "UMCpYzllKRo",
@@ -1200,11 +811,16 @@
       "duration_min": 11,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "骨盤",
-        "脚",
-        "寝る前"
-      ]
+      "tags": ["骨盤", "脚", "寝る前"]
+    },
+    {
+      "id": "Pwn3PZZ9754",
+      "title": "【たった10分】首こり肩こりをスッキリ改善！ 座ったまま簡単ヨガ #710",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
     },
     {
       "id": "kO-3aNbttmQ",
@@ -1213,9 +829,70 @@
       "duration_min": 10,
       "intensity": 1,
       "type": "warmup",
-      "tags": [
-        "朝"
-      ]
+      "tags": ["朝"]
+    },
+    {
+      "id": "rgvF1ODDxCg",
+      "title": "【極上リラックス】心身の疲れを癒し自律神経を整える夜ヨガ #707",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "リラックス", "疲労回復", "自律神経"]
+    },
+    {
+      "id": "44xIw7UzcnY",
+      "title": "【毎朝10分】やさしい朝のフローヨガで代謝UP＆スッキリ目覚め！ #705",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["朝"]
+    },
+    {
+      "id": "moyFAcThOng",
+      "title": "【10分骨盤リセット】歪み改善＆冷え・むくみスッキリ！初心者向け簡単ストレッチ #704",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "むくみ", "初心者"]
+    },
+    {
+      "id": "OeisNBZhVrs",
+      "title": "【10分で整う】寝起きの体をほぐす、やさしい朝ヨガ #703",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝"]
+    },
+    {
+      "id": "tgUuVWpL9gY",
+      "title": "【8分で肩こり＆自律神経ケア】寝たまま簡単リラックスストレッチ #702",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["肩", "自律神経", "リラックス"]
+    },
+    {
+      "id": "AwifDGij6b8",
+      "title": "【柔軟性アップ】 股関節をほぐし、骨盤を整える30分のヨガ #701",
+      "channel": "b-flow",
+      "duration_min": 34,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "骨盤", "柔軟性"]
+    },
+    {
+      "id": "_BRIDFAA8U4",
+      "title": "1日10分で疲れを解消！毎晩の夜ストレッチでぐっすり快眠 #699",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["夜", "寝る前", "疲労回復"]
     },
     {
       "id": "hI9XRg4uaLY",
@@ -1224,9 +901,214 @@
       "duration_min": 4,
       "intensity": 3,
       "type": "warmup",
-      "tags": [
-        "体幹"
-      ]
+      "tags": ["体幹"]
+    },
+    {
+      "id": "TDe5YypXUis",
+      "title": "【毎日10分】猫背・肩こり・骨盤調整に効果的な姿勢改善ストレッチ #696",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "骨盤"]
+    },
+    {
+      "id": "kIvKQhgEtEU",
+      "title": "【毎日10分】脂肪燃焼＆柔軟性UP！痩せやすい体を作るストレッチ #694",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["柔軟性"]
+    },
+    {
+      "id": "5jLAeAJLRWE",
+      "title": "【朝の10分】ゆったり朝ヨガで心と体をやさしく目覚めさせる #693",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝"]
+    },
+    {
+      "id": "JOELTIsle_0",
+      "title": "【寝る前のヨガ】全身の疲労を回復し、自律神経を整える夜ヨガ #692",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "寝る前", "疲労回復", "自律神経"]
+    },
+    {
+      "id": "-s4H0l_onpU",
+      "title": "【究極の安眠ヨガ】 自律神経を整え、心と体の疲れを癒す #691",
+      "channel": "b-flow",
+      "duration_min": 34,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経", "疲労回復", "寝る前"]
+    },
+    {
+      "id": "D0LS8rVto0o",
+      "title": "心身の癒しと疲労回復のためのリラックスヨガ #690",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["リラックス", "疲労回復"]
+    },
+    {
+      "id": "-n4pse-F2gw",
+      "title": "1日の終わりに骨盤のゆがみを整える　寝たままリセットヨガ #689",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "寝る前"]
+    },
+    {
+      "id": "dVdxe9LQ318",
+      "title": "背骨を整えるヨガで自律神経をリセット！ #687",
+      "channel": "b-flow",
+      "duration_min": 36,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["背中", "自律神経"]
+    },
+    {
+      "id": "_DhoZgiNTA4",
+      "title": "【12分】これ一本で全身の脂肪燃焼＆ストレッチができるヨガ #686",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "l7ALnzigwIo",
+      "title": "【毎日5分！】寝たままできる下腹やせピラティス #683",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "Zyl0PhhNiNo",
+      "title": "【充実の30分】骨盤調整ヨガ｜腰痛改善・股関節柔軟性向上・むくみ解消に効果的 #678",
+      "channel": "b-flow",
+      "duration_min": 31,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["骨盤", "腰", "股関節", "むくみ"]
+    },
+    {
+      "id": "TL4Jb7d4zFU",
+      "title": "【毎日10分】自律神経みるみる整う全身ストレッチ　呼吸機能を高めよう！ #677",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "自律神経"]
+    },
+    {
+      "id": "uuOWcRwLRtE",
+      "title": "【10分で完了】全身代謝アップ＆姿勢改善に効果的なリフレッシュヨガ #676",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "リフレッシュ"]
+    },
+    {
+      "id": "uYG0uXMzlEA",
+      "title": "【毎日10分】 これ1本で全身の疲れが取れる！ 極上の疲労回復ストレッチ #673",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "疲労回復"]
+    },
+    {
+      "id": "ySoQsXQjR2U",
+      "title": "【12分】ガチガチの首こり・肩こりを解消するストレッチ　 座ったまま簡単にできる！ #672",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "5UxaqHF2NTg",
+      "title": "【毎日10分】ヨガでガチガチ肩こり解消！ 座ったままで快適に #668",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩"]
+    },
+    {
+      "id": "63BFLly5NiA",
+      "title": "【毎日10分】夜のストレッチヨガ　全身の疲労回復、骨盤の歪み解消、自律神経を整えるのに効果的！ #667",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "全身", "疲労回復", "骨盤"]
+    },
+    {
+      "id": "ePJOasZp3CQ",
+      "title": "【寝る前30分】これ1本で足・腰・背中・肩の疲れが取れる！ #665",
+      "channel": "b-flow",
+      "duration_min": 38,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "腰", "背中", "肩"]
+    },
+    {
+      "id": "pds0p81Rhhw",
+      "title": "【毎日10分】股関節もどんどん柔らかくなる骨盤調整ストレッチ #664",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "骨盤", "柔軟性"]
+    },
+    {
+      "id": "12AHkdvUMLc",
+      "title": "【熟睡ヨガ20分】心と体の疲れを癒す寝る前のリラックスヨガ #663",
+      "channel": "b-flow",
+      "duration_min": 22,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "リラックス", "疲労回復"]
+    },
+    {
+      "id": "DDUXeUrVkXM",
+      "title": "【毎日10分】首・肩・背中の凝りをほぐし、姿勢が良くなる肩こり解消ヨガ #662",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "背中"]
+    },
+    {
+      "id": "5vBox42Te_Y",
+      "title": "【全身ダイエット】しなやかで美しい体を作る究極の脂肪燃焼ヨガ #656",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "j60sH_oUzsQ",
+      "title": "【脂肪燃焼MAX】全身の体脂肪がみるみる燃える効果絶大トレーニング #654",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["全身", "筋力"]
     },
     {
       "id": "z4h3OH_VcVU",
@@ -1235,10 +1117,7 @@
       "duration_min": 11,
       "intensity": 1,
       "type": "cooldown",
-      "tags": [
-        "自律神経",
-        "寝る前"
-      ]
+      "tags": ["自律神経", "寝る前"]
     },
     {
       "id": "gzDFchGqA34",
@@ -1247,9 +1126,79 @@
       "duration_min": 12,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "肩"
-      ]
+      "tags": ["肩"]
+    },
+    {
+      "id": "ZCIoX1QLQHg",
+      "title": "【毎日10分】腰の疲労回復ストレッチ　安眠に効果的！　#646",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["腰", "寝る前", "疲労回復"]
+    },
+    {
+      "id": "Z_Ssk7kR8yw",
+      "title": "【最速で腹を割る】腹筋に縦線を作る超短期間トレーニング #645",
+      "channel": "b-flow",
+      "duration_min": 4,
+      "intensity": 3,
+      "type": "warmup",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "shhGflhYFfk",
+      "title": "【毎日10分 夜のストレッチ】骨盤調整、全身の疲労回復、ぐっすり眠りたい方におすすめ #644",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["骨盤", "全身", "夜", "寝る前", "疲労回復"]
+    },
+    {
+      "id": "ZTzyKyATBlQ",
+      "title": "毎朝5分だけ！ 自律神経を整える朝のヨガ習慣 #643",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝", "自律神経"]
+    },
+    {
+      "id": "v2YwcuW8rQs",
+      "title": "【寝たまま10分】姿勢改善ヨガ　疲労回復・肩こり解消にもおすすめ #642",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "寝る前", "疲労回復"]
+    },
+    {
+      "id": "zbyGh6bv9Oc",
+      "title": "【10分鬼やせ】これ１本で全身の脂肪をごっそり落とす完全燃焼トレーニング #641",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["全身", "筋力"]
+    },
+    {
+      "id": "xvrIxDH6REM",
+      "title": "【毎日5分】朝ヨガで柔軟性を高め、しなやかな体をつくる！ #640",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝", "柔軟性"]
+    },
+    {
+      "id": "b7J6Df1XK8k",
+      "title": "【毎日10分】骨盤調整、腰痛改善、冷えやむくみを改善し美脚になるストレッチ #639",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "腰", "むくみ"]
     },
     {
       "id": "yZK7WReA15I",
@@ -1258,10 +1207,34 @@
       "duration_min": 11,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "骨盤",
-        "背中"
-      ]
+      "tags": ["骨盤", "背中"]
+    },
+    {
+      "id": "lPnsVF1_ZZE",
+      "title": "【毎日10分】ぽっこりお腹、前張り太もも、腰痛、むくみが一気に解消されるストレッチ #637",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "むくみ", "脚"]
+    },
+    {
+      "id": "FQixMwPy7D0",
+      "title": "【毎日10分】体が硬い人のための肩甲骨がみるみる柔らかくなるストレッチ #636",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["背中", "柔軟性"]
+    },
+    {
+      "id": "grD9NGRtGiQ",
+      "title": "【毎晩10分】ぐっすり眠れる安眠ストレッチ　全身の疲労回復や骨盤調整にも効果的！ #633",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["骨盤", "全身", "寝る前", "疲労回復"]
     },
     {
       "id": "o9FPXY1-n5E",
@@ -1270,10 +1243,2797 @@
       "duration_min": 11,
       "intensity": 1,
       "type": "main",
-      "tags": [
-        "骨盤",
-        "疲労回復"
-      ]
+      "tags": ["骨盤", "疲労回復"]
+    },
+    {
+      "id": "m5j9hIK2rT0",
+      "title": "【毎朝10分】 朝のストレッチで1日が劇的に変わる！　#631",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝"]
+    },
+    {
+      "id": "gya60twQ9NE",
+      "title": "【毎日15分】全身の疲労回復ヨガ　骨盤や背骨のゆがみ解消、肩こりや腰痛緩和に効果的！ #630",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中", "腰", "骨盤", "全身"]
+    },
+    {
+      "id": "qCXWBJIzzN0",
+      "title": "【毎日10分】首を痛めないズルいお腹やせエクササイズ #629",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["首", "体幹", "筋力"]
+    },
+    {
+      "id": "SfjcBDYWjp8",
+      "title": "【痩せるヨガ】 全身を引き締める極上フローヨガ #628",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "26aFrEzofnk",
+      "title": "姿勢がみるみる改善！ 初心者のためのやさしいピラティス #627",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["初心者"]
+    },
+    {
+      "id": "D8-1GqmNVog",
+      "title": "【6分でスッキリ！】 立ったままできる肩こり解消ヨガ #626",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["肩"]
+    },
+    {
+      "id": "szQ2ujCZW1Y",
+      "title": "【毎日20分】これ一本で全身の脂肪燃焼＆ストレッチできるヨガ　#623",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "y9HUGCm5A9Q",
+      "title": "【毎朝10分】 やさしい朝ヨガで最高の1日をスタート！ #621",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝"]
+    },
+    {
+      "id": "tt4ebHvAppg",
+      "title": "【毎日10分】 下腹ポッコリに効く！骨盤底筋を鍛えるピラティストレーニング #618",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["骨盤", "体幹"]
+    },
+    {
+      "id": "jaVX7qwKQXI",
+      "title": "股関節が超ほぐれる魔法のヨガストレッチ　#615",
+      "channel": "b-flow",
+      "duration_min": 25,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "柔軟性"]
+    },
+    {
+      "id": "cMspgXtU1Mw",
+      "title": "【毎日12分】 柔軟性を高め、全身がほぐれるストレッチヨガ  #614",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "柔軟性"]
+    },
+    {
+      "id": "DNVoqNbxAbg",
+      "title": "【毎日10分】 初心者のためのやさしい朝ヨガ #613",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝", "初心者"]
+    },
+    {
+      "id": "cYvLdBbLh-s",
+      "title": "【1回で変わる！】 全身のゆがみを整える姿勢改善ヨガ #612",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "uRcdRKqHYOA",
+      "title": "心と体がスーッとラクになる自律神経を整えるヨガ #611",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経"]
+    },
+    {
+      "id": "To1yijqZCCE",
+      "title": "【毎日8分】 ガチガチ肩こりが１回で解消！ 座ったままでもOK #607",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩"]
+    },
+    {
+      "id": "3Gec0zeu9fY",
+      "title": "【毎朝10分】 朝のゆったり腸活ヨガ　初心者にオススメ！ #606",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝", "デトックス", "初心者"]
+    },
+    {
+      "id": "JL_FLZLyz2o",
+      "title": "【毎晩10分】 骨盤のゆがみ改善、腰回りの疲れ解消に効果的！ #605",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤", "疲労回復"]
+    },
+    {
+      "id": "ITqRzhPvLgE",
+      "title": "【太らないカラダ】 全身フローヨガで代謝アップ！ #604",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "XXZ7gWeFwik",
+      "title": "【１回で骨盤が変わる！】 姿勢改善、腰痛予防、下半身の冷えやむくみ、肩こり解消に効果的 #602",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["骨盤", "むくみ", "肩"]
+    },
+    {
+      "id": "KdrsbM_nZ64",
+      "title": "【人生を変える5分ヨガ】 代謝を上げ、自然に痩せやすいカラダをつくる！ #598",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["リフレッシュ"]
+    },
+    {
+      "id": "7xK0WSveK9Q",
+      "title": "【人生を変える5分ヨガ】 腸活デトックスで内臓機能が改善！ 便秘も治る #597",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["デトックス"]
+    },
+    {
+      "id": "y2xMLAF0XFg",
+      "title": "【人生を変える5分ヨガ】 寝たまま脚やせで足の疲れやむくみをリセット！ #595",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["脚", "むくみ"]
+    },
+    {
+      "id": "nRvSBd_h0Eg",
+      "title": "【人生を変える5分ヨガ】 ぽっこり下腹をペタンコに！ 腹だけ痩せる #594",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "URL0Lhk5hO4",
+      "title": "【人生を変える5分ヨガ】 肩甲骨をほぐして肩こり解消！ 気分も前向きに #593",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中"]
+    },
+    {
+      "id": "KXe07sNk9uc",
+      "title": "【人生を変える5分ヨガ】 寝たまま朝ヨガで1日を気持ちよくスタート！ #591",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝", "寝る前"]
+    },
+    {
+      "id": "lHCIGPMU6d4",
+      "title": "【10分でスッキリ】 首こり・肩こりを解消し、呼吸を深める #589",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "MIsG2xsVxv8",
+      "title": "【15分全身フローヨガ】 代謝上げて、痩せるカラダをつくる！ ＃588",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "ZdoECl5OznE",
+      "title": "【寝る前10分】寝たまま全身の疲れを取る簡単ヨガストレッチ #586",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["全身", "寝る前", "疲労回復"]
+    },
+    {
+      "id": "wOhJ4UJzn-U",
+      "title": "【10分】反り腰改善、骨盤調整、腰痛の改善に効果的なピラティスストレッチ #585",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["腰", "骨盤"]
+    },
+    {
+      "id": "W4Y5Vb3FxBA",
+      "title": "【10分】寝たままデトックスヨガ　腰痛予防に効果的 #584",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "寝る前", "デトックス"]
+    },
+    {
+      "id": "zzpuTm0lROQ",
+      "title": "【毎日15分】 柔軟性が高まる全身ストレッチヨガ #583",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "柔軟性"]
+    },
+    {
+      "id": "6MxzA-PtpG8",
+      "title": "【超熟睡】 自律神経に優しいストレッチヨガ #582",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "自律神経"]
+    },
+    {
+      "id": "gCV-tVdj6ug",
+      "title": "【1日8分】1週間で下腹を凹ませる！ ぽっこり解消ピラティス #581",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "vEBVtOpTBhw",
+      "title": "【毎日10分】 体が硬い人でもベターっと開脚できる骨盤ストレッチ #580",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "脚", "柔軟性"]
+    },
+    {
+      "id": "t_mmDRvWd18",
+      "title": "【毎日10分】 姿勢改善ストレッチ　猫背、巻き肩、体のゆがみ、骨盤調整に効果的 #579",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中", "骨盤"]
+    },
+    {
+      "id": "Mq6oS9TApAw",
+      "title": "【毎日10分】 股関節が変わる前後開脚ストレッチ #578",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "脚"]
+    },
+    {
+      "id": "A22Qhp6APt8",
+      "title": "【毎日10分】 首・肩・背中の凝りをほぐし、姿勢が良くなる肩甲骨ストレッチ #577",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "背中"]
+    },
+    {
+      "id": "i6TiBBr3_6Q",
+      "title": "【毎日8分】 骨盤底筋を鍛えるヨガ　ぽっこりお腹、尿漏れ改善、骨盤調整におすすめ #576",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["骨盤", "体幹", "筋力"]
+    },
+    {
+      "id": "9mzEkUv-NLY",
+      "title": "【疲れリセット】首、肩、背中のこりをほぐすヨガ #575",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "背中", "疲労回復"]
+    },
+    {
+      "id": "5dwcsX4QTwE",
+      "title": "【究極の安眠ヨガ】 自律神経を整え、心と体の疲れを癒す #574",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "疲労回復", "自律神経"]
+    },
+    {
+      "id": "F0nFI0X9NSc",
+      "title": "【11分 疲労回復ヨガ】 腰痛を和らげ、骨盤調整に効果的 #573",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤", "疲労回復"]
+    },
+    {
+      "id": "DpZXYcF1Pv0",
+      "title": "【毎朝5分】 やさしい朝ヨガ　1日を前向きに過ごす！ #572",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝"]
+    },
+    {
+      "id": "HhqUGRsJuhk",
+      "title": "【毎日15分】 最高の疲労回復ヨガ　骨盤調整、自律神経も整う #569",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "疲労回復", "自律神経"]
+    },
+    {
+      "id": "vsJ1In_9a7M",
+      "title": "【毎日8分】 腸を綺麗にするヨガ　便秘解消し、自律神経を整える #568",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経", "デトックス"]
+    },
+    {
+      "id": "Bo6Anz4hsTM",
+      "title": "【毎晩8分】寝たままできる骨盤調整　尿もれ、腰痛、ぽっこりお腹解消 #567",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤", "体幹", "寝る前"]
+    },
+    {
+      "id": "DODZzcgKfSE",
+      "title": "【毎朝8分】朝のやさしいストレッチヨガ　1日の体調を整える！ #566",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝"]
+    },
+    {
+      "id": "znkI1zbyHFg",
+      "title": "【10分】太もも・ふくらはぎがみるみる引き締まる脚やせトレーニング - SHINE #564",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "W6fpJmcKV24",
+      "title": "【寝たまま10分】プリっと上向きヒップに！ 自宅で美尻を手に入れる - SHINE #561",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚", "寝る前"]
+    },
+    {
+      "id": "ufYVaCaIZrY",
+      "title": "【毎日10分】夜のストレッチヨガ　全身の疲労回復、ゆがみの解消、安眠に効果的！ #559",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["全身", "夜", "寝る前", "疲労回復"]
+    },
+    {
+      "id": "OjQN6FXZBp0",
+      "title": "【10分朝ヨガ】上半身をほぐし、首こり肩こりを和らげるヨガ ＃556",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "朝"]
+    },
+    {
+      "id": "ErpYODZu2f4",
+      "title": "究極の脂肪燃焼フローヨガ　体幹を鍛え、しなやかな体を作る！ #554",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "jhaxa6bQHJU",
+      "title": "【10分】最高の自分を味わうフローヨガ　柔軟性アップにおすすめ！ #553",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["柔軟性"]
+    },
+    {
+      "id": "cmaoZsTVuCI",
+      "title": "【寝る前のヨガ】 首こり、肩こりの解消　自律神経のバランスを整える #551",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "寝る前", "自律神経"]
+    },
+    {
+      "id": "yKJAaJyDQPQ",
+      "title": "疲れた脚をじっくりほぐす陰ヨガストレッチ　股関節も柔らかくなる　 #549",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "脚", "疲労回復", "柔軟性"]
+    },
+    {
+      "id": "QYiXVzb9Rao",
+      "title": "10分朝ヨガ全身ストレッチ #548",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "朝"]
+    },
+    {
+      "id": "SY0_i18DV_I",
+      "title": "8分で首・肩・背中をほぐす　初心者や体が硬い方にもオススメ！ #547",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "背中", "柔軟性", "初心者"]
+    },
+    {
+      "id": "LLBlcLoVn7Y",
+      "title": "やさしい腰痛改善ヨガ　骨盤調整や自律神経を整えたい方にもおすすめ！ #546",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤", "自律神経"]
+    },
+    {
+      "id": "pTCE15AKnxQ",
+      "title": "【10分で代謝アップ】全身ストレッチフローヨガ　#545",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "_l_FuDNsgj8",
+      "title": "【毎日10分】朝の全身ストレッチ　１日を前向きに過ごす！ #544",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["全身", "朝"]
+    },
+    {
+      "id": "Z5uaxJBUGeM",
+      "title": "【毎日10分】疲労回復ストレッチヨガ　初心者の方、体が硬い方におすすめ！ #543",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["疲労回復", "柔軟性", "初心者"]
+    },
+    {
+      "id": "99r5iRDnqWY",
+      "title": "股関節を和らげるデトックスストレッチ #542",
+      "channel": "b-flow",
+      "duration_min": 26,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "デトックス"]
+    },
+    {
+      "id": "HPCfqYNXuks",
+      "title": "自律神経のバランスを整える陰ヨガ　 ストレスの緩和、疲労回復に効果的　#541",
+      "channel": "b-flow",
+      "duration_min": 27,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["疲労回復", "自律神経"]
+    },
+    {
+      "id": "QhpHGGvlio8",
+      "title": "【痩せるフローヨガ】 代謝を上げ、体幹を強化する！ #540",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "70Dp-yCx7P8",
+      "title": "【疲労回復ヨガ】 自律神経を整え、心と体の疲れを癒す　#539",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["疲労回復", "自律神経"]
+    },
+    {
+      "id": "CU8SEXzzGAs",
+      "title": "ヨガ初心者や体が硬い方におすすめ！　寝たままできる片頭痛ヨガ　#537",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "柔軟性", "初心者"]
+    },
+    {
+      "id": "lIGAg8u1BkE",
+      "title": "全身フローヨガ　代謝アップ、脂肪燃焼に効果的　#536",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "vG5pSese1qQ",
+      "title": "極上ストレッチヨガ　腰痛改善、骨盤矯正に効果的　#535",
+      "channel": "b-flow",
+      "duration_min": 25,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤"]
+    },
+    {
+      "id": "11gceWDkDBM",
+      "title": "自律神経のバランスを整える片頭痛ヨガ　#533",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経"]
+    },
+    {
+      "id": "b3bE47a9-bM",
+      "title": "自律神経が整う腸活ヨガ　便秘の解消、美肌作りに効果的！ #532",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経", "デトックス"]
+    },
+    {
+      "id": "2S2DNRwDC40",
+      "title": "【滝汗10分】 みるみる脂肪が燃える究極の全身痩せトレーニング - RISE #531",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["全身", "筋力"]
+    },
+    {
+      "id": "BzP05pulruU",
+      "title": "肩こり・首こり解消に効果的！　上半身をほぐす片頭痛ヨガ　#524",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "GISUPMLKtak",
+      "title": "【毎日10分 夜ストレッチ】　腰痛改善、疲労回復、安眠に効果的！　#523",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["腰", "夜", "寝る前", "疲労回復"]
+    },
+    {
+      "id": "1Z3SifFe4RM",
+      "title": "【毎日10分 朝ストレッチ】 柔軟性を高め、しなやかな体を作る！　#522",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝", "柔軟性"]
+    },
+    {
+      "id": "zRJImTXURpA",
+      "title": "ストレスや不安を解消し、全身のゆがみを整えるヨガ　＃521",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "DJ7iz90cRcw",
+      "title": "【全身フローヨガ】 柔軟性アップとダイエットに効果的！ #519",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "柔軟性"]
+    },
+    {
+      "id": "pH1Id5262wQ",
+      "title": "心と体の疲れを癒す寝る前のリラックスヨガ #517",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "リラックス", "疲労回復"]
+    },
+    {
+      "id": "fypCTSbsscU",
+      "title": "【1日8分】 美しいデコルテラインを作る♡　肩こり・首こりもスッキリ！ #515",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "U7EpYjkW7_M",
+      "title": "【毎日7分】 前屈が深まる魔法のストレッチ　腰痛改善＆疲労回復に効果的！ #511",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "疲労回復"]
+    },
+    {
+      "id": "hS_BRoS5euw",
+      "title": "【毎日10分】 2週間でベターっと開脚できる魔法のストレッチ #510",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "CgYd8LHn8MA",
+      "title": "【10分】 美しい背中を作る魔法のストレッチ　肩こり解消にも効果的！ #509",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中"]
+    },
+    {
+      "id": "qqfTG6mpX0E",
+      "title": "【8分で劇的変化！】 股関節がみるみる柔らかくなる魔法のストレッチ　骨盤調整・脚の冷え・むくみに効果的 #508",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "骨盤", "脚", "柔軟性", "むくみ"]
+    },
+    {
+      "id": "eXr9zG63UOs",
+      "title": "【自律神経リセット】 心と体がらくになるセルフケアヨガ！ #507",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経"]
+    },
+    {
+      "id": "TyNH1CweC_M",
+      "title": "【寝たまま8分】 骨盤リセットで疲れ知らずのカラダになる！ 股関節・腰痛・むくみ・冷えの解消 #504",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "股関節", "骨盤", "寝る前", "疲労回復"]
+    },
+    {
+      "id": "Vr1AdVWbrFA",
+      "title": "【座ったまま3分】ガチガチ肩こりがスッキリ解消！ #502",
+      "channel": "b-flow",
+      "duration_min": 4,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩"]
+    },
+    {
+      "id": "SX2FsECzB24",
+      "title": "【極上ストレッチ】 全身の不調が改善し、みるみる柔らかくなる！ #501",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "柔軟性"]
+    },
+    {
+      "id": "V9wT2bDe_wc",
+      "title": "【最高のリフレッシュ】 パワーがみなぎるフローヨガで代謝アップ＆免疫力強化！ #499",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["リフレッシュ"]
+    },
+    {
+      "id": "BdsvI2FdjzU",
+      "title": "【毎朝12分】 目覚めの全身ストレッチでみるみるカラダが変化！ #497",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "朝"]
+    },
+    {
+      "id": "RLLAkCDwRKY",
+      "title": "【地獄の10分】効果絶大！全身痩せトレーニング - BEST FIT #494",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["全身", "筋力"]
+    },
+    {
+      "id": "XQqexUW3Ko0",
+      "title": "【10分で変化】みるみる脚が引き締まる下半身燃焼トレーニング - BEST FIT #493",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "Re2MmgYe01A",
+      "title": "【全身スッキリ】 仕事の後や運動後の疲れをとる6分間ストレッチ！ #488",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["全身", "疲労回復"]
+    },
+    {
+      "id": "ui77f0BwhZI",
+      "title": "【寝る前10分】 寝たままできる脚やせストレッチ #487",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["脚", "寝る前"]
+    },
+    {
+      "id": "l5g11Jub_Jc",
+      "title": "【毎日6分ストレッチ】 硬いカラダを柔らかく！ #485",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["柔軟性"]
+    },
+    {
+      "id": "CtYD3EysPO8",
+      "title": "【肩こり・首こりは自分で治せる！】 上半身の凝りをほぐすヨガ #484",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "fJJrJ2dd1U4",
+      "title": "【寝る前のヨガ】 全身の疲れを癒し、自律神経を整える #481",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "寝る前", "リラックス", "疲労回復", "自律神経"]
+    },
+    {
+      "id": "1RP7DZH28Cg",
+      "title": "【1日10分】 肩と背中をほぐす朝ヨガ　一日を元気に過ごそう！ #479",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["肩", "背中", "朝"]
+    },
+    {
+      "id": "MSS3gJlN3Wk",
+      "title": "【全身の疲労回復】 産後の症状改善、肩こり・骨盤調整に効果的！ #478",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "骨盤", "全身", "疲労回復"]
+    },
+    {
+      "id": "JJ1xGDthDrA",
+      "title": "【安産力を高める骨盤ケア】 体力・体幹力・足腰の強化に効果的 #477",
+      "channel": "b-flow",
+      "duration_min": 22,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["腰", "骨盤", "脚", "体幹"]
+    },
+    {
+      "id": "uZl5hjYvnr8",
+      "title": "【自律神経を整える】 妊婦さん・ヨガ初心者におすすめの究極のリラックスヨガ #476",
+      "channel": "b-flow",
+      "duration_min": 28,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["リラックス", "自律神経", "初心者"]
+    },
+    {
+      "id": "9wJCbeDRppI",
+      "title": "【体質改善】 全身をほぐし安産へと導く、妊婦さんのための太陽礼拝 #474",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "0DWB3AKQ_sY",
+      "title": "【デトックスがとまらない】 全身をキレイに引き締める痩せるフローヨガ #472",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "デトックス"]
+    },
+    {
+      "id": "LUoQ6F-1Njs",
+      "title": "【骨盤底筋を鍛える】 尿漏れ、ぽっこりお腹、骨盤のゆがみ解消に効果的！ #469",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["骨盤", "体幹", "筋力"]
+    },
+    {
+      "id": "IQ7E9x2BqwY",
+      "title": "【脂肪を減らす！】 やせ体質になる全身フローヨガ #468",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "nT79KOg9B64",
+      "title": "【疲れ知らずの体になる】 骨盤リセットヨガでぼっこりお腹もみるみる解消！ #466",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "体幹", "疲労回復"]
+    },
+    {
+      "id": "AqyzZj8DcWI",
+      "title": "【太らない体をつくる！】 朝の10分フローヨガで時短ダイエット☆ #461",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 2,
+      "type": "warmup",
+      "tags": ["朝"]
+    },
+    {
+      "id": "PQfEfaKRgW8",
+      "title": "【肩と背中の凝りに効く！】 ガチガチな上半身がみるみるほぐれる整体ヨガ☆ #460",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中"]
+    },
+    {
+      "id": "u0u5vxQRtFk",
+      "title": "【Day24】 Connect - 30 Days Yoga　肩と背中をほぐす #443",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中"]
+    },
+    {
+      "id": "Q5_tCUFes-U",
+      "title": "【Day20】 Connect - 30 Days Yoga　朝のフローヨガ #439",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["朝"]
+    },
+    {
+      "id": "o86pl7UPK2I",
+      "title": "【Day16】 Connect - 30 Days Yoga　首と肩甲骨をほぐす #435",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "背中"]
+    },
+    {
+      "id": "jwC-IbHqy5E",
+      "title": "【Day14】 Connect - 30 Days Yoga　腰をほぐすヨガ #433",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰"]
+    },
+    {
+      "id": "B4mU-9nsXHE",
+      "title": "【Day12】 Connect - 30 Days Yoga　寝たまま朝ヨガ #431",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝", "寝る前"]
+    },
+    {
+      "id": "ebeFRKkjs9Y",
+      "title": "【Day10】 Connect - 30 Days Yoga　全身ストレッチ #429",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "MQbWnsnFmZ8",
+      "title": "【魔法の寝落ちヨガ　安眠編】 心も体もホロホロにほぐれて夢の世界へ #416",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前"]
+    },
+    {
+      "id": "BnVaMeLCALQ",
+      "title": "【夜のフローヨガ】 全身の疲労回復、冷えやむくみの改善に効果的！ #413",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "夜", "疲労回復", "むくみ"]
+    },
+    {
+      "id": "PiyA-1PM1RQ",
+      "title": "【肩・首スッキリ！】 肩甲骨をほぐすヨガ☆ 姿勢改善にも効果的！ #408",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "背中"]
+    },
+    {
+      "id": "8JmFSFrdlkI",
+      "title": "【サンセット疲労回復ヨガ】 自律神経を整え、心と身体の不調を改善させる☆ #406",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["疲労回復", "自律神経"]
+    },
+    {
+      "id": "LRyDvgEIpcg",
+      "title": "【疲労回復・集中力アップ！】 呼吸が深まり、血流が良くなるリフレッシュヨガ☆ #405",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["リフレッシュ", "疲労回復"]
+    },
+    {
+      "id": "hy-NaKyd5fc",
+      "title": "【安眠ヨガ】 ぐっすり眠れる疲労回復ヨガ☆ その日の疲れはその日のうちに！ #397",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "疲労回復"]
+    },
+    {
+      "id": "El-hcEUklR4",
+      "title": "【毎日15分】 全身がほぐれるフローヨガ☆ 朝ヨガにもオススメ！ #393",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "朝"]
+    },
+    {
+      "id": "cdQVhWP-ZXE",
+      "title": "【ぐっすり安眠】 夜寝る前のヨガで自律神経を整えよう！ 初心者にもオススメ☆ #391",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "寝る前", "自律神経", "初心者"]
+    },
+    {
+      "id": "YOsoXG4dzCc",
+      "title": "【運動後のストレッチ】足の疲れ、むくみ、腰痛改善に効果的！ #389",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "疲労回復", "むくみ"]
+    },
+    {
+      "id": "GzLMhUzTxqA",
+      "title": "【6分燃焼！】 短時間で全身を引き締め、美腹筋を作るトレーニング☆ #386",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "全身", "筋力"]
+    },
+    {
+      "id": "nZSe3ZZUSJw",
+      "title": "【ベッドで朝ヨガ】 起きてすぐ！全身を心地よくほぐし１日を快適に☆ #381",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "朝"]
+    },
+    {
+      "id": "GybQDmSJhTM",
+      "title": "【毎日3分】 寝たままできる背中やせ☆ 肩こり・猫背もみるみる改善！ #366",
+      "channel": "b-flow",
+      "duration_min": 5,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中", "寝る前"]
+    },
+    {
+      "id": "EYqPH91q5nE",
+      "title": "【毎日10分】 カラダが変わる！ ヨガで自律神経をセルフケア☆ #363",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経"]
+    },
+    {
+      "id": "Zw_osQctQKs",
+      "title": "骨盤のゆがみを整え、腰痛を緩和するヨガ☆ 初心者にオススメ！ #360",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤", "初心者"]
+    },
+    {
+      "id": "7aXi7F7br6A",
+      "title": "全身の代謝を上げるフローヨガ☆　股関節もみるみる柔軟に！ #354",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["股関節", "全身", "柔軟性"]
+    },
+    {
+      "id": "ivoTv8BWrQA",
+      "title": "ゆるめるヨガで肩こり・腰痛・ストレス解消！ #353",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "腰"]
+    },
+    {
+      "id": "gifR5H3_jxw",
+      "title": "魔法のピラティスで全身を美しく引き締める！ ＃352",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "WA-XGHeXnao",
+      "title": "【1日5分で美しく引き締まる】魔法のくびれトレーニング！ ＃351",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "kBLCmz8pODg",
+      "title": "【1日5分で美しく引き締まる】魔法の美尻トレーニング！ ＃350",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "IBt5l9Um_rY",
+      "title": "【1日5分で美しく引き締まる】魔法の背中＆二の腕トレーニング！ ＃349",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["背中", "筋力"]
+    },
+    {
+      "id": "WWxKW8ncPe0",
+      "title": "【1日5分で美しく引き締まる】魔法の美脚トレーニング！ ＃348",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "CmWJJWKLeKg",
+      "title": "【1日5分で美しく引き締まる】魔法の腹割りトレーニング！  #347",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["筋力"]
+    },
+    {
+      "id": "e9HR7-3I3MA",
+      "title": "肩こり、背中周りがみるみるほぐれるヨガ☆ 初心者にオススメ！ #344",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中", "初心者"]
+    },
+    {
+      "id": "dsHgUncnWTk",
+      "title": "首こり解消ヨガ☆ つら～い首こりやスマホ首がみるみる治る！ #341",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["首"]
+    },
+    {
+      "id": "J0B27XRg9Ck",
+      "title": "1日の終わりに骨盤のゆがみを整える寝たままヨガ #330",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "寝る前"]
+    },
+    {
+      "id": "2S8fSj5Ox6o",
+      "title": "寝たままできる脚の疲れやむくみを取るヨガ！　脚やせにも効果的☆ #315",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚", "寝る前", "疲労回復", "むくみ"]
+    },
+    {
+      "id": "9LU2ZqTpGOI",
+      "title": "やさしい骨盤リセットヨガ！　腰痛改善、生理痛の緩和にも効果的☆ #314",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤"]
+    },
+    {
+      "id": "3DoZVZv2ioA",
+      "title": "肩こり・首こりが驚くほど軽くなるヨガ☆　初心者におすすめ #311",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "初心者"]
+    },
+    {
+      "id": "zCHw2fWcnw4",
+      "title": "寝たままできる腰痛改善ヨガ☆　初心者におすすめ #310",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "寝る前", "初心者"]
+    },
+    {
+      "id": "UFfa-lK90DM",
+      "title": "お腹がみるみる引き締まる！ ピラティス呼吸法 #308",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "4eD2IzDnyVc",
+      "title": "【13分】全身脂肪燃焼エクササイズ！　きついけど効果絶大！ #307",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["全身", "筋力"]
+    },
+    {
+      "id": "s7w6jLynl6c",
+      "title": "【10分集中】最強のくびれトレーニング！　一生太らない体を手に入れる #306",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "Qa8i-YeYk6w",
+      "title": "【1日8分】下腹をへこますトレーニング　憧れのぺたんこ腹になる！ #305",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "1jVivuZx5yw",
+      "title": "【毎日8分】目指せ腹筋女子！　お腹に縦線をつくるエクササイズ #304",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "VIH-aaLQ5TI",
+      "title": "【8分集中】全身脂肪燃焼！　みるみる体が引き締まるトレーニング #303",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["全身", "筋力"]
+    },
+    {
+      "id": "WliGaqjp-hY",
+      "title": "【1日7分】ぽっこりお腹解消！　美腹筋をつくるエクササイズ #302",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "aEE5TzkiUmg",
+      "title": "最強！美腹筋トレーニング　すぐやせて2度と太らない私に！ #299",
+      "channel": "b-flow",
+      "duration_min": 5,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "d8h1oTP_0Gw",
+      "title": "10分でできる寝たままヨガ　デトックスと腰痛予防に効果的！ #297",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "寝る前", "デトックス"]
+    },
+    {
+      "id": "GamX-b6DASY",
+      "title": "みるみる肩周りがほぐれる！ 肩スッキリヨガ #296",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩"]
+    },
+    {
+      "id": "vaK0JHHWLHI",
+      "title": "フローヨガ特別版　全身を引き締め心も体もリフレッシュ！ #293",
+      "channel": "b-flow",
+      "duration_min": 58,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "リフレッシュ"]
+    },
+    {
+      "id": "LeU31ws-HBk",
+      "title": "全身のゆがみを整えるヨガ☆　姿勢を整え、疲労を回復させよう！ #292",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "疲労回復"]
+    },
+    {
+      "id": "KTBGcQHlUmg",
+      "title": "全身を引き締めるダイエットヨガ☆　体幹を強化し、しなやかボディを作る！ #290",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹", "全身"]
+    },
+    {
+      "id": "WL-yCF3f6OQ",
+      "title": "寝たままできる肩こり解消ヨガ☆　ガンコな肩こりもみるみる消える！ #288",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "寝る前"]
+    },
+    {
+      "id": "ND9uh2I2ljE",
+      "title": "初心者にオススメの腰回りをほぐすヨガ☆　腰痛改善に効果的！ #287",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "初心者"]
+    },
+    {
+      "id": "vSAtEErqDWY",
+      "title": "下半身の筋膜をほぐすセルフケア☆　脚やせ、疲労回復に効果的！ #284",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚", "疲労回復"]
+    },
+    {
+      "id": "y05DzIPcytA",
+      "title": "足裏と足指をほぐすセルフケア☆　むくみ、冷え症、疲労回復におすすめ！ #283",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["疲労回復", "むくみ"]
+    },
+    {
+      "id": "MDMbpikr8oo",
+      "title": "10分間のゆったり朝ヨガ☆　脳とカラダが心地よく目覚める！ #279",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["朝"]
+    },
+    {
+      "id": "lv3x_Jh2WRw",
+      "title": "寝たまま楽チン！ 脚の疲れやむくみをとる壁ヨガ☆ #270",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚", "寝る前", "疲労回復", "むくみ"]
+    },
+    {
+      "id": "s5L_eIfxQgk",
+      "title": "寝たままできる究極のリラクゼーションヨガ #265",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前"]
+    },
+    {
+      "id": "IPNLFyK43KE",
+      "title": "脚と背中を一気に引き締める☆ バレトン20分 #255",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["背中", "脚"]
+    },
+    {
+      "id": "lfFgjOu-SCM",
+      "title": "脚やせにも効果的！ 脚のむくみや疲れをとる下半身をほぐすヨガ☆ #253",
+      "channel": "b-flow",
+      "duration_min": 27,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚", "疲労回復", "むくみ"]
+    },
+    {
+      "id": "j7riQ0SpuTE",
+      "title": "肩と背中をほぐすヨガ☆　不思議なほど肩こりが軽くなる！ #245",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中"]
+    },
+    {
+      "id": "KaDsJF0qK6U",
+      "title": "座ったままできる眼精疲労をとるヨガ☆　首こりの方にもおすすめ！ #243",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["首", "疲労回復"]
+    },
+    {
+      "id": "lFNpEerWDXg",
+      "title": "夜寝る前のヨガで眠りの質を高めよう！　初心者の方にもおすすめ☆ #238",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "寝る前", "初心者"]
+    },
+    {
+      "id": "PfuKYiwO6NI",
+      "title": "全身引き締めフローヨガ☆　ダイエット＆脂肪燃焼に効果的！ #236",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "qKo9131A06k",
+      "title": "骨盤調整ダイエットで下半身を引き締める☆　バレトン20分 #231",
+      "channel": "b-flow",
+      "duration_min": 22,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["骨盤", "脚"]
+    },
+    {
+      "id": "tEVh6R29ORY",
+      "title": "座ったままできる肩こり解消ヨガ☆　デスクワークの方におすすめ！ #226",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩"]
+    },
+    {
+      "id": "sqZWAQK302I",
+      "title": "腰回りが硬い方にオススメ！　短時間で腰をほぐすヨガ #225",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰"]
+    },
+    {
+      "id": "RPuMaCVGPSk",
+      "title": "目覚めの朝ヨガ　肩こり・首こり解消、腰回りをほぐす☆ #224",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "腰", "朝"]
+    },
+    {
+      "id": "w0JeUppbmhQ",
+      "title": "脚やせフローヨガ☆　下半身痩せに効果的！ #222",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "-EayjSTkcU4",
+      "title": "寝たままできるリラックスヨガ☆　心と体を軽くする #217",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "リラックス"]
+    },
+    {
+      "id": "QVhIPrkFr8w",
+      "title": "脚やせヨガ☆　下半身を強化し、基礎代謝アップ！ #216",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "BEbDvIrvePM",
+      "title": "肩こり解消ヨガ☆　首こり、頭痛、眼精疲労にも効果的！ #214",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "疲労回復"]
+    },
+    {
+      "id": "xXiLTuPPJO8",
+      "title": "体幹を鍛えるヨガ☆　疲れにくいカラダをつくる #213",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "疲労回復", "筋力"]
+    },
+    {
+      "id": "1xrh2fMtuFA",
+      "title": "心と体を整えるヨガ☆　自律神経の調子を整える #211",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経"]
+    },
+    {
+      "id": "7grUvNWJriM",
+      "title": "エナジーフローヨガ☆　全身を代謝アップし、免疫力をあげよう！ #209",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "hZkOVN8qT8I",
+      "title": "自律神経の調子を整えるリラックスヨガ！　初心者の方にもおすすめ☆ #207",
+      "channel": "b-flow",
+      "duration_min": 35,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["リラックス", "自律神経", "初心者"]
+    },
+    {
+      "id": "Qbuxt2PFcsQ",
+      "title": "全身に効く20分フローヨガ☆　みるみる体が引き締まる！ #206",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "AhK4zvnRMXQ",
+      "title": "反り腰改善ヨガ☆　骨盤のゆがみを整え腰痛を緩和する！ #204",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤"]
+    },
+    {
+      "id": "TH9jJX1JeSo",
+      "title": "短時間で下腹を引き締める！　ぽっこりお腹を解消しよう☆ #203",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "JDOMr2odzTU",
+      "title": "夜寝る前のベッドヨガ☆　自律神経の調子を整える！ #199",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "寝る前", "自律神経"]
+    },
+    {
+      "id": "AZp1DvSEKI0",
+      "title": "腰痛を緩和するゆったりヨガ☆　骨盤のゆがみも整える！ #198",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤"]
+    },
+    {
+      "id": "gLstd0ldKz4",
+      "title": "上向きヒップをつくる☆　かんたん美尻エクササイズ！ #197",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "Bvl4PtEMzTM",
+      "title": "首こり・肩こりを解消するヨガ☆　ショートバージョン #196",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "lCbJxjrHdbs",
+      "title": "ヒーリングヨガ☆　自律神経を整えたい方、初心者の方におすすめ！ #194",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経", "初心者"]
+    },
+    {
+      "id": "S3oKmqT0EQI",
+      "title": "デトックスフローヨガ☆　脂肪燃焼しやすい体作り！ #193",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["デトックス"]
+    },
+    {
+      "id": "UNjs13coll4",
+      "title": "お腹を引き上げる！　5分バレエワークアウト☆ #192",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "tavq7yjI0CQ",
+      "title": "骨盤矯正ヨガ☆　歪みを正し、美しい下半身作りに効果的！ #191",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "脚"]
+    },
+    {
+      "id": "l_INIgA-WVQ",
+      "title": "やさしい朝ヨガ☆　心と体を元気にする！ #189",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝"]
+    },
+    {
+      "id": "c1-nZNoYAK0",
+      "title": "寝たままできる陰ヨガ☆　自律神経の調子を整える！ #188",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "自律神経"]
+    },
+    {
+      "id": "CjE1CMLZ624",
+      "title": "ゆがみを整えるリラックスヨガ☆　全身のこりをほぐそう！ #184",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "リラックス"]
+    },
+    {
+      "id": "MhhVyXtRAys",
+      "title": "ベッドの上でかんたん朝ヨガ☆　全身のこりをほぐし気分爽快！ #180",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "warmup",
+      "tags": ["全身", "朝", "リフレッシュ"]
+    },
+    {
+      "id": "g7s0NeOAadY",
+      "title": "寝る前のヨガで心と体を癒そう！　初心者の方にもおすすめ☆ #178",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "初心者"]
+    },
+    {
+      "id": "CniM6IVt3Uw",
+      "title": "腸をキレイにするヨガ☆　自律神経を整えて便秘解消！ #177",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経", "デトックス"]
+    },
+    {
+      "id": "ofum6PxdWQs",
+      "title": "本気のお腹やせ！　45秒体幹トレーニング【上級編】 #176",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "jkG8AU4fDKc",
+      "title": "お尻と内ももを引き締める！　美脚バレエワークアウト☆ #175",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "5M1Nv2mzVos",
+      "title": "足の冷えや疲れ、むくみを解消する陰ヨガ☆ #174",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["疲労回復", "むくみ"]
+    },
+    {
+      "id": "9ZPEGtL3ZTI",
+      "title": "お腹回りスッキリ！　45秒体幹トレーニング【中級編】 #172",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "2lfJzcsbR8o",
+      "title": "寝たままできる骨盤のゆがみを整えるヨガ☆ #171",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "寝る前"]
+    },
+    {
+      "id": "KRCAygCLpLo",
+      "title": "肩、背中周りをほぐすヨガ☆　初心者や体が硬い方にもオススメ！ #170",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中", "柔軟性", "初心者"]
+    },
+    {
+      "id": "TjPI40DNyEs",
+      "title": "短時間でお腹やせ☆　45秒体幹トレーニング【初級編】 #168",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "A9PhilXqbuI",
+      "title": "朝のフローヨガでエネルギーチャージ！　一日を前向きにスタート☆ #167",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["朝"]
+    },
+    {
+      "id": "zty0W3JHb34",
+      "title": "ヨガ初心者の方でも簡単にできる朝ヨガ！太陽礼拝☆ #165",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝", "初心者"]
+    },
+    {
+      "id": "KWhqj4HkfNs",
+      "title": "脚とお腹を同時に引き締める！　体幹バレエワークアウト☆ #163",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "体幹", "筋力"]
+    },
+    {
+      "id": "mgHc506GbMo",
+      "title": "ゆがみを整えるヨガ☆　骨盤から肩回りまで全身スッキリ！ #158",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "骨盤", "全身"]
+    },
+    {
+      "id": "X-eESeQIAl0",
+      "title": "寝る前のベッドヨガでぐっすり安眠☆　一日の疲れを解消しよう！ #157",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "疲労回復"]
+    },
+    {
+      "id": "cMm2vuEdPRo",
+      "title": "お腹まわりを引き締める体幹ワークアウト☆ #156",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "m1v_4uXIYcs",
+      "title": "脚やせヨガストレッチ☆　ももの裏側をほぐす #155",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "J40CVl5bpF8",
+      "title": "骨盤ぽかぽかヨガ☆　お尻をほぐして腰痛を和らげる #153",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤"]
+    },
+    {
+      "id": "WHvJ7mfL2js",
+      "title": "10分寝たままヨガでリラックス☆　初心者の方にもオススメ #152",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "リラックス", "初心者"]
+    },
+    {
+      "id": "4swJQkLPFQI",
+      "title": "脚やせヨガストレッチ☆　ももの前側をほぐす #149",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "kWCYY2DuUOo",
+      "title": "ウエストにくびれを作る☆　リズムピラティスでお腹まわりスッキリ！ #146",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "OjWe9jVAQew",
+      "title": "脚を引き締める☆　リズムに乗って下半身痩せ！ #145",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "vvxPOsJ9GWg",
+      "title": "体幹ヨガでダイエット☆　全身の血行を促進し、脂肪燃焼しよう！ #144",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹", "全身"]
+    },
+    {
+      "id": "2zeVeL2a0qM",
+      "title": "ぽっこりお腹を解消するトレーニング☆　短時間で集中ダイエット！ #140",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "mTN5Nq4SpHs",
+      "title": "自律神経を整えるヨガ☆　免疫力を高めるのにも効果的！ #139",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経"]
+    },
+    {
+      "id": "tFuXOE1uEtc",
+      "title": "背中とお尻を引き締める☆　ダイエット効果を高めるリズムピラティス☆ #136",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["背中"]
+    },
+    {
+      "id": "Krd83R7UhHc",
+      "title": "骨盤のゆがみを整えるヨガ☆　脚のむくみ解消にも効果的！ #135",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "脚", "むくみ"]
+    },
+    {
+      "id": "wOl-pUrqlOE",
+      "title": "お腹を引き締める☆　リズムピラティスでダイエット効果倍増！ #134",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "G5rLhuS-fgE",
+      "title": "上半身をほぐすヨガ☆　肩こり解消にも効果的！ #130",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩"]
+    },
+    {
+      "id": "NsM0A9bSUlI",
+      "title": "お腹とお尻を同時に引き締めるサーキットトレーニング☆　【上級編】 #129",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "sOx-fnmxIck",
+      "title": "体が硬い人のための簡単タオルヨガ☆　腰痛・骨盤矯正にも効果的！ #128",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤", "柔軟性"]
+    },
+    {
+      "id": "GOYj9aiTyVU",
+      "title": "お腹とお尻を同時に引き締めるサーキットトレーニング☆　【中級編】 #126",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "z52LkcTgiOw",
+      "title": "体が硬い人のための簡単タオルヨガ☆　肩こり・猫背に効果的！ #125",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中", "柔軟性"]
+    },
+    {
+      "id": "q64H5SRsA8c",
+      "title": "お尻と下半身の引き締めに効果的☆　【バレトン】 #124",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "rejzAUf8TYs",
+      "title": "背骨を整える陰ヨガ☆　上半身の凝りをほぐし自律神経を整える #123",
+      "channel": "b-flow",
+      "duration_min": 24,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["背中", "自律神経"]
+    },
+    {
+      "id": "TGRtw7hvIa0",
+      "title": "お腹とお尻を同時に引き締めるサーキットトレーニング☆　【初級編】 #122",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "2apFPvwW1EU",
+      "title": "ダイエットヨガで脂肪燃焼！　体幹を強化して痩せやすい体づくり☆ #121",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "3-gMTiPdeKo",
+      "title": "寝る前のヨガで体内浄化☆　ベッドの上で心地よくストレッチ #119",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前"]
+    },
+    {
+      "id": "WtekCvN5oQY",
+      "title": "脚とお腹の短期集中ダイエット☆　【上級編】 #118",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚", "体幹"]
+    },
+    {
+      "id": "moKKlMuTlNc",
+      "title": "肩こり・首こりを同時に解消するリラックスヨガ☆ #117",
+      "channel": "b-flow",
+      "duration_min": 20,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首", "リラックス"]
+    },
+    {
+      "id": "JIl2UMw5PV4",
+      "title": "キュッとくびれた足首！　ふくらはぎ引き締めに効果的なバレトン☆ #116",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["首", "脚", "体幹"]
+    },
+    {
+      "id": "eJRt9L_eO0g",
+      "title": "朝ヨガで心地よく目覚めよう！　ベッドの上で簡単ストレッチ☆ #115",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝"]
+    },
+    {
+      "id": "9scAXbpvL54",
+      "title": "月礼拝☆　骨盤のゆがみを整え、女性らしい体作りに効果的！ #114",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤"]
+    },
+    {
+      "id": "x1-_WPPjFlw",
+      "title": "脚とお腹の短期集中ダイエット☆　【中級編】 #113",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚", "体幹"]
+    },
+    {
+      "id": "GvKlyDL00m8",
+      "title": "心と体を整えるリラックスヨガ　夜寝る前におすすめ☆ #112",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "寝る前", "リラックス"]
+    },
+    {
+      "id": "I_iUKQBLAR8",
+      "title": "ブレない「体幹」の作り方！　美脚にも効果的なバレトンエクササイズ☆ #111",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "体幹", "筋力"]
+    },
+    {
+      "id": "-NL6Cl12atI",
+      "title": "脚とお腹の短期集中ダイエット☆　【初級編】 #110",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚", "体幹"]
+    },
+    {
+      "id": "k7ju5ykeoV8",
+      "title": "寝たままできる自律神経を整えるヨガ☆　やる気が出ない時にオススメ #109",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "自律神経"]
+    },
+    {
+      "id": "Z8XEQeQvNW8",
+      "title": "体幹トレーニングでお腹回りを引締める☆　地味にキツいが効果絶大！ #106",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "23wGMlSJEuc",
+      "title": "夜寝る前のおやすみヨガ☆　骨盤のゆがみを整え、ぐっすり安眠 #105",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "夜", "寝る前"]
+    },
+    {
+      "id": "LJ5eUaZ-4-0",
+      "title": "二の腕と背中を引き締めるバレトンエクササイズ☆ #104",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["背中", "筋力"]
+    },
+    {
+      "id": "BWoFXG7TKt0",
+      "title": "ヨガで過剰な食欲をコントロール！　自律神経の調子を整えよう☆ #103",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["自律神経"]
+    },
+    {
+      "id": "YWtRjRhJomw",
+      "title": "180度開脚を極める！　脚のむくみ解消にも効果的なヨガストレッチ☆ #102",
+      "channel": "b-flow",
+      "duration_min": 28,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚", "むくみ"]
+    },
+    {
+      "id": "NYXfk6dCpX4",
+      "title": "即効お腹やせ！　30秒体幹トレーニングで脂肪燃焼MAX【上級編】 #101",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "x627x858uw8",
+      "title": "腰まわりをほぐすヨガ☆　骨盤矯正にも効果的！ #100",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰", "骨盤"]
+    },
+    {
+      "id": "H3wEYGqpfgk",
+      "title": "ゆったり夜ヨガで自律神経の調子を整えよう☆ #97",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "自律神経"]
+    },
+    {
+      "id": "F2TSEm5bzfQ",
+      "title": "お腹が凹む！　30秒体幹トレーニングで集中ダイエット【中級編】 #95",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "vIK2fheXxos",
+      "title": "ダイエットに効果的☆　デトックスヨガで内臓機能を高めよう！ #94",
+      "channel": "b-flow",
+      "duration_min": 22,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["デトックス"]
+    },
+    {
+      "id": "-Kh0p8ZNJxA",
+      "title": "陰ヨガで美脚になる☆　むくみを解消して脚スッキリ！ #92",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["脚", "むくみ"]
+    },
+    {
+      "id": "wwxZFRI146k",
+      "title": "ぽっこりお腹解消！　30秒体幹トレーニングで気軽にダイエット【初級編】 #91",
+      "channel": "b-flow",
+      "duration_min": 5,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "8-3CalRJJDo",
+      "title": "フローヨガで脂肪燃焼☆　体を大きく使って全身の代謝UP！ #90",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "rzQ2aca1r6g",
+      "title": "朝ヨガはダイエット効果抜群☆　体をほぐして代謝を上げよう！ #89",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["朝"]
+    },
+    {
+      "id": "CeWlhFpB8bc",
+      "title": "ゆがみを整えるヨガ（初心者向け）　綺麗な姿勢を取り戻す☆ #88",
+      "channel": "b-flow",
+      "duration_min": 15,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["初心者"]
+    },
+    {
+      "id": "RqNLX1inaFU",
+      "title": "背中とお尻を引き締める体幹エクササイズ☆ #87",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["背中", "体幹", "筋力"]
+    },
+    {
+      "id": "ewzN39Wi_ME",
+      "title": "陰ヨガで柔軟性を高めよう！　骨盤のゆがみも整える☆ #86",
+      "channel": "b-flow",
+      "duration_min": 28,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "柔軟性"]
+    },
+    {
+      "id": "FkYBVeogG8k",
+      "title": "脚とお尻を引き締める　美脚バレエエクササイズ☆ #84",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "wjF_wQjehtQ",
+      "title": "ヨガで痩せる！　全身を引き締めるダイエットフローヨガ☆ #83",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "IHkv9I7R1TY",
+      "title": "寝たままできる骨盤矯正ヨガ☆　初心者にもおすすめ #82",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "寝る前", "初心者"]
+    },
+    {
+      "id": "-DNTKfXejA4",
+      "title": "くびれ復活！　５分でできるくびれ強化エクササイズ☆ #81",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "YKOUMBAF0RM",
+      "title": "内ももとお尻の引き締めに効果的☆バレトンエクササイズ中級 #80",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["筋力"]
+    },
+    {
+      "id": "FfJDOWnnPCE",
+      "title": "夜のリラックスヨガ　肩こりや骨盤矯正に効果的☆ #79",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "骨盤", "夜", "リラックス"]
+    },
+    {
+      "id": "P_uhpBfmYWk",
+      "title": "脚やせ・下腹やせを同時に叶えるダイエットエクササイズ☆Part2 #78",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "体幹", "筋力"]
+    },
+    {
+      "id": "hTpLdcQ3o-I",
+      "title": "脚のむくみ解消リンパヨガ　下半身痩せにも効果的☆ #76",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚", "むくみ"]
+    },
+    {
+      "id": "A8U-CPfZhoQ",
+      "title": "お腹やせダイエット　深層部を鍛えてウエストシェイプ！ #74",
+      "channel": "b-flow",
+      "duration_min": 5,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["体幹"]
+    },
+    {
+      "id": "9rhHLXHX864",
+      "title": "目指せ前後開脚！　骨盤矯正にも効果的なヨガストレッチ☆ #73",
+      "channel": "b-flow",
+      "duration_min": 22,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤", "脚"]
+    },
+    {
+      "id": "wCCWkJGsvu4",
+      "title": "全身のゆがみを整えるリラックスヨガ　自己治癒力を高めよう☆ #72",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["全身", "リラックス"]
+    },
+    {
+      "id": "MzgRaQbXcOQ",
+      "title": "3分体幹ボディメイク☆　背中もウエストも引き締める！ #71",
+      "channel": "b-flow",
+      "duration_min": 5,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["背中", "体幹"]
+    },
+    {
+      "id": "ay3VJRWwREY",
+      "title": "美脚＆美尻！　バレトンで下半身を引き締めよう☆ #70",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "Jx-UaR6N6CU",
+      "title": "ヨガ ダイエットで基礎代謝アップ！お腹と下半身に効く☆ #69",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚", "体幹"]
+    },
+    {
+      "id": "dXzw-h1MQqo",
+      "title": "フローヨガで肩こり解消☆　全身の血の巡りを良くしよう！ #67",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["肩", "全身"]
+    },
+    {
+      "id": "Tqlr3uxEw4w",
+      "title": "夜寝る前のヨガで疲れを癒そう！　初心者の方にもオススメ☆ #66",
+      "channel": "b-flow",
+      "duration_min": 21,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "寝る前", "疲労回復", "初心者"]
+    },
+    {
+      "id": "UCZxkW0ycV4",
+      "title": "わき腹シェイプと肩こり解消に効くエクササイズ【バレトン】 #65",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["肩", "筋力"]
+    },
+    {
+      "id": "fSD5VDBG-D0",
+      "title": "陰ヨガで自律神経を整える　安眠効果バツグン☆ #64",
+      "channel": "b-flow",
+      "duration_min": 23,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前", "自律神経"]
+    },
+    {
+      "id": "RO8DHlLR5ws",
+      "title": "ぽっこりお腹さようなら　下腹引き締めエクササイズ　Part3 #63",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "IaO7CKkB8d8",
+      "title": "肩甲骨をほぐすヨガ☆　肩こり・腰痛さようなら！ #62",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "背中", "腰"]
+    },
+    {
+      "id": "BBVtXZu-0bo",
+      "title": "夜ヨガ☆　体ぽかぽかぐっすり安眠＆冷え性改善 #59",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["夜", "寝る前"]
+    },
+    {
+      "id": "tpPXhaG-78w",
+      "title": "美脚を作る！お尻もキュッと上がるバレトンエクササイズ #55",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "GPd_82Ud0Oc",
+      "title": "脚やせ・下腹やせを同時に叶えるダイエットエクササイズ☆ #54",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "体幹", "筋力"]
+    },
+    {
+      "id": "RX5uFTRsgJI",
+      "title": "自律神経を整えるヨガ☆　夜寝る前やリラックスしたい時にオススメ！ #53",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["夜", "寝る前", "リラックス", "自律神経"]
+    },
+    {
+      "id": "IbciHraVyEg",
+      "title": "二の腕ダイエット　背中も美しくするバレトンエクササイズ☆ #51",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["背中", "筋力"]
+    },
+    {
+      "id": "pUPSLhO7-bM",
+      "title": "ポッコリお腹解消！３分でできる体幹トレーニング☆ #50",
+      "channel": "b-flow",
+      "duration_min": 5,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "4rVjWpahnW8",
+      "title": "骨盤底筋を鍛えるヨガ☆　ぽっこりお腹、尿もれ改善などにオススメ！ #49",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["骨盤", "体幹", "筋力"]
+    },
+    {
+      "id": "DusCiQ4vyR4",
+      "title": "肩こり、腕の張りに効くヨガ☆　スマホ疲れ、デスクワークの方におすすめ #48",
+      "channel": "b-flow",
+      "duration_min": 9,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "疲労回復"]
+    },
+    {
+      "id": "EvvLI17BAsY",
+      "title": "足痩せダイエット！初心者からレベルアップ【バレトン中級】 #47",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["初心者"]
+    },
+    {
+      "id": "Z2_Q6TsoKBg",
+      "title": "首こり解消ヨガ　これ一本で肩こりも同時にスッキリ！ #42",
+      "channel": "b-flow",
+      "duration_min": 17,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["肩", "首"]
+    },
+    {
+      "id": "QpybO4WDgkU",
+      "title": "下半身シェイプ　お尻も太ももも全部引き締めよう！【バレトン】 #41",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["脚"]
+    },
+    {
+      "id": "7d7o2Zwwaok",
+      "title": "骨盤矯正ヨガ Part2　５分でできる骨盤のゆがみリセット術！ #39",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤"]
+    },
+    {
+      "id": "2hq7rMmvziQ",
+      "title": "３分でできる！　体幹トレーニングで痩せ体質を作ろう #38",
+      "channel": "b-flow",
+      "duration_min": 3,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "uZCKRkKc-xA",
+      "title": "内ももの引き締めに効果的！　O脚も治す脚やせエクササイズ☆ #36",
+      "channel": "b-flow",
+      "duration_min": 8,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "XD2xCQNV8KM",
+      "title": "安眠ヨガ part2　深い眠りで美人になろう！ #35",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["寝る前"]
+    },
+    {
+      "id": "EgmagCR5eKk",
+      "title": "引き締まったお尻を手に入れるエクササイズ【バレトン】 #34",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["筋力"]
+    },
+    {
+      "id": "NZznRWKUc0E",
+      "title": "ぽっこりお腹さようなら　下腹引き締めエクササイズ　Part2 #32",
+      "channel": "b-flow",
+      "duration_min": 7,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "DinPgHWZ4X4",
+      "title": "美脚になる！　足痩せ目指すならこのエクササイズ【バレトン】 #31",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "C5RoW3JU8nI",
+      "title": "股関節を柔らかくほぐして代謝アップ　【バレトン】 #23",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["股関節", "柔軟性"]
+    },
+    {
+      "id": "uPHhTNhfDk8",
+      "title": "骨盤矯正ヨガ　その日のゆがみはその日のうちに！ #22",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["骨盤"]
+    },
+    {
+      "id": "g-U-oq7LnEE",
+      "title": "足ヨガで足スッキリ！　立ち仕事の疲れやむくみを取る #20",
+      "channel": "b-flow",
+      "duration_min": 19,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["疲労回復", "むくみ"]
+    },
+    {
+      "id": "JqPHtUo2f08",
+      "title": "腰痛に効く！効果的なヨガストレッチ【ヨガ】 #18",
+      "channel": "b-flow",
+      "duration_min": 13,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["腰"]
+    },
+    {
+      "id": "EsbECwl7sxk",
+      "title": "腹筋だけでは作れない　くびれ強化エクササイズ #17",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "ivmzSyHwJxw",
+      "title": "第一印象を良くする！猫背解消エクササイズ【バレトン】 #16",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["背中", "筋力"]
+    },
+    {
+      "id": "tfp82qpltRM",
+      "title": "痩せやすい体を作る体幹トレーニング #15",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "ceL3A-QHQGY",
+      "title": "スラっとした美しい姿勢を作るバレトンエクササイズ #11",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["筋力"]
+    },
+    {
+      "id": "MDHVEhks03A",
+      "title": "股関節をやわらかくほぐして老廃物をごっそり流す　【ヨガ】 #10",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["股関節", "デトックス"]
+    },
+    {
+      "id": "6S5uo1pICBQ",
+      "title": "重力に負けない美尻を手に入れるエクササイズ【バレトン】 #9",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "te3y-dU57Eg",
+      "title": "10分安眠ヨガで不眠から解放される【おやすみヨガ】 #8",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["寝る前"]
+    },
+    {
+      "id": "KYhpHdjFbpk",
+      "title": "ぽっこりお腹さようなら　下腹引き締めエクササイズ #7",
+      "channel": "b-flow",
+      "duration_min": 6,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "tuh6VgjI0GQ",
+      "title": "太ももの引き締めに効果があるバレトンエクササイズ #6",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["脚", "筋力"]
+    },
+    {
+      "id": "sXMnJZ7KMnY",
+      "title": "腹筋より効果的にくびれを作るエクササイズ【バレトン】#4",
+      "channel": "b-flow",
+      "duration_min": 10,
+      "intensity": 3,
+      "type": "main",
+      "tags": ["体幹", "筋力"]
+    },
+    {
+      "id": "g4zQEwZPUP0",
+      "title": "肩こり解消もダイエットもこれ1本でＯＫです！【バレトン】 #1",
+      "channel": "b-flow",
+      "duration_min": 18,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["肩"]
     }
   ]
 }

@@ -8,26 +8,17 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { validateVideos, validateCatalog } from "./lib/validate-videos.mjs";
+import { readJson } from "./lib/util.mjs";
+import { buildVideosJson, serializeVideos } from "./lib/catalog.mjs";
+import { checkFreshness } from "./lib/sync.mjs";
+import { today } from "./lib/util.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-
-const REQUIRED_FIELDS = ["id", "title", "channel", "duration_min", "intensity", "type", "tags"];
-const VALID_TYPES = ["warmup", "main", "cooldown", "meditation"];
-const VALID_INTENSITIES = [1, 2, 3];
-const ID_PATTERN = /^[A-Za-z0-9_-]{11}$/;
 
 async function loadJson(relativePath) {
   const text = await readFile(path.join(ROOT, relativePath), "utf8");
   return { text, data: JSON.parse(text) };
-}
-
-// 元のJSONテキスト内で該当動画の "id" が出現する行番号を調べる(エラー表示用)
-function findLineForId(rawText, id) {
-  if (!id) return "?";
-  const marker = `"id": "${id}"`;
-  const index = rawText.indexOf(marker);
-  if (index === -1) return "?";
-  return rawText.slice(0, index).split("\n").length;
 }
 
 async function checkLive(video) {
@@ -42,69 +33,6 @@ async function checkLive(video) {
   }
 }
 
-function validateVideos(videosRaw, videosData, validChannels, validTags) {
-  const errors = [];
-  const seenIds = new Set();
-
-  for (const video of videosData.videos) {
-    const line = findLineForId(videosRaw, video.id);
-    const prefix = `[行${line}] id=${video.id ?? "(なし)"}`;
-
-    for (const field of REQUIRED_FIELDS) {
-      if (video[field] === undefined || video[field] === null) {
-        errors.push(`${prefix}: 必須項目 "${field}" がありません`);
-      }
-    }
-
-    if (typeof video.id !== "string" || !ID_PATTERN.test(video.id)) {
-      errors.push(`${prefix}: id は11文字の英数字・-・_ である必要があります`);
-    } else if (seenIds.has(video.id)) {
-      errors.push(`${prefix}: id が重複しています`);
-    } else {
-      seenIds.add(video.id);
-    }
-
-    if (typeof video.title !== "string" || video.title.trim() === "") {
-      errors.push(`${prefix}: title が空です`);
-    }
-
-    if (typeof video.channel !== "string" || !validChannels.has(video.channel)) {
-      errors.push(`${prefix}: channel "${video.channel}" は scripts/config.json のチャンネル名のいずれかである必要があります`);
-    }
-
-    if (!Number.isInteger(video.duration_min) || video.duration_min < 1 || video.duration_min > 120) {
-      errors.push(`${prefix}: duration_min は1〜120の整数である必要があります`);
-    }
-
-    if (!VALID_INTENSITIES.includes(video.intensity)) {
-      errors.push(`${prefix}: intensity は 1 / 2 / 3 のいずれかである必要があります`);
-    }
-
-    if (!VALID_TYPES.includes(video.type)) {
-      errors.push(`${prefix}: type は ${VALID_TYPES.join(" / ")} のいずれかである必要があります`);
-    }
-
-    if (!Array.isArray(video.tags) || video.tags.length < 1 || video.tags.length > 5) {
-      errors.push(`${prefix}: tags は1〜5個である必要があります`);
-    } else {
-      for (const tag of video.tags) {
-        if (!validTags.has(tag)) {
-          errors.push(`${prefix}: タグ "${tag}" は data/vocabulary.json にありません`);
-        }
-      }
-    }
-
-    // equipment(任意): 壁・椅子・ブロック等、動画の実施に必要な道具。未設定/空配列=道具なし
-    if (video.equipment !== undefined) {
-      if (!Array.isArray(video.equipment) || video.equipment.some((e) => typeof e !== "string" || e.trim() === "")) {
-        errors.push(`${prefix}: equipment は文字列の配列である必要があります`);
-      }
-    }
-  }
-
-  return errors;
-}
-
 async function main() {
   const checkLiveFlag = process.argv.includes("--check-live");
 
@@ -116,6 +44,23 @@ async function main() {
   const validTags = new Set(Object.values(vocabulary.categories).flat());
 
   const errors = validateVideos(videosRaw, videosData, validChannels, validTags);
+
+  // 台帳(catalog.json)がある場合は、台帳+手動修正から生成した結果と videos.json が一致しているかも確認する
+  // (videos.json を手で直接編集した、または生成し忘れた状態を検出する)
+  const catalog = await readJson(path.join(ROOT, "data/catalog.json"), null);
+  if (catalog) {
+    const overrides = await readJson(path.join(ROOT, "data/overrides.json"), { videos: {} });
+    errors.push(...validateCatalog(catalog, overrides, new Set(config.channels.map((c) => c.channel_id))));
+    const expected = buildVideosJson(catalog, overrides, validTags, videosData.updated);
+    if (serializeVideos(expected) !== serializeVideos(videosData)) {
+      errors.push("data/videos.json が catalog.json + overrides.json から生成される内容と一致しません。node scripts/catalog-sync.mjs --rebuild を実行してください(videos.json は直接編集しない)");
+    }
+
+    // 保存データの鮮度(YouTube API規約: 保存から30日以内に再取得か削除)。ここでは警告のみ(エラーにはしない)
+    for (const r of checkFreshness(catalog, config, today())) {
+      if (r.level !== "ok") console.warn(`${r.level === "error" ? "警告(要対応)" : "注意"}: ${r.channel} の保存データは ${r.message}。Actionsの定期更新が動いているか確認してください`);
+    }
+  }
 
   if (errors.length > 0) {
     console.error(`videos.json の検証エラー: ${errors.length}件\n`);

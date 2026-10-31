@@ -1,0 +1,56 @@
+name: Deploy to GitHub Pages
+
+# 公開元を「GitHub Actions」にしたときの公開用ワークフロー。
+#   push        … main への通常のpush(人による変更)で公開
+#   workflow_call … データ更新ワークフローから、自動コミットのあとに呼び出される
+#   workflow_dispatch … Actionsタブからの手動公開
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      # 呼び出し元がコミットした直後でも、最新のmainを公開する
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # 壊れたデータを公開しない
+      - name: Validate data
+        run: node scripts/validate.mjs
+
+      # 公開するのはアプリの実行に必要なファイルだけ(_site/ に集める)
+      - name: Collect site files
+        run: node scripts/build-site.mjs
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

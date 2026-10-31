@@ -739,7 +739,9 @@ noEquipmentCheckbox.addEventListener("change", () => {
 async function init() {
   renderTimeChips();
 
-  const [modesRes, videosRes] = await Promise.all([fetch("data/modes.json"), fetch("data/videos.json")]);
+  // no-cache: 月次更新で videos.json が変わっても、ブラウザの古いキャッシュを使い続けないよう毎回サーバーに確認する
+  const fresh = { cache: "no-cache" };
+  const [modesRes, videosRes] = await Promise.all([fetch("data/modes.json", fresh), fetch("data/videos.json", fresh)]);
   const modesData = await modesRes.json();
   const videosData = await videosRes.json();
 

@@ -1,7 +1,11 @@
 {
   "channels": [
-    { "name": "b-flow", "channel_id": "UCd0pUnH7i5CM-Y8xRe7cZVg" },
-    { "name": "b-flow-studio", "channel_id": "UCaf8CNoK0GuCvjPDeint_1g" }
+    { "name": "b-flow", "channel_id": "UCd0pUnH7i5CM-Y8xRe7cZVg", "handle": "@bflowyoga" },
+    { "name": "b-flow-studio", "channel_id": "UCaf8CNoK0GuCvjPDeint_1g", "handle": "@bflowstudio" }
   ],
-  "rss_url_template": "https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+  "limits": {
+    "max_duration_min": 60,
+    "shorts_max_sec": 180,
+    "incremental_max_pages": 6
+  }
 }
