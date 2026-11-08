@@ -17,8 +17,8 @@ export const REASON_LABELS = {
 
 const row = (s) => String(s).replace(/\|/g, "\\|");
 
-export function renderHeldMarkdown(catalog, overrides, vocabularyTags) {
-  const { resolved } = resolveAll(catalog, overrides, vocabularyTags);
+export function renderHeldMarkdown(catalog, overrides, vocabularyTags, reference = {}) {
+  const { resolved } = resolveAll(catalog, overrides, vocabularyTags, reference);
   const held = [...resolved].filter(([, r]) => r.status === "held");
   const lines = [
     "# 保留(要確認)の動画",

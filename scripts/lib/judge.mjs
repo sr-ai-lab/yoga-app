@@ -55,7 +55,8 @@ export function judgeVideo(facts, rules, limits) {
     if (s.wrong_channel) reasons.push("wrong_channel");
     if (!s.public) reasons.push("not_public");
     // ライブ配信中/予定、およびアーカイブは再生時間が取れても完全に除外する
-    if (s.live) reasons.push("live_or_archive");
+    // プレミア公開と確認できた動画(signals.premiere)は通常の動画として扱う。確認できないものはライブ扱いのまま
+    if (s.live && !s.premiere) reasons.push("live_or_archive");
     if (!(durationSec > 0)) reasons.push("no_duration");
 
     if (s.shorts_playlist || (s.shorts_hashtag && durationSec > 0 && durationSec <= limits.shorts_max_sec)) {

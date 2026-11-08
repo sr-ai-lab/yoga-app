@@ -104,11 +104,11 @@ export function createYouTubeClient({
       return { refs, pages, complete: !pageToken };
     },
 
-    // YouTubeが自動生成するチャンネルのShorts専用プレイリスト(UUSH+チャンネルID後半)のID集合。
-    // 公式ドキュメントには載っていない派生IDのため「補助信号」として扱う。
-    // プレイリストが存在しない(404)場合のみ「Shortsなし」とみなし、それ以外のエラーは例外にする。
-    async listShortsIds(channelId) {
-      const playlistId = `UUSH${channelId.slice(2)}`;
+    // 公式ドキュメントには載っていない派生IDのため、いずれも「補助信号」として扱う。
+    // YouTubeが「Shorts」「ライブ」タブとして持つ派生プレイリスト(UUSH / UULV。非公式仕様)の動画ID一覧。
+    // 「プレイリストなし」の404だけを available:false とし、権限・クォータ・一時障害などは呼び出し側にエラーとして伝える
+    async listDerivedIds(prefix, channelId) {
+      const playlistId = `${prefix}${channelId.slice(2)}`;
       const ids = new Set();
       let pageToken;
       try {
@@ -125,13 +125,22 @@ export function createYouTubeClient({
           pageToken = data.nextPageToken;
         } while (pageToken);
       } catch (err) {
-        // 「プレイリストが存在しない」場合だけを"Shorts一覧なし"として扱う。権限・クォータ・一時障害などは呼び出し側にエラーとして伝える
         if (err instanceof YouTubeApiError && err.status === 404 && err.reason === "playlistNotFound") {
           return { ids, available: false };
         }
         throw err;
       }
       return { ids, available: true };
+    },
+
+    // Shorts専用プレイリスト(UUSH)
+    listShortsIds(channelId) {
+      return this.listDerivedIds("UUSH", channelId);
+    },
+
+    // ライブ専用プレイリスト(UULV)。プレミア公開の動画は載らない(ライブ配信のアーカイブとの見分けに使う)
+    listLiveIds(channelId) {
+      return this.listDerivedIds("UULV", channelId);
     },
 
     // videos.list は1回50件まで。存在しない/非公開の動画は結果に含まれない

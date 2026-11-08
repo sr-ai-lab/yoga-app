@@ -42,16 +42,19 @@ function saveLastModeId(modeId) {
 }
 
 // design.md §6.2 スロットテンプレート(目安分数)
+// cooldownの max は、そのコースで選べるcooldown動画の長さの上限(分)。長めのcooldownも選べるようにしつつ、
+// 短いコースでは従来どおり短いものに限る(30分=従来の最長12分 / 45分=18分 / 60分=固定上限なし)。
+// 60分コースは固定の上限を設けず、合計時間の条件(選択時間-5分〜+3分)と各mainの長さの許容幅(目安の±30%)で絞られる。
 const COURSE_TEMPLATES = {
   30: [
     { type: "warmup", target: 5 },
     { type: "main", target: 18 },
-    { type: "cooldown", target: 7 },
+    { type: "cooldown", target: 7, max: 12 },
   ],
   45: [
     { type: "warmup", target: 8 },
     { type: "main", target: 25 },
-    { type: "cooldown", target: 10 },
+    { type: "cooldown", target: 10, max: 18 },
   ],
   60: [
     { type: "warmup", target: 10 },
@@ -341,9 +344,9 @@ function getWarmupCandidates(target, mode, maxIntensity, now) {
     });
 }
 
-function getCooldownCandidates(target, mode, now) {
+function getCooldownCandidates(target, mode, now, max = Infinity) {
   return state.videos
-    .filter((v) => (v.type === "cooldown" || v.type === "meditation") && passesEquipmentFilter(v))
+    .filter((v) => (v.type === "cooldown" || v.type === "meditation") && v.duration_min <= max && passesEquipmentFilter(v))
     .map((v) => {
       const tagScore = v.tags.reduce((sum, tag) => sum + (mode.tag_weights[tag] || 0), 0);
       const bonus = timeOfDayBonus(v.tags, now);
@@ -396,7 +399,7 @@ function attemptCombination(templateSlots, mode) {
   let cooldownVideo = null;
   const cooldownSlot = templateSlots.find((s) => s.type === "cooldown");
   if (cooldownSlot) {
-    const candidates = getCooldownCandidates(cooldownSlot.target, mode, now);
+    const candidates = getCooldownCandidates(cooldownSlot.target, mode, now, cooldownSlot.max);
     // cooldown枠も同様に中立な補完を許可する
     const tierCandidates = selectSupportSlotCandidates(candidates, mode);
     cooldownVideo = weightedPickExcluding(tierCandidates, usedIds);

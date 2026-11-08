@@ -30,7 +30,9 @@ export function entryReasons(entry) {
 
 // 1本の最終状態を決める。overrides(人の判断)が自動判定より優先される。
 // 戻り値: { status: registered|held|excluded, primary, reasons, source: auto|manual|mixed, record? }
-export function resolveEntry(id, entry, override, vocabularyTags) {
+//   reference: 公式カレンダーでの掲載位置(data/reference-roles.json の1件)。タイトルによる自動分類とは別の根拠として種別にだけ使う
+//   種別の根拠の強さ: 人の手動修正(overrides) > 公式カレンダーの掲載位置 > タイトルによる自動分類
+export function resolveEntry(id, entry, override, vocabularyTags, reference) {
   const o = override ?? {};
 
   if (o.exclude === true) {
@@ -49,13 +51,20 @@ export function resolveEntry(id, entry, override, vocabularyTags) {
 
   const auto = entry.classify?.auto ?? {};
   const intensity = o.intensity ?? auto.intensity ?? null;
-  const type = o.type ?? auto.type ?? null;
+  let type = o.type ?? auto.type ?? null;
+  let typeSource = o.type != null ? "manual" : "title";
   const tags = o.tags ?? auto.tags ?? [];
   const equipment = o.equipment ?? auto.equipment ?? [];
 
   // 人が3項目(強度・種別・タグ)を揃えた、または approve:true を付けた場合は「人が承認した」扱い
   const approved = o.approve === true || (o.intensity != null && o.type != null && Array.isArray(o.tags));
   const overridden = ["intensity", "type", "tags", "equipment"].some((k) => o[k] !== undefined);
+
+  // 公式カレンダーで「その日の最後の動画」に置かれている動画は cooldown とする(高強度の動画には適用しない)
+  if (o.type == null && reference?.role === "cooldown" && intensity !== 3 && type !== "cooldown") {
+    type = "cooldown";
+    typeSource = "calendar";
+  }
 
   if (!approved) {
     const reasons = entryReasons(entry);
@@ -91,6 +100,7 @@ export function resolveEntry(id, entry, override, vocabularyTags) {
     primary: null,
     reasons: [],
     source: approved ? "manual" : overridden ? "mixed" : "auto",
+    type_source: typeSource,
     record,
   };
 }
@@ -103,19 +113,19 @@ function byNewestThenId(a, b) {
 }
 
 // 台帳+手動修正 → { resolved: Map(id → resolveEntry結果), videos: 推薦対象レコード配列 }
-export function resolveAll(catalog, overrides, vocabularyTags) {
+export function resolveAll(catalog, overrides, vocabularyTags, reference = {}) {
   const resolved = new Map();
   const rows = Object.entries(catalog.videos).map(([id, entry]) => ({ id, entry }));
   rows.sort(byNewestThenId);
   for (const { id, entry } of rows) {
-    resolved.set(id, resolveEntry(id, entry, overrides.videos?.[id], vocabularyTags));
+    resolved.set(id, resolveEntry(id, entry, overrides.videos?.[id], vocabularyTags, reference.videos?.[id]));
   }
   const videos = [...resolved.values()].filter((r) => r.status === "registered").map((r) => r.record);
   return { resolved, videos };
 }
 
-export function buildVideosJson(catalog, overrides, vocabularyTags, updated) {
-  const { videos } = resolveAll(catalog, overrides, vocabularyTags);
+export function buildVideosJson(catalog, overrides, vocabularyTags, updated, reference = {}) {
+  const { videos } = resolveAll(catalog, overrides, vocabularyTags, reference);
   return { schema_version: 1, updated, videos };
 }
 

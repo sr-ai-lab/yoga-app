@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-31",
+  "updated": "2026-11-08",
   "videos": [
     {
       "id": "pKqL-925900",
@@ -2313,7 +2313,7 @@
       "channel": "b-flow",
       "duration_min": 17,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["夜", "寝る前", "自律神経", "初心者"]
     },
     {
@@ -2322,7 +2322,7 @@
       "channel": "b-flow",
       "duration_min": 21,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["腰", "疲労回復", "むくみ"]
     },
     {
@@ -2358,7 +2358,7 @@
       "channel": "b-flow",
       "duration_min": 12,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["自律神経"]
     },
     {
@@ -2466,7 +2466,7 @@
       "channel": "b-flow",
       "duration_min": 13,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["骨盤", "寝る前"]
     },
     {
@@ -2484,7 +2484,7 @@
       "channel": "b-flow",
       "duration_min": 20,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["腰", "骨盤"]
     },
     {
@@ -2502,7 +2502,7 @@
       "channel": "b-flow",
       "duration_min": 16,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["腰", "寝る前", "初心者"]
     },
     {
@@ -2610,7 +2610,7 @@
       "channel": "b-flow",
       "duration_min": 20,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["全身", "疲労回復"]
     },
     {
@@ -2628,7 +2628,7 @@
       "channel": "b-flow",
       "duration_min": 13,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["肩", "寝る前"]
     },
     {
@@ -2637,7 +2637,7 @@
       "channel": "b-flow",
       "duration_min": 16,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["腰", "初心者"]
     },
     {
@@ -2655,7 +2655,7 @@
       "channel": "b-flow",
       "duration_min": 20,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["疲労回復", "むくみ"]
     },
     {
@@ -2673,7 +2673,7 @@
       "channel": "b-flow",
       "duration_min": 17,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["脚", "寝る前", "疲労回復", "むくみ"]
     },
     {
@@ -2682,7 +2682,7 @@
       "channel": "b-flow",
       "duration_min": 21,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["寝る前"]
     },
     {
@@ -2700,8 +2700,44 @@
       "channel": "b-flow",
       "duration_min": 27,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["脚", "疲労回復", "むくみ"]
+    },
+    {
+      "id": "CPN5q-vipx0",
+      "title": "自律神経みるみる整う夜のヨガ☆　今日の疲れを完全リセット！ #252",
+      "channel": "b-flow",
+      "duration_min": 26,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["夜", "疲労回復", "自律神経"]
+    },
+    {
+      "id": "CvQhSHhcHuU",
+      "title": "痩せたがる体作り！　昼ヨガで身も心もすっきりしなやか☆ #250",
+      "channel": "b-flow",
+      "duration_min": 16,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "QcqWYaMNvGY",
+      "title": "太陽礼拝で全身エネルギーチャージ！　動く瞑想で心と体を整える☆ #248",
+      "channel": "b-flow",
+      "duration_min": 12,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身"]
+    },
+    {
+      "id": "-1M4wiFSaDQ",
+      "title": "朝ヨガで脳と体スッキリ！　1日10分で体は劇的に変わる☆ #247",
+      "channel": "b-flow",
+      "duration_min": 14,
+      "intensity": 1,
+      "type": "main",
+      "tags": ["朝"]
     },
     {
       "id": "j7riQ0SpuTE",
@@ -2709,7 +2745,7 @@
       "channel": "b-flow",
       "duration_min": 17,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["肩", "背中"]
     },
     {
@@ -2718,7 +2754,7 @@
       "channel": "b-flow",
       "duration_min": 7,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["首", "疲労回復"]
     },
     {
@@ -2727,7 +2763,7 @@
       "channel": "b-flow",
       "duration_min": 23,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["夜", "寝る前", "初心者"]
     },
     {
@@ -2790,7 +2826,7 @@
       "channel": "b-flow",
       "duration_min": 18,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["寝る前", "リラックス"]
     },
     {
@@ -2808,7 +2844,7 @@
       "channel": "b-flow",
       "duration_min": 16,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["肩", "首", "疲労回復"]
     },
     {
@@ -2880,7 +2916,7 @@
       "channel": "b-flow",
       "duration_min": 17,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["夜", "寝る前", "自律神経"]
     },
     {
@@ -2943,7 +2979,7 @@
       "channel": "b-flow",
       "duration_min": 19,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["骨盤", "脚"]
     },
     {
@@ -2961,7 +2997,7 @@
       "channel": "b-flow",
       "duration_min": 21,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["寝る前", "自律神経"]
     },
     {
@@ -2970,7 +3006,7 @@
       "channel": "b-flow",
       "duration_min": 16,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["全身", "リラックス"]
     },
     {
@@ -2997,7 +3033,7 @@
       "channel": "b-flow",
       "duration_min": 17,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["自律神経", "デトックス"]
     },
     {
@@ -3105,7 +3141,7 @@
       "channel": "b-flow",
       "duration_min": 13,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["寝る前", "疲労回復"]
     },
     {
@@ -3141,7 +3177,7 @@
       "channel": "b-flow",
       "duration_min": 12,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["寝る前", "リラックス", "初心者"]
     },
     {
@@ -3375,7 +3411,7 @@
       "channel": "b-flow",
       "duration_min": 19,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["夜", "寝る前", "リラックス"]
     },
     {
@@ -3582,7 +3618,7 @@
       "channel": "b-flow",
       "duration_min": 10,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["骨盤", "寝る前", "初心者"]
     },
     {
@@ -3717,7 +3753,7 @@
       "channel": "b-flow",
       "duration_min": 23,
       "intensity": 1,
-      "type": "main",
+      "type": "cooldown",
       "tags": ["寝る前", "自律神経"]
     },
     {

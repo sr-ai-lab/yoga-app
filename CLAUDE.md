@@ -17,6 +17,7 @@
   自動分類できず保留になった動画(docs/HELD.md)を採用する場合は、分類(intensity/type/tags)の
   案をユーザーに提示して承認を得てから data/overrides.json に書くこと
 - 人の修正は overrides.json にだけ書く。catalog.json は自動処理専用(手で編集しない)
+- data/reference-roles.json は公式カレンダーの掲載位置(cooldownの根拠)。種別の根拠は 人の修正 > カレンダー > タイトルのルール
 - 分類ルールの変更: data/classification-rules.json を編集 → `--reclassify` で差分を確認 → ユーザーに説明
 - 推薦結果の調整: modes.json の重みを変更 → ユーザーに差分を説明
 - validate.mjs がエラーの状態で commit しない。データ変更後は

@@ -90,3 +90,14 @@ export function validateCatalog(catalog, overrides, validChannelIds) {
   }
   return errors;
 }
+
+// 公式カレンダーの掲載位置(reference-roles.json)の整合チェック
+export function validateReference(reference, catalog) {
+  const errors = [];
+  for (const [id, r] of Object.entries(reference.videos ?? {})) {
+    if (!catalog.videos?.[id]) errors.push(`reference-roles: id=${id} は catalog.json に存在しません`);
+    if (r.role !== "cooldown") errors.push(`reference-roles: id=${id} の role は現在 "cooldown" のみ対応です(${r.role})`);
+    if (!Array.isArray(r.positions) || r.positions.length === 0) errors.push(`reference-roles: id=${id} に掲載位置(positions)がありません`);
+  }
+  return errors;
+}

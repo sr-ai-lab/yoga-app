@@ -6,7 +6,7 @@
 採用する場合は `data/overrides.json` に動画IDで分類(intensity / type / tags)を書くか、`approve: true`(自動分類のまま承認)を追加します。
 推薦しない場合は `exclude: true` を追加すると、このリストから消えます。
 
-保留: 251件
+保留: 255件
 
 | 動画 | チャンネル | 分 | 保留の理由 | 自動分類の案 |
 |---|---|---:|---|---|
@@ -55,6 +55,7 @@
 | [【新プログラム】 人生を変える朝の5分ヨガ](https://www.youtube.com/watch?v=hrMn6pt7Kf8) `hrMn6pt7Kf8` | b-flow | 6 | プログラム紹介の可能性(運動動画か判断できない); 強度を判断できる語がない | 強度? / main / 朝 |
 | [【誰でも簡単にぐっすり眠れる】 寝たまま瞑想 #590](https://www.youtube.com/watch?v=WDT9nUa3Ok8) `WDT9nUa3Ok8` | b-flow | 20 | 瞑想系(現在のアプリでは推薦対象外); タイトルから運動動画と判断できる語がない | 強度1 / main / 寝る前 |
 | [【毎日8分】 ストレス解消ヨガ　肩こり解消と骨盤調整にも効果的！ #571](https://www.youtube.com/watch?v=3iJV2YtLClU) `3iJV2YtLClU` | b-flow | 10 | 強度を判断できる語がない | 強度? / main / 肩・骨盤 |
+| [ヨガ×温泉×食を掛け合わせた究極のリトリート　- Gunma Retreat Marche - ＃570](https://www.youtube.com/watch?v=BfnCY_IdM1M) `BfnCY_IdM1M` | b-flow | 32 | 運動を示す語と運動以外を示す語の両方を含む; 強度を判断できる語がない; 部位・目的のタグを判断できない | 強度? / main / - |
 | [【滝汗10分】短時間で全身の脂肪を燃やす！ - SHINE #565](https://www.youtube.com/watch?v=Kdrdw5LPmkE) `Kdrdw5LPmkE` | b-flow | 12 | タイトルから運動動画と判断できる語がない; 強度を判断できる語がない | 強度? / main / 全身 |
 | [【毎日10分】2週間で腰肉を落とし美しいくびれをつくる - SHINE #563](https://www.youtube.com/watch?v=zqb-bFCKkw4) `zqb-bFCKkw4` | b-flow | 12 | タイトルから運動動画と判断できる語がない; 強度を判断できる語がない | 強度? / main / 腰・体幹 |
 | [【1日10分】2週間で二の腕と背中がみるみる引き締まる - SHINE #562](https://www.youtube.com/watch?v=KbBru-Fh0nU) `KbBru-Fh0nU` | b-flow | 12 | タイトルから運動動画と判断できる語がない; 強度を判断できる語がない | 強度? / main / 背中 |
@@ -172,6 +173,9 @@
 | [脚からみるみる痩せる！ 超簡単な1日7分の脚やせエクサ☆ #258](https://www.youtube.com/watch?v=76Q_2GQz6vU) `76Q_2GQz6vU` | b-flow | 9 | タイトルから運動動画と判断できる語がない | 強度2 / main / 脚 |
 | [【完全無料】 脚からやせる 4週間カレンダープログラム #257](https://www.youtube.com/watch?v=FsHWEGf7ETk) `FsHWEGf7ETk` | b-flow | 5 | プログラム紹介の可能性(運動動画か判断できない); タイトルから運動動画と判断できる語がない; 強度を判断できる語がない | 強度? / main / 脚 |
 | [最短1か月☆ 1日たった3分で憧れの「腹割」をつくる！ #256](https://www.youtube.com/watch?v=cdnnhalThKY) `cdnnhalThKY` | b-flow | 4 | タイトルから運動動画と判断できる語がない; 強度を判断できる語がない; 部位・目的のタグを判断できない | 強度? / main / - |
+| [朝ごはんあるある編　食べていいの？卵、パン、スムージー etc... #254](https://www.youtube.com/watch?v=FESpC1qN6-Y) `FESpC1qN6-Y` | b-flow | 14 | タイトルから運動動画と判断できる語がない; 強度を判断できる語がない | 強度? / main / 朝 |
+| [朝食のすごい効果☆　痩せ体質になる朝ごはんのルール #251](https://www.youtube.com/watch?v=U9mZS_GRmxQ) `U9mZS_GRmxQ` | b-flow | 12 | タイトルから運動動画と判断できる語がない | 強度2 / warmup / 朝 |
+| [太らない食べ方☆　食事の基本を身につけよう！ #249](https://www.youtube.com/watch?v=1MC0xl3y4yU) `1MC0xl3y4yU` | b-flow | 15 | タイトルから運動動画と判断できる語がない; 強度を判断できる語がない; 部位・目的のタグを判断できない | 強度? / main / - |
 | [B-lifeの初書籍が発売されます！　おうちヨガがますます充実☆ #246](https://www.youtube.com/watch?v=TQJr-1fT5lY) `TQJr-1fT5lY` | b-flow | 5 | 強度を判断できる語がない; 部位・目的のタグを判断できない | 強度? / main / - |
 | [マインドフルネス瞑想　ストレスを軽減しポジティブ思考になる #244](https://www.youtube.com/watch?v=3RZYY-2fghg) `3RZYY-2fghg` | b-flow | 17 | 瞑想系(現在のアプリでは推薦対象外); タイトルから運動動画と判断できる語がない; 強度を判断できる語がない; 部位・目的のタグを判断できない | 強度? / main / - |
 | [肩こり解消バレトンで上半身スッキリ！　バレトン20分 #242](https://www.youtube.com/watch?v=7oftwwlAMk0) `7oftwwlAMk0` | b-flow | 20 | 強度を判断できる語がない | 強度? / main / 肩 |

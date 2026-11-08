@@ -16,20 +16,30 @@ export const TODAY = "2026-11-01";
 export const id = (n) => String(n).padStart(11, "x"); // 11文字のダミーID
 
 // 動画の「API上の姿」を作る
-export function video({ n, title, sec = 600, channel = "UC_A", live = false, privacy = "public", published = "2026-01-01T00:00:00Z" }) {
+//   live: ライブ配信のアーカイブ(配信開始の後に公開される。配信終了時刻あり)
+//   premiere: プレミア公開(配信開始の2分前に動画が公開される。ライブタブには載らない)
+export function video({ n, title, sec = 600, channel = "UC_A", live = false, premiere = false, privacy = "public", published = "2026-01-01T00:00:00Z" }) {
+  const liveLike = live || premiere;
   return {
     id: id(n),
-    snippet: { title, publishedAt: published, channelId: channel, description: "" },
+    snippet: {
+      title,
+      publishedAt: premiere ? "2025-12-31T23:58:00Z" : liveLike ? "2026-01-01T01:05:00Z" : published,
+      channelId: channel,
+      description: "",
+      liveBroadcastContent: "none",
+    },
     contentDetails: { duration: sec ? `PT${Math.floor(sec / 60)}M${sec % 60}S` : "P0D" },
     status: { privacyStatus: privacy },
-    ...(live ? { liveStreamingDetails: { actualStartTime: "2026-01-01T00:00:00Z" } } : {}),
+    ...(liveLike ? { liveStreamingDetails: { scheduledStartTime: "2026-01-01T00:00:00Z", actualStartTime: "2026-01-01T00:00:00Z", actualEndTime: "2026-01-01T01:00:00Z" }, _premiere: premiere } : {}),
   };
 }
 
 // YouTube APIの代わりになる偽クライアント
 //   shortsAvailable: チャンネルごとにShorts一覧(UUSH)が取得できるか(既定: できる)
 //   flakyOnce: 最初の1回だけ結果から漏れる動画(一時的な取りこぼしの模擬)
-export function fakeClient({ channels, shorts = {}, shortsAvailable = {}, failChannel = null, flakyOnce = [] }) {
+//   liveTabAvailable: チャンネルごとにライブタブ(UULV)が取得できるか(既定: できる)
+export function fakeClient({ channels, shorts = {}, shortsAvailable = {}, liveTabAvailable = {}, failChannel = null, flakyOnce = [] }) {
   const all = new Map();
   const flaky = new Set(flakyOnce);
   for (const c of Object.values(channels)) for (const v of c.videos) all.set(v.id, v);
@@ -46,6 +56,12 @@ export function fakeClient({ channels, shorts = {}, shortsAvailable = {}, failCh
     async listShortsIds(channelId) {
       const available = shortsAvailable[channelId] ?? true;
       return { ids: new Set(available ? (shorts[channelId] ?? []) : []), available };
+    },
+    // ライブタブ: ライブ配信のアーカイブは載り、プレミア公開は載らない(実データで確認した挙動)
+    async listLiveIds(channelId) {
+      const available = liveTabAvailable[channelId] ?? true;
+      const ids = channels[channelId].videos.filter((v) => v.liveStreamingDetails && !v._premiere).map((v) => v.id);
+      return { ids: new Set(available ? ids : []), available };
     },
     async getVideos(ids) {
       const out = new Map();

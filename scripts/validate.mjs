@@ -8,7 +8,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { validateVideos, validateCatalog } from "./lib/validate-videos.mjs";
+import { validateVideos, validateCatalog, validateReference } from "./lib/validate-videos.mjs";
 import { readJson } from "./lib/util.mjs";
 import { buildVideosJson, serializeVideos } from "./lib/catalog.mjs";
 import { checkFreshness } from "./lib/sync.mjs";
@@ -51,7 +51,9 @@ async function main() {
   if (catalog) {
     const overrides = await readJson(path.join(ROOT, "data/overrides.json"), { videos: {} });
     errors.push(...validateCatalog(catalog, overrides, new Set(config.channels.map((c) => c.channel_id))));
-    const expected = buildVideosJson(catalog, overrides, validTags, videosData.updated);
+    const reference = await readJson(path.join(ROOT, "data/reference-roles.json"), { videos: {} });
+    errors.push(...validateReference(reference, catalog));
+    const expected = buildVideosJson(catalog, overrides, validTags, videosData.updated, reference);
     if (serializeVideos(expected) !== serializeVideos(videosData)) {
       errors.push("data/videos.json が catalog.json + overrides.json から生成される内容と一致しません。node scripts/catalog-sync.mjs --rebuild を実行してください(videos.json は直接編集しない)");
     }

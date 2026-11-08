@@ -32,6 +32,7 @@ import { renderHeldMarkdown, renderChangesMarkdown } from "./lib/report.mjs";
 const P = {
   catalog: path.join(ROOT, "data/catalog.json"),
   overrides: path.join(ROOT, "data/overrides.json"),
+  reference: path.join(ROOT, "data/reference-roles.json"),
   videos: path.join(ROOT, "data/videos.json"),
   rules: path.join(ROOT, "data/classification-rules.json"),
   vocabulary: path.join(ROOT, "data/vocabulary.json"),
@@ -77,21 +78,22 @@ async function writeAllAtomic(files) {
 }
 
 async function loadAll() {
-  const [catalog, overrides, rules, vocabulary, config, videos] = await Promise.all([
+  const [catalog, overrides, reference, rules, vocabulary, config, videos] = await Promise.all([
     readJson(P.catalog, emptyCatalog()),
     readJson(P.overrides, { schema_version: 1, note: "", videos: {} }),
+    readJson(P.reference, { schema_version: 1, videos: {} }),
     readJson(P.rules),
     readJson(P.vocabulary),
     readJson(P.config),
     readJson(P.videos),
   ]);
   const vocabularyTags = new Set(Object.values(vocabulary.categories).flat());
-  return { catalog, overrides, rules, vocabularyTags, config, videos };
+  return { catalog, overrides, reference, rules, vocabularyTags, config, videos };
 }
 
 // 台帳+手動修正から videos.json を作り、構造検証と「推薦対象が急減していないか」の安全確認を行う
-function buildAndCheck({ catalog, overrides, vocabularyTags, config, videos: current }, today) {
-  const fresh = buildVideosJson(catalog, overrides, vocabularyTags, current.updated);
+function buildAndCheck({ catalog, overrides, reference, vocabularyTags, config, videos: current }, today) {
+  const fresh = buildVideosJson(catalog, overrides, vocabularyTags, current.updated, reference);
   const same = serializeVideos(fresh) === serializeVideos(current);
   const next = same ? current : { ...fresh, updated: today };
 
@@ -112,15 +114,20 @@ function buildAndCheck({ catalog, overrides, vocabularyTags, config, videos: cur
   return { next, text, same, added, removed };
 }
 
-function summarize(catalog, overrides, vocabularyTags, config) {
-  const { resolved } = resolveAll(catalog, overrides, vocabularyTags);
+function summarize(catalog, overrides, vocabularyTags, config, reference) {
+  const { resolved } = resolveAll(catalog, overrides, vocabularyTags, reference);
   const out = {};
-  for (const ch of config.channels) out[ch.name] = { total: 0, registered: 0, held: 0, excluded: 0, by_reason: {}, by_reason_any: {}, source: {} };
+  for (const ch of config.channels) out[ch.name] = { total: 0, registered: 0, held: 0, excluded: 0, by_reason: {}, by_reason_any: {}, source: {}, type: {}, type_source: {} };
   for (const [id, r] of resolved) {
-    const s = out[catalog.videos[id].channel] ?? (out[catalog.videos[id].channel] = { total: 0, registered: 0, held: 0, excluded: 0, by_reason: {}, by_reason_any: {}, source: {} });
+    const s = out[catalog.videos[id].channel] ?? (out[catalog.videos[id].channel] = { total: 0, registered: 0, held: 0, excluded: 0, by_reason: {}, by_reason_any: {}, source: {}, type: {}, type_source: {} });
     s.total++;
     s[r.status]++;
-    if (r.status === "registered") s.source[r.source] = (s.source[r.source] ?? 0) + 1;
+    if (r.status === "registered") {
+      s.source[r.source] = (s.source[r.source] ?? 0) + 1;
+      s.type[r.record.type] = (s.type[r.record.type] ?? 0) + 1;
+      // 種別の根拠: title=タイトルによる自動分類 / calendar=公式カレンダーの掲載位置 / manual=人の手動修正
+      s.type_source[r.type_source] = (s.type_source[r.type_source] ?? 0) + 1;
+    }
     if (r.primary) s.by_reason[r.primary] = (s.by_reason[r.primary] ?? 0) + 1;
     for (const x of new Set(r.reasons)) s.by_reason_any[x] = (s.by_reason_any[x] ?? 0) + 1;
   }
@@ -132,6 +139,7 @@ function printSummary(summary) {
   for (const [name, s] of Object.entries(summary)) {
     log(`\n[${name}] 台帳 ${s.total}件 = 推薦対象 ${s.registered} + 保留 ${s.held} + 除外 ${s.excluded}`);
     log(`  推薦対象の内訳(source): ${JSON.stringify(s.source)}`);
+    log(`  種別(役割)の内訳: ${JSON.stringify(s.type)} / 種別の根拠(title=タイトルのルール, calendar=公式カレンダーの位置, manual=人の修正): ${JSON.stringify(s.type_source)}`);
     log(`  除外/保留の理由(1本につき最優先の理由1つで集計。合計=保留+除外): ${JSON.stringify(s.by_reason)}`);
     log(`  参考: 該当した全理由の延べ件数(重複あり): ${JSON.stringify(s.by_reason_any)}`);
     for (const k of Object.keys(all)) all[k] += s[k];
@@ -196,12 +204,12 @@ async function main() {
   const dryRun = args.has("--dry-run");
   const today = todayJst();
   const ctx = await loadAll();
-  const { catalog, overrides, rules, vocabularyTags, config } = ctx;
+  const { catalog, overrides, reference, rules, vocabularyTags, config } = ctx;
 
   if (args.has("--report") || args.has("--list-held")) {
-    const summary = summarize(catalog, overrides, vocabularyTags, config);
+    const summary = summarize(catalog, overrides, vocabularyTags, config, reference);
     if (args.has("--report")) printSummary(summary);
-    if (args.has("--list-held")) log(renderHeldMarkdown(catalog, overrides, vocabularyTags));
+    if (args.has("--list-held")) log(renderHeldMarkdown(catalog, overrides, vocabularyTags, reference));
     return 0;
   }
 
@@ -232,7 +240,7 @@ async function main() {
     await loadEnv();
     const client = createYouTubeClient({ apiKey: process.env.YOUTUBE_API_KEY });
     const mode = args.has("--backfill") ? "backfill" : "incremental";
-    const result = await runSync({ mode, client, config, catalog, overrides, rules, vocabularyTags, today });
+    const result = await runSync({ mode, client, config, catalog, overrides, rules, vocabularyTags, reference, today });
     nextCatalog = result.catalog;
     report = result.report;
     for (const [name, c] of Object.entries(report.channels)) {
@@ -250,7 +258,7 @@ async function main() {
     }
     if (report.failures.length > 0) exitCode = 2;
   } else if (args.has("--reclassify")) {
-    const { catalog: re, changes } = reclassifyAll({ catalog, overrides, rules, vocabularyTags, limits: config.limits });
+    const { catalog: re, changes } = reclassifyAll({ catalog, overrides, rules, vocabularyTags, limits: config.limits, reference });
     log(`再分類による変化: ${changes.length}件`);
     for (const c of changes.slice(0, 50)) log(`  ${c.id} ${c.from} → ${c.to}  ${c.title}`);
     const diffOut = argValue("--diff-out");
@@ -280,14 +288,14 @@ async function main() {
   if (!args.has("--no-build")) {
     build = buildAndCheck({ ...ctx, catalog: nextCatalog }, today);
     if (!build.same) files.push([P.videos, build.text]);
-    const held = renderHeldMarkdown(nextCatalog, overrides, vocabularyTags);
+    const held = renderHeldMarkdown(nextCatalog, overrides, vocabularyTags, reference);
     const heldBefore = await readFile(P.held, "utf8").catch(() => null);
     if (held !== heldBefore) files.push([P.held, held]);
     log(`\nvideos.json: 推薦対象 ${build.next.videos.length}件(追加 ${build.added.length} / 削除 ${build.removed.length})`);
     for (const v of build.removed) log(`  削除: ${v.id} ${v.title}`);
   }
 
-  printSummary(summarize(nextCatalog, overrides, vocabularyTags, config));
+  printSummary(summarize(nextCatalog, overrides, vocabularyTags, config, reference));
   if (report) await writeStepSummary(reportToMarkdown(report, build));
 
   if (dryRun) {

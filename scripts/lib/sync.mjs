@@ -25,23 +25,51 @@ export function daysBetween(fromDate, toDate) {
   return Math.round((Date.parse(`${toDate}T00:00:00Z`) - Date.parse(`${fromDate}T00:00:00Z`)) / 86400000);
 }
 
-export function buildFacts(ref, detail, inShortsPlaylist, channel) {
+// プレミア公開(ライブ配信ではなく、通常の動画として事前公開されたもの)かどうかの確認。
+// プレミア公開の動画もAPIでは liveStreamingDetails を持つため、ライブ配信のアーカイブと区別できない。
+// 誤ってライブアーカイブを推薦対象に加えないよう、次の4つが**すべて**成り立つ場合だけプレミア公開と確認する(1つでも欠ければ従来どおりライブ扱い)。
+//   1. 公開日時が配信開始以前(プレミア公開は先に動画が公開される。ライブアーカイブは配信後に公開される)
+//   2. YouTubeの「ライブ」タブ(UULV)に載っていない(プレミア公開は動画タブに載る)。ライブタブが取得できない場合は確認できない
+//   3. タイトルに「LIVE」「ライブ」「配信」などが含まれない
+//   4. 配信が終了済み(実施中・予定ではない)
+export function checkPremiere(detail, title, inLiveTab, liveTabAvailable, liveTitleRe) {
+  const l = detail?.liveStreamingDetails ?? {};
+  const start = Date.parse(l.actualStartTime ?? l.scheduledStartTime ?? "");
+  const published = Date.parse(detail?.snippet?.publishedAt ?? "");
+  return {
+    published_before_start: Number.isFinite(start) && Number.isFinite(published) && published <= start,
+    not_in_live_tab: liveTabAvailable ? !inLiveTab : false,
+    no_live_word: !liveTitleRe.test(title),
+    ended: Boolean(l.actualEndTime) && (detail?.snippet?.liveBroadcastContent ?? "none") === "none",
+  };
+}
+
+// ctx: { channel, shortsIds:Set, liveTab:{ids:Set, available}, liveTitle:RegExp }
+export function buildFacts(ref, detail, ctx) {
+  const { channel, shortsIds, liveTab, liveTitle } = ctx;
   const title = detail?.snippet?.title ?? ref.title ?? "";
   const description = detail?.snippet?.description ?? "";
   const live = Boolean(detail?.liveStreamingDetails) || (detail?.snippet?.liveBroadcastContent ?? "none") !== "none";
+  const signals = {
+    unavailable: !detail,
+    public: detail?.status?.privacyStatus === "public",
+    live,
+    shorts_playlist: shortsIds.has(ref.id),
+    // 説明文は分類には使わず、#shorts ハッシュタグの検出にのみ一時的に使う(説明文自体は保存しない)
+    shorts_hashtag: /#shorts\b/i.test(`${title} ${description}`),
+    wrong_channel: Boolean(detail) && detail.snippet?.channelId !== channel.channel_id,
+  };
+  if (live && detail) {
+    // ライブ関連の動画だけ、プレミア公開の確認結果を残す(根拠が後から確認できる)
+    const check = checkPremiere(detail, title, liveTab.ids.has(ref.id), liveTab.available, liveTitle);
+    signals.premiere_check = check;
+    signals.premiere = Object.values(check).every(Boolean);
+  }
   return {
     title,
     duration_sec: parseIsoDurationSec(detail?.contentDetails?.duration),
     published_at: detail?.snippet?.publishedAt ?? ref.publishedAt ?? "",
-    signals: {
-      unavailable: !detail,
-      public: detail?.status?.privacyStatus === "public",
-      live,
-      shorts_playlist: Boolean(inShortsPlaylist),
-      // 説明文は分類には使わず、#shorts ハッシュタグの検出にのみ一時的に使う(説明文自体は保存しない)
-      shorts_hashtag: /#shorts\b/i.test(`${title} ${description}`),
-      wrong_channel: Boolean(detail) && detail.snippet?.channelId !== channel.channel_id,
-    },
+    signals,
   };
 }
 
@@ -115,6 +143,9 @@ async function syncChannel({ channel, mode, client, catalog, rules, vocabularyTa
 
   // Shorts専用プレイリスト(補助信号)。YouTubeの非公式仕様に依存するため、消えたことを見逃さない
   const shorts = await client.listShortsIds(channel.channel_id);
+  // ライブタブ(UULV)。プレミア公開とライブアーカイブの見分けに使う
+  const liveTab = await client.listLiveIds(channel.channel_id);
+  const ctx = { channel, shortsIds: shorts.ids, liveTab, liveTitle: new RegExp(rules.judge.live_title ?? "LIVE|ライブ|配信|生放送", "i") };
   const prevMeta = catalog.channels[channel.channel_id];
   const everHadShorts = prevMeta?.shorts_playlist_status === "ok" || prevMeta?.shorts_playlist_available === true || own.some(([, e]) => e.signals?.shorts_playlist);
   if (!shorts.available && everHadShorts && !channel.ignore_shorts_playlist) {
@@ -134,7 +165,7 @@ async function syncChannel({ channel, mode, client, catalog, rules, vocabularyTa
   const entries = {};
   const newDetails = await client.getVideos(newRefs.map((r) => r.id));
   for (const ref of newRefs) {
-    const facts = buildFacts(ref, newDetails.get(ref.id), shorts.ids.has(ref.id), channel);
+    const facts = buildFacts(ref, newDetails.get(ref.id), ctx);
     entries[ref.id] = makeEntry(facts, channel, today, rules, vocabularyTags, limits);
   }
 
@@ -169,7 +200,7 @@ async function syncChannel({ channel, mode, client, catalog, rules, vocabularyTa
           stats.pending_unavailable++;
           continue;
         }
-        const entry = makeEntry(buildFacts({ title: old.title, publishedAt: old.published_at }, detail, shorts.ids.has(id), channel), channel, today, rules, vocabularyTags, limits, old.first_seen);
+        const entry = makeEntry(buildFacts({ id, title: old.title, publishedAt: old.published_at }, detail, ctx), channel, today, rules, vocabularyTags, limits, old.first_seen);
         entry.unavailable_since = today;
         entries[id] = entry;
         stats.newly_unavailable++;
@@ -177,7 +208,7 @@ async function syncChannel({ channel, mode, client, catalog, rules, vocabularyTa
         continue;
       }
 
-      const facts = buildFacts({ title: old.title, publishedAt: old.published_at }, detail, shorts.ids.has(id), channel);
+      const facts = buildFacts({ id, title: old.title, publishedAt: old.published_at }, detail, ctx);
       const wasGone = Boolean(old.unavailable_since);
       if (JSON.stringify(factsOf(old)) === JSON.stringify(facts)) {
         // 事実データは同じ。以前の「見つからない」記録だけを消す(分類ルールの変更は --reclassify でのみ反映する)
@@ -219,13 +250,14 @@ async function syncChannel({ channel, mode, client, catalog, rules, vocabularyTa
       title: info.title,
       uploads_playlist_id: info.uploadsPlaylistId,
       shorts_playlist_status: shortsStatus,
+      live_tab_available: liveTab.available,
     },
     stats: { fetched: refs.length, listing_complete: complete, new: newRefs.length, ...stats },
     warnings,
   };
 }
 
-export async function runSync({ mode, client, config, catalog, overrides, rules, vocabularyTags, now = new Date(), today }) {
+export async function runSync({ mode, client, config, catalog, overrides, rules, vocabularyTags, reference = {}, now = new Date(), today }) {
   const next = structuredClone(catalog);
   next.rules_version = next.rules_version ?? rules.version;
   const limits = config.limits;
@@ -252,7 +284,7 @@ export async function runSync({ mode, client, config, catalog, overrides, rules,
   }
 
   // 新規分の内訳(登録/保留/除外と、除外・保留の理由)を集計する。理由は1本につき1つ(primary)で数える
-  const { resolved } = resolveAll(next, overrides, vocabularyTags);
+  const { resolved } = resolveAll(next, overrides, vocabularyTags, reference);
   for (const [name, ids] of Object.entries(newIdsByChannel)) {
     const tally = { registered: 0, held: 0, excluded: 0, by_reason: {}, by_reason_any: {} };
     for (const id of ids) {
@@ -294,8 +326,8 @@ export function checkFreshness(catalog, config, today, { warnDays = 10, maxDays 
 }
 
 // ルール変更後の再分類(API不要)。手動修正(overrides)は resolveEntry で常に優先されるため上書きされない。
-export function reclassifyAll({ catalog, overrides, rules, vocabularyTags, limits }) {
-  const before = resolveAll(catalog, overrides, vocabularyTags).resolved;
+export function reclassifyAll({ catalog, overrides, rules, vocabularyTags, limits, reference = {} }) {
+  const before = resolveAll(catalog, overrides, vocabularyTags, reference).resolved;
   const next = structuredClone(catalog);
   for (const entry of Object.values(next.videos)) {
     if (entry.purged) continue; // 消去済みの墓標は対象外
@@ -304,7 +336,7 @@ export function reclassifyAll({ catalog, overrides, rules, vocabularyTags, limit
     entry.classify = classify;
   }
   next.rules_version = rules.version;
-  const after = resolveAll(next, overrides, vocabularyTags).resolved;
+  const after = resolveAll(next, overrides, vocabularyTags, reference).resolved;
 
   const changes = [];
   for (const [id, a] of after) {
@@ -319,7 +351,10 @@ export function reclassifyAll({ catalog, overrides, rules, vocabularyTags, limit
         to: a.status,
         before: b.record ?? { reasons: b.reasons },
         after: a.record ?? { reasons: a.reasons },
-        evidence: next.videos[id].classify?.auto?.evidence ?? [],
+        evidence: [
+          ...(next.videos[id].classify?.auto?.evidence ?? []),
+          ...(a.type_source === "calendar" ? [`type=cooldown:公式カレンダーの掲載位置(${(reference.videos?.[id]?.positions ?? []).join(" / ")})`] : []),
+        ],
       });
     }
   }
