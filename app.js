@@ -1,4 +1,4 @@
-// Step 4: manifest.json / localStorageによる前回選択の記憶 / 仕上げ。
+// 今日のヨガ: 推薦・コース生成のロジック + 2画面(今日のヨガ / 今日のコース)の表示。
 
 const TIME_OPTIONS = [10, 20, 30, 45, 60];
 const DEFAULT_MINUTES = 30;
@@ -82,71 +82,21 @@ const TIERLESS_MODE_IDS = ["random"];
 // Tier1が1件でもあればTier1のみを使う強いゲーティング対象
 const STRICT_TIER_MODE_IDS = ["shoulder_neck", "hip_lower"];
 
+// 画面の要素(画面① 今日のヨガ / 画面② 今日のコース)
 const topScreen = document.getElementById("top-screen");
 const resultScreen = document.getElementById("result-screen");
 const timeChips = document.getElementById("time-chips");
 const modeGrid = document.getElementById("mode-grid");
-const backButton = document.getElementById("back-button");
-const resultCondition = document.getElementById("result-condition");
-const resultHeading = document.getElementById("result-heading");
-
-const videoCard = document.getElementById("video-card");
-const videoThumb = document.getElementById("video-thumb");
-const videoTitle = document.getElementById("video-title");
-const videoMeta = document.getElementById("video-meta");
-const videoPlay = document.getElementById("video-play");
-
-const courseFallbackNote = document.getElementById("course-fallback-note");
-const courseCard = document.getElementById("course-card");
-const courseList = document.getElementById("course-list");
-const courseTotal = document.getElementById("course-total");
-
 const noEquipmentCheckbox = document.getElementById("no-equipment-checkbox");
+const generateButton = document.getElementById("generate-button");
+const backButton = document.getElementById("back-button");
+const kindToggle = document.getElementById("kind-toggle");
+const courseFallbackNote = document.getElementById("course-fallback-note");
+const resultList = document.getElementById("result-list");
+const resultHint = document.getElementById("result-hint");
 const noCandidates = document.getElementById("no-candidates");
 const retryButton = document.getElementById("retry-button");
-const toggleCourseButton = document.getElementById("toggle-course-button");
-const playAllBar = document.getElementById("play-all-bar");
-const playAllButton = document.getElementById("play-all-button");
-
-function renderTimeChips() {
-  timeChips.innerHTML = "";
-  for (const minutes of TIME_OPTIONS) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "chip";
-    button.textContent = `${minutes}分`;
-    button.dataset.minutes = String(minutes);
-    if (minutes === state.minutes) {
-      button.classList.add("selected");
-    }
-    button.addEventListener("click", () => {
-      state.minutes = minutes;
-      saveLastTime(minutes);
-      renderTimeChips();
-    });
-    timeChips.appendChild(button);
-  }
-}
-
-function renderModeGrid() {
-  modeGrid.innerHTML = "";
-  const lastModeId = loadLastModeId();
-  for (const mode of state.modes) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "mode-button";
-    if (mode.id === lastModeId) {
-      button.classList.add("mode-button--last-used");
-      const badge = document.createElement("span");
-      badge.className = "last-used-badge";
-      badge.textContent = "前回";
-      button.appendChild(badge);
-    }
-    button.appendChild(document.createTextNode(mode.label));
-    button.addEventListener("click", () => recommend(mode));
-    modeGrid.appendChild(button);
-  }
-}
+const playButton = document.getElementById("play-button");
 
 // --- 共通スコアリング(design.md §5.1) ---
 
@@ -472,288 +422,355 @@ function buildRoleLabels(template) {
   });
 }
 
-// --- 結果表示の演出(表示専用。上記の推薦・選定ロジックには一切影響しない) ---
-// 選定処理自体は一瞬で終わるため、結果を1枚ずつ順番に表示することで
-// 「今まさに選ばれた結果である」ことが体感的に分かるようにする。
+// --- 画面(UI) ---
+// 推薦・コース生成のロジックは上のまま。ここは「今日のヨガ」(条件をえらぶ)と「今日のコース」(結果)の
+// 2画面の表示と操作だけを担当する。選定は buildCourse / buildCandidatePool / pickFromPool をそのまま呼ぶ。
 
-const REVEAL_FADE_OUT_MS = 180; // 前回の結果を消す時間
-const REVEAL_STAGGER_MS = 330; // カード表示の間隔(最大4枚構成でも合計が1.5秒程度に収まる)
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const THEME_COLORS = { morning: "#f8e1d1", day: "#dfeaee", night: "#10152a" };
 
-let revealGeneration = 0;
-let revealTimers = [];
-
-// 連打等で古い演出が新しい演出を上書きしないよう、世代カウンタで無効化する
-function cancelReveal() {
-  revealGeneration++;
-  for (const timer of revealTimers) clearTimeout(timer);
-  revealTimers = [];
+// 配色は時間帯で切り替える(表示のみ。動画の推薦には影響しない)。確認用に ?theme=morning|day|night で固定できる。
+function applyTheme() {
+  const forced = new URLSearchParams(location.search).get("theme");
+  const hour = new Date().getHours();
+  const theme = THEME_COLORS[forced] ? forced : hour >= 4 && hour < 10 ? "morning" : hour >= 10 && hour < 17 ? "day" : "night";
+  document.body.dataset.theme = theme;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = THEME_COLORS[theme];
 }
 
-// requestAnimationFrameはタブが非表示(バックグラウンド)だと発火しないことがあるため、
-// 短いsetTimeoutを保険として競わせ、演出がハングしないようにする
-function nextFrame(callback) {
-  let done = false;
-  const fire = () => {
-    if (done) return;
-    done = true;
-    callback();
-  };
-  requestAnimationFrame(fire);
-  setTimeout(fire, 50);
+// 目的ごとの補足文(表示専用。ラベル・重みは data/modes.json のまま)
+const MODE_COPY = {
+  stretch: "全身をやさしく伸ばす",
+  active: "筋力・体幹を使う",
+  shoulder_neck: "デスクワークのこりに",
+  hip_lower: "座り疲れ・脚の重さに",
+  relax: "呼吸を深めて休む",
+  random: "強度も部位もおまかせ",
+};
+const CHANNEL_LABELS = { "b-flow": "B-flow", "b-flow-studio": "B-flow Studio" };
+
+const ICONS = {
+  back: '<svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>',
+  play: '<svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/></svg>',
+  shuffle:
+    '<svg viewBox="0 0 24 24"><path d="M3 7h3.5c2 0 3.2 1 4.3 2.6l2.4 4.8c1.1 1.6 2.3 2.6 4.3 2.6H21M3 17h3.5c1.3 0 2.3-.4 3.1-1.2M21 7h-3.5c-1.3 0-2.3.4-3.1 1.2M18 4l3 3-3 3M18 14l3 3-3 3"/></svg>',
+  external: '<svg viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8M11 7H6v11h11v-5"/></svg>',
+  arrow: '<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+};
+
+const watchUrl = (id) => `https://www.youtube.com/watch?v=${id}`;
+const thumbUrl = (id) => `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+// まとめて再生: 非公式の watch_videos エンドポイントを使用(design.md §6.4)。将来無効化される可能性があるが、
+// 各動画の個別リンクが常にフォールバックとして機能する。途中の動画から始める場合は、その動画以降のIDだけを渡す。
+const playlistUrl = (videos) =>
+  videos.length === 1 ? watchUrl(videos[0].id) : `https://www.youtube.com/watch_videos?video_ids=${videos.map((v) => v.id).join(",")}`;
+const sumMinutes = (videos) => videos.reduce((sum, v) => sum + v.duration_min, 0);
+
+function el(tag, attrs = {}, ...children) {
+  const node = document.createElement(tag);
+  for (const [key, value] of Object.entries(attrs)) {
+    if (value == null || value === false) continue;
+    if (key === "class") node.className = value;
+    else if (key === "text") node.textContent = value;
+    else if (key.startsWith("on")) node.addEventListener(key.slice(2), value);
+    else node.setAttribute(key, value === true ? "" : value);
+  }
+  for (const child of children.flat()) if (child != null && child !== false) node.append(child);
+  return node;
 }
 
-// container(video-card/course-card)が表示中なら一度フェードアウトしてからbuildContentで
-// 中身を差し替え、getItemsが返す要素を上から順にフェードインさせる。
-function revealResult({ container, headingText, buildContent, getItems }) {
-  const generation = ++revealGeneration;
-  for (const timer of revealTimers) clearTimeout(timer);
-  revealTimers = [];
+function iconNode(name) {
+  const span = el("span", { class: "ico", "aria-hidden": "true" });
+  span.innerHTML = ICONS[name];
+  return span;
+}
 
-  const wasVisible = !container.hidden;
+function initUi() {
+  const $ = (id) => document.getElementById(id);
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const start = () => {
-    if (generation !== revealGeneration) return;
-
-    container.classList.remove("reveal-fading");
-    buildContent();
-    container.hidden = false;
-
-    resultHeading.textContent = headingText;
-    resultHeading.hidden = false;
-    resultHeading.classList.remove("reveal-visible");
-
-    const items = getItems();
-    items.forEach((el) => {
-      el.classList.add("reveal-item");
-      el.classList.remove("reveal-visible");
-    });
-
-    if (prefersReducedMotion) {
-      resultHeading.classList.add("reveal-visible");
-      items.forEach((el) => el.classList.add("reveal-visible"));
-      return;
-    }
-
-    // 1フレーム待ってから開始し、opacity:0の初期状態を確実に描画させてからフェードインさせる
-    nextFrame(() => {
-      if (generation !== revealGeneration) return;
-      resultHeading.classList.add("reveal-visible");
-      items.forEach((el, index) => {
-        const timer = setTimeout(() => {
-          if (generation !== revealGeneration) return;
-          el.classList.add("reveal-visible");
-        }, index * REVEAL_STAGGER_MS);
-        revealTimers.push(timer);
-      });
-    });
+  const view = {
+    screen: "home",
+    modeId: null,
+    result: null, // { kind: "course" | "single", videos, roles, fallback } / 候補なしは null
+    generated: false,
+    start: 0, // 何本目から再生するか(コースの途中から再生する位置)
   };
 
-  if (wasVisible && !prefersReducedMotion) {
-    container.classList.add("reveal-fading");
-    const timer = setTimeout(start, REVEAL_FADE_OUT_MS);
-    revealTimers.push(timer);
-  } else {
-    container.classList.remove("reveal-fading");
-    start();
-  }
-}
+  // 前回選んだ目的を選択済みにしておく(時間は state.minutes が前回値で初期化済み)
+  const lastModeId = loadLastModeId();
+  view.modeId = state.modes.some((m) => m.id === lastModeId) ? lastModeId : null;
 
-// --- 画面表示 ---
+  document.querySelectorAll("[data-ico]").forEach((node) => {
+    node.innerHTML = ICONS[node.dataset.ico];
+  });
 
-function recommend(mode) {
-  state.currentMode = mode;
-  state.courseModePreferred = true; // 新しい検索のたびにデフォルトはコース提案(design.md §6.1)
-  saveLastModeId(mode.id);
-  resultCondition.textContent = `${state.minutes}分 × ${mode.label}`;
-  topScreen.hidden = true;
-  resultScreen.hidden = false;
-  renderResult();
-}
+  // ---------- 画面の切り替え(端末の「戻る」操作で画面①に戻れるようにする) ----------
 
-function renderResult() {
-  const isCourseEligible = state.minutes >= 30;
-  toggleCourseButton.hidden = !isCourseEligible;
-  courseFallbackNote.hidden = true;
-
-  if (isCourseEligible && state.courseModePreferred) {
-    renderCourse();
-  } else {
-    renderSingle();
+  function show(name) {
+    view.screen = name;
+    topScreen.hidden = name !== "home";
+    resultScreen.hidden = name !== "result";
+    window.scrollTo(0, 0);
+    if (name === "home") renderHome();
   }
 
-  if (isCourseEligible) {
-    toggleCourseButton.textContent = courseCard.hidden ? "コースにする" : "1本にする";
-  }
-}
+  window.addEventListener("popstate", (event) => {
+    const target = event.state?.screen ?? "home";
+    show(target === "result" && !view.generated ? "home" : target);
+  });
 
-function renderSingle() {
-  courseCard.hidden = true;
-  playAllBar.hidden = true;
+  // ---------- 画面① 今日のヨガ ----------
 
-  state.currentPool = buildCandidatePool(state.minutes, state.currentMode);
-  state.shownIds = new Set();
+  function renderHome() {
+    applyTheme();
 
-  if (state.currentPool.length === 0) {
-    showNoCandidates();
-    return;
-  }
-  showVideo(pickFromPool());
-}
-
-function renderCourse() {
-  videoCard.hidden = true;
-
-  const result = buildCourse(state.minutes, state.currentMode);
-
-  if (!result.videos) {
-    // コースが組めなかった → 単発提案にフォールバック(design.md §6.3 最終手段)
-    renderSingle();
-    if (!videoCard.hidden) {
-      courseFallbackNote.hidden = false;
+    // 時間帯による動画の重み付け(modes.json の time_of_day_bonus)が効いている時間帯であることを知らせる
+    const hour = new Date().getHours();
+    const activeTags = [];
+    for (const period of Object.values(state.timeOfDayBonus || {})) {
+      const [start, end] = period.hours;
+      const inRange = end > 24 ? hour >= start || hour < end - 24 : hour >= start && hour < end;
+      if (inRange) activeTags.push(...Object.keys(period.tags));
     }
-    return;
+    $("when").textContent = activeTags.length ? `いまは「${activeTags.join("・")}」向けを優先` : "";
+
+    // 大きな数字は「希望する時間」。実際の動画の合計時間は画面②で別に表示する
+    $("hero-min").textContent = String(state.minutes);
+    const template = COURSE_TEMPLATES[state.minutes];
+    const sub = $("hero-sub");
+    if (template) {
+      const labels = buildRoleLabels(template);
+      sub.replaceChildren(
+        "目安 ",
+        ...template.flatMap((slot, i) => [i > 0 && el("b", { text: "→" }), el("span", { class: "nw", text: `${labels[i]} ${slot.target}分` })]).filter(Boolean)
+      );
+    } else {
+      sub.textContent = "希望に近い長さの動画を1本、提案します";
+    }
+
+    timeChips.replaceChildren(
+      ...TIME_OPTIONS.map((minutes) =>
+        el("button", {
+          type: "button",
+          role: "radio",
+          "aria-checked": String(minutes === state.minutes),
+          "aria-label": `${minutes}分`,
+          text: String(minutes),
+          onclick: () => {
+            state.minutes = minutes;
+            saveLastTime(minutes);
+            renderHome();
+          },
+        })
+      )
+    );
+
+    modeGrid.replaceChildren(
+      ...state.modes.map((mode) =>
+        el(
+          "button",
+          {
+            type: "button",
+            role: "radio",
+            "aria-checked": String(mode.id === view.modeId),
+            onclick: () => {
+              view.modeId = mode.id;
+              renderHome();
+            },
+          },
+          el("b", { text: mode.label }),
+          MODE_COPY[mode.id] && el("small", { text: MODE_COPY[mode.id] })
+        )
+      )
+    );
+
+    const mode = state.modes.find((m) => m.id === view.modeId);
+    generateButton.disabled = !mode;
+    generateButton.replaceChildren(...(mode ? [template ? "コースをつくる" : "動画をえらぶ", iconNode("arrow")] : ["目的をえらんでください"]));
   }
 
-  showCourse(result);
-}
-
-function showVideo(video) {
-  noCandidates.hidden = true;
-  retryButton.hidden = false;
-
-  revealResult({
-    container: videoCard,
-    headingText: "今日の1本",
-    buildContent: () => {
-      videoThumb.classList.remove("broken");
-      videoThumb.onerror = () => videoThumb.classList.add("broken");
-      videoThumb.src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
-      videoThumb.alt = video.title;
-
-      videoTitle.textContent = video.title;
-      videoMeta.textContent = `${video.channel} ・ ${video.duration_min}分 ・ 強度${video.intensity}`;
-      videoPlay.href = `https://www.youtube.com/watch?v=${video.id}`;
-    },
-    getItems: () => [videoCard],
+  noEquipmentCheckbox.addEventListener("change", () => {
+    state.noEquipment = noEquipmentCheckbox.checked;
   });
-}
 
-function showCourse({ videos, template }) {
-  noCandidates.hidden = true;
-  retryButton.hidden = false;
-
-  revealResult({
-    container: courseCard,
-    headingText: `今日の${videos.length}本`,
-    buildContent: () => {
-      const roleLabels = buildRoleLabels(template);
-      courseList.innerHTML = "";
-
-      videos.forEach((video, index) => {
-        const li = document.createElement("li");
-        li.className = "course-item";
-
-        const link = document.createElement("a");
-        link.className = "course-item-link";
-        link.href = `https://www.youtube.com/watch?v=${video.id}`;
-        link.target = "_blank";
-        link.rel = "noopener";
-
-        const thumb = document.createElement("img");
-        thumb.className = "course-thumb";
-        thumb.alt = video.title;
-        thumb.onerror = () => thumb.classList.add("broken");
-        thumb.src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
-
-        const info = document.createElement("div");
-        info.className = "course-item-info";
-
-        const role = document.createElement("p");
-        role.className = "course-item-role";
-        role.textContent = `${index + 1}. ${roleLabels[index]}`;
-
-        const title = document.createElement("p");
-        title.className = "course-item-title";
-        title.textContent = `${video.title}(${video.duration_min}分)`;
-
-        info.appendChild(role);
-        info.appendChild(title);
-        link.appendChild(thumb);
-        link.appendChild(info);
-        li.appendChild(link);
-        courseList.appendChild(li);
-      });
-
-      const total = videos.reduce((sum, v) => sum + v.duration_min, 0);
-      courseTotal.textContent = `合計 ${total}分`;
-
-      // まとめて再生: 非公式の watch_videos エンドポイントを使用(design.md §6.4)。
-      // 将来無効化される可能性があるが、上記の個別動画リンクが常にフォールバックとして機能する。
-      const ids = videos.map((v) => v.id).join(",");
-      playAllButton.href = `https://www.youtube.com/watch_videos?video_ids=${ids}`;
-      playAllBar.hidden = false;
-    },
-    getItems: () => Array.from(courseList.children),
+  generateButton.addEventListener("click", () => {
+    const mode = state.modes.find((m) => m.id === view.modeId);
+    if (!mode) return;
+    state.currentMode = mode;
+    saveLastModeId(mode.id);
+    state.courseModePreferred = true; // 新しい検索のたびにデフォルトはコース提案(design.md §6.1)
+    view.generated = true;
+    buildResult();
+    history.pushState({ screen: "result" }, "");
+    show("result");
   });
-}
 
-function showNoCandidates() {
-  cancelReveal();
-  resultHeading.hidden = true;
-  videoCard.hidden = true;
-  videoCard.classList.remove("reveal-fading");
-  courseCard.hidden = true;
-  courseCard.classList.remove("reveal-fading");
-  playAllBar.hidden = true;
-  retryButton.hidden = true;
-  noCandidates.hidden = false;
-}
+  // ---------- 画面② 今日のコース ----------
 
-function showTopScreen() {
-  cancelReveal();
-  resultHeading.hidden = true;
-  resultScreen.hidden = true;
-  topScreen.hidden = false;
-  playAllBar.hidden = true;
-}
+  // 分岐は従来の renderResult / renderCourse / renderSingle と同じ。選定は既存の関数をそのまま呼ぶ
+  function buildResult() {
+    const mode = state.currentMode;
+    const isCourseEligible = state.minutes >= 30;
+    let result = null;
+    let fallback = false;
 
-backButton.addEventListener("click", showTopScreen);
-
-retryButton.addEventListener("click", () => {
-  const isCourseEligible = state.minutes >= 30;
-  if (isCourseEligible && state.courseModePreferred) {
-    renderCourse();
-    toggleCourseButton.textContent = courseCard.hidden ? "コースにする" : "1本にする";
-  } else if (state.currentPool.length > 0) {
-    showVideo(pickFromPool());
+    if (isCourseEligible && state.courseModePreferred) {
+      const course = buildCourse(state.minutes, mode);
+      if (course.videos) result = { kind: "course", videos: course.videos, roles: buildRoleLabels(course.template), fallback: false };
+      else fallback = true; // コースが組めなかった → 単発提案にフォールバック(design.md §6.3 最終手段)
+    }
+    if (!result) {
+      state.currentPool = buildCandidatePool(state.minutes, mode);
+      state.shownIds = new Set();
+      if (state.currentPool.length > 0) result = { kind: "single", videos: [pickFromPool()], roles: ["今日の1本"], fallback };
+    }
+    view.result = result;
+    view.start = 0;
+    renderResult(true);
   }
-});
 
-toggleCourseButton.addEventListener("click", () => {
-  state.courseModePreferred = !state.courseModePreferred;
-  renderResult();
-});
+  retryButton.addEventListener("click", () => {
+    const isCourseEligible = state.minutes >= 30;
+    if (isCourseEligible && state.courseModePreferred) {
+      buildResult();
+    } else if (state.currentPool.length > 0) {
+      view.result = { ...view.result, videos: [pickFromPool()] };
+      view.start = 0;
+      renderResult(true);
+    }
+  });
 
-noEquipmentCheckbox.addEventListener("change", () => {
-  state.noEquipment = noEquipmentCheckbox.checked;
-});
+  backButton.addEventListener("click", () => history.back());
+
+  // animate: 新しい提案のときだけ、上から順に表示する。再生開始位置を選び直すときは動かさない
+  function renderResult(animate) {
+    const { result } = view;
+    const mode = state.currentMode;
+    const isCourseEligible = state.minutes >= 30;
+
+    // 画面②の大きな数字は、実際に提案された動画の合計時間(画面①の「希望する時間」とは別)
+    $("result-eyebrow").textContent = !result ? "" : result.kind === "course" ? "今日のコース ・ 合計時間" : "今日の1本 ・ 再生時間";
+    $("result-total").parentElement.hidden = !result;
+    $("result-total").textContent = result ? String(sumMinutes(result.videos)) : "";
+    $("result-count").textContent = result && result.kind === "course" ? `${result.videos.length}本` : "";
+    $("result-condition").textContent = `希望 ${state.minutes}分 ・ ${mode.label}${state.noEquipment ? " ・ 道具なし" : ""}`;
+
+    // 「コース / 1本」の切り替え(従来の「1本にする / コースにする」と同じ働き。30分以上のみ)
+    kindToggle.hidden = !isCourseEligible || !result;
+    kindToggle.replaceChildren(
+      ...[
+        ["course", "コース"],
+        ["single", "1本"],
+      ].map(([value, label]) =>
+        el("button", {
+          type: "button",
+          role: "radio",
+          "aria-checked": String(result?.kind === value),
+          text: label,
+          onclick: () => {
+            const wantCourse = value === "course";
+            if (wantCourse === state.courseModePreferred && result?.kind === value) return;
+            state.courseModePreferred = wantCourse;
+            buildResult();
+          },
+        })
+      )
+    );
+
+    courseFallbackNote.hidden = !(result && result.fallback);
+    noCandidates.hidden = Boolean(result);
+    retryButton.hidden = !result;
+    playButton.hidden = !result;
+    resultHint.hidden = !result || result.videos.length < 2;
+
+    resultList.className = `list${result?.kind === "single" ? " single" : ""}`;
+    resultList.replaceChildren();
+    if (!result) return;
+
+    const { videos, roles } = result;
+    const single = result.kind === "single";
+
+    videos.forEach((video, i) => {
+      const img = el("img", { alt: "", loading: "lazy", src: thumbUrl(video.id) });
+      img.onerror = () => img.classList.add("broken");
+
+      // 行をタップ: コースなら「ここから再生」の位置を選ぶ(画面は移動しない)。1本だけの提案ならそのままYouTubeで開く
+      const main = el(
+        single ? "a" : "button",
+        single
+          ? { class: "row-main", href: watchUrl(video.id), target: "_blank", rel: "noopener" }
+          : {
+              class: "row-main",
+              type: "button",
+              "aria-pressed": String(i === view.start),
+              "aria-label": `${roles[i]} ${video.duration_min}分 ${video.title}。ここから再生する`,
+              onclick: () => {
+                view.start = i;
+                renderResult(false);
+              },
+            },
+        el("span", { class: "thumb-wrap" }, img, el("span", { class: "start-badge" }, iconNode("play"))),
+        el(
+          "span",
+          { class: "row-text" },
+          !single &&
+            el(
+              "span",
+              { class: "row-head" },
+              el("span", { class: "role", text: roles[i] }),
+              el("span", { class: "dur" }, String(video.duration_min), el("small", { text: "分" }))
+            ),
+          el("span", { class: "title", text: video.title }),
+          single && el("span", { class: "meta", style: "display:block", text: `${CHANNEL_LABELS[video.channel] || video.channel} ・ ${video.duration_min}分 ・ 強度${video.intensity}` })
+        )
+      );
+
+      const row = el(
+        "li",
+        { class: `row${i === view.start ? " is-start" : ""}${i < view.start ? " is-before" : ""}` },
+        main,
+        // 個別リンク: その動画だけをYouTubeで開く(まとめて再生が動かない環境でのフォールバックも兼ねる)
+        !single &&
+          el("a", { class: "row-open", href: watchUrl(video.id), target: "_blank", rel: "noopener", "aria-label": `${video.title} だけをYouTubeで開く` }, iconNode("external"))
+      );
+      resultList.append(row);
+      if (!animate || prefersReducedMotion) row.classList.add("in");
+      else setTimeout(() => row.classList.add("in"), 60 + i * 130);
+    });
+
+    const rest = videos.slice(view.start);
+    playButton.href = playlistUrl(rest);
+    playButton.textContent =
+      videos.length === 1 ? "YouTubeで再生" : view.start === 0 ? "YouTubeでまとめて再生" : rest.length === 1 ? "この1本をYouTubeで再生" : "ここからまとめて再生";
+    resultHint.textContent =
+      view.start === 0 ? "動画をタップすると、その動画から続けて再生できます。" : `${view.start + 1}本目から再生します(残り 約${sumMinutes(rest)}分)。`;
+  }
+
+  history.replaceState({ screen: "home" }, "");
+  renderHome();
+}
 
 async function init() {
-  renderTimeChips();
+  applyTheme();
 
-  // no-cache: 月次更新で videos.json が変わっても、ブラウザの古いキャッシュを使い続けないよう毎回サーバーに確認する
-  const fresh = { cache: "no-cache" };
-  const [modesRes, videosRes] = await Promise.all([fetch("data/modes.json", fresh), fetch("data/videos.json", fresh)]);
-  const modesData = await modesRes.json();
-  const videosData = await videosRes.json();
+  try {
+    // no-cache: 月次更新で videos.json が変わっても、ブラウザの古いキャッシュを使い続けないよう毎回サーバーに確認する
+    const fresh = { cache: "no-cache" };
+    const [modesRes, videosRes] = await Promise.all([fetch("data/modes.json", fresh), fetch("data/videos.json", fresh)]);
+    const modesData = await modesRes.json();
+    const videosData = await videosRes.json();
 
-  state.modes = modesData.modes;
-  state.timeOfDayBonus = modesData.time_of_day_bonus;
-  state.videos = videosData.videos;
-  state.allPrimaryTags = new Set(state.modes.flatMap((m) => m.primary_tags || []));
+    state.modes = modesData.modes;
+    state.timeOfDayBonus = modesData.time_of_day_bonus;
+    state.videos = videosData.videos;
+    state.allPrimaryTags = new Set(state.modes.flatMap((m) => m.primary_tags || []));
+  } catch {
+    generateButton.textContent = "データを読み込めませんでした";
+    return;
+  }
 
-  renderModeGrid();
+  initUi();
 }
 
 init();
