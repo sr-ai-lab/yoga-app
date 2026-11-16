@@ -1,7 +1,25 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-08",
+  "updated": "2026-11-16",
   "videos": [
+    {
+      "id": "vJsw3tapk2k",
+      "title": "【寝たまま10分】骨盤を整えるストレッチ｜1日の疲れを癒して安眠へ #787",
+      "channel": "b-flow",
+      "duration_min": 11,
+      "intensity": 1,
+      "type": "cooldown",
+      "tags": ["骨盤", "寝る前", "リラックス", "疲労回復"]
+    },
+    {
+      "id": "ucOK7MfPIok",
+      "title": "【毎日15分】血流アップで全身スッキリ！爽快リフレッシュフローヨガ｜Hikari",
+      "channel": "b-flow-studio",
+      "duration_min": 15,
+      "intensity": 2,
+      "type": "main",
+      "tags": ["全身", "リフレッシュ"]
+    },
     {
       "id": "pKqL-925900",
       "title": "【10分お尻ほぐし】股関節を柔らかくして骨盤を整える｜足腰スッキリ #784",
